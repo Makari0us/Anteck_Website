@@ -60,6 +60,72 @@
                 </div>
             </div>
         </div>
+
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <div class="product-image mb-4">
+                    <img src="{{ url_for('static', filename='images/panel-chamber-testing1.jpg') }}" alt="Acoustic Testing Equipment 1" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-image mb-4">
+                    <img src="{{ url_for('static', filename='images/panel-chamber-testing2.jpg') }}" alt="Acoustic Testing Equipment 2" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="product-categories">
+                    {% if current_lang == 'zh' %}
+                    <h3>消声室型</h3>
+                    <p>全消声室、半消声室、简易消声室</p>
+
+                    <h3>吸声材料类型</h3>
+                    <p>玻璃棉尖劈 金属尖劈 平板消声室</p>
+
+                    <h3>隔声板类型</h3>
+                    <p>混凝土建结构，金属隔声吸声板</p>
+
+                    <h3>隔振器类型</h3>
+                    <p>弹簧隔振器，橡胶隔振器</p>
+
+                    <h3>全消声室地网类型</h3>
+                    <p>钢丝软地网，钢筋硬地网</p>
+                    {% elif current_lang == 'vi' %}
+                    <h3>Loại phòng tiêu âm</h3>
+                    <p>Phòng tiêu âm toàn phần, Phòng tiêu âm bán phần, Phòng tiêu âm đơn giản</p>
+
+                    <h3>Loại vật liệu hấp thụ âm</h3>
+                    <p>Nêm bông thủy tinh, Nêm kim loại, Phòng tiêu âm phẳng</p>
+
+                    <h3>Loại tấm cách âm</h3>
+                    <p>Kết cấu bê tông, Tấm kim loại cách âm và hấp thụ âm</p>
+
+                    <h3>Loại giảm chấn</h3>
+                    <p>Giảm chấn lò xo, Giảm chấn cao su</p>
+
+                    <h3>Loại sàn lưới phòng tiêu âm toàn phần</h3>
+                    <p>Lưới mềm dây thép, Lưới cứng thép</p>
+                    {% else %}
+                    <h3>Anechoic Chamber Types</h3>
+                    <p>Full Anechoic Chamber, Semi-Anechoic Chamber, Simple Anechoic Chamber</p>
+
+                    <h3>Sound Absorption Material Types</h3>
+                    <p>Glass Wool Wedges, Metal Wedges, Panel Anechoic Chamber</p>
+
+                    <h3>Sound Insulation Panel Types</h3>
+                    <p>Concrete Construction, Metal Sound Insulation and Absorption Panels</p>
+
+                    <h3>Vibration Isolator Types</h3>
+                    <p>Spring Vibration Isolators, Rubber Vibration Isolators</p>
+
+                    <h3>Full Anechoic Chamber Floor Grid Types</h3>
+                    <p>Steel Wire Soft Grid, Steel Bar Hard Grid</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
