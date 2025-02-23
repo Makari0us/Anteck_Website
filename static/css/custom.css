@@ -146,6 +146,21 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* Hot Keywords Section */
+.hot-keywords {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.hot-keywords .keywords {
+    font-size: 1.1rem;
+    color: var(--bs-light);
+    margin: 0;
+    line-height: 1.5;
+}
+
 /* Testing Facility Section */
 .testing-facility {
     background-color: var(--bs-dark);

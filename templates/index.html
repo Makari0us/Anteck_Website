@@ -19,6 +19,19 @@
 <!-- Testing Facility Section -->
 <section class="testing-facility py-5">
     <div class="container">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="hot-keywords text-center">
+                    {% if current_lang == 'zh' %}
+                    <p class="keywords">热门关键词: 消音室、消声箱、隔声室、平板消声室、混响室</p>
+                    {% elif current_lang == 'vi' %}
+                    <p class="keywords">Từ khóa nóng: Phòng cách âm, Hộp tiêu âm, Phòng cách ly âm thanh, Phòng tiêu âm phẳng, Phòng vang âm</p>
+                    {% else %}
+                    <p class="keywords">Hot Keywords: Soundproof Room, Noise Reduction Box, Sound Isolation Room, Panel Anechoic Chamber, Reverberation Room</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
         <div class="row align-items-center">
             <div class="col-md-6">
                 <img src="{{ url_for('static', filename='images/testing-room.jpg') }}" class="img-fluid mb-4" alt="Testing Room">
@@ -34,11 +47,11 @@
                     <h2>苏州岸肯为声学领域专业公司，为高新技术企业</h2>
                     <p>公司专业从事消声设备、声学、噪声、电声和电磁屏蔽设备的开发与生产。</p>
                     {% elif current_lang == 'vi' %}
-                    <h2>Công ty TNHH Anken Suzhou - Chuyên gia trong lĩnh vực âm học</h2>
-                    <p>Chuyên nghiên cứu và sản xuất thiết bị cách âm, âm học, chống ồn, âm thanh điện tử và thiết bị chống nhiễu điện từ.</p>
+                    <h2>Công ty TNHH Anken Suzhou - Doanh nghiệp công nghệ cao chuyên về lĩnh vực âm học</h2>
+                    <p>Công ty chuyên nghiên cứu và phát triển sản xuất thiết bị tiêu âm, âm học, chống ồn, âm thanh điện tử và thiết bị chống nhiễu điện từ.</p>
                     {% else %}
-                    <h2>Suzhou Anken - Professional Acoustic Solutions</h2>
-                    <p>Specializing in the development and production of noise reduction equipment, acoustics, noise control, electroacoustics, and electromagnetic shielding equipment.</p>
+                    <h2>Suzhou Anken - A High-Tech Enterprise Specializing in Acoustics</h2>
+                    <p>The company specializes in the development and production of noise reduction equipment, acoustics, noise control, electroacoustics, and electromagnetic shielding equipment.</p>
                     {% endif %}
                 </div>
             </div>
