@@ -36,8 +36,8 @@
         </div>
 
         <!-- Product Gallery -->
-        <div class="product-gallery mt-5">
-            <div class="row g-4">
+        <div class="product-gallery mt-4">
+            <div class="row g-3">
                 <div class="col-md-3">
                     <img src="{{ url_for('static', filename='images/products/soundproof-box-1.jpg') }}" alt="Soundproof Box Detail 1" class="img-fluid gallery-image">
                 </div>
@@ -54,7 +54,7 @@
         </div>
 
         <!-- Technical Details -->
-        <div class="technical-details mt-5">
+        <div class="technical-details mt-4">
             {% if current_lang == 'zh' %}
             <p>某些客户由于空间及成本限制，也不需要精度太高的消声箱，岸肯电子也提供另外一种产品，平板型消声箱。</p>
             <p>该产品分部采用钢板结构，中间填充高效吸音隔音材料，内部是由岸肯电子专业设计的吸声板板，采用不同材质的吸音材料根据声学原理叠加而成，以达到对不同频段的声波进行吸收。内部有可以活动的拉板，采用吸音设计，以方便测试使用。</p>
@@ -103,9 +103,9 @@
             {% endif %}
         </div>
 
-        <!-- Additional Gallery Row -->
-        <div class="product-gallery mt-5">
-            <div class="row g-4">
+        <!-- Additional Product Images -->
+        <div class="product-gallery mt-4">
+            <div class="row g-3">
                 <div class="col-md-3">
                     <img src="{{ url_for('static', filename='images/products/soundproof-box-5.jpg') }}" alt="Soundproof Box Additional 1" class="img-fluid gallery-image">
                 </div>
@@ -116,35 +116,35 @@
                     <img src="{{ url_for('static', filename='images/products/soundproof-box-7.jpg') }}" alt="Soundproof Box Additional 3" class="img-fluid gallery-image">
                 </div>
                 <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-8.jpg') }}" alt="Soundproof Box Additional 4" class="img-fluid gallery-image">
+                    <img src="{{ url_for('static', filename='images/products/auto-box-new.jpg') }}" alt="Soundproof Box Additional 4" class="img-fluid gallery-image">
                 </div>
             </div>
         </div>
 
         <!-- Automated Door Options -->
-        <div class="technical-details mt-5">
+        <div class="technical-details mt-4">
             {% if current_lang == 'zh' %}
             <p>当客户需要在生产线上进行快速的声学测试，即采用自动化开门及关门方式，我司提供翻盖式及抽屉式自动门消声箱供客户选择：</p>
             {% elif current_lang == 'vi' %}
-            <p>Khi khách hàng cần thực hiện kiểm tra âm thanh nhanh chóng trên dây chuyền sản xuất, sử dụng phương thức mở cửa và đóng cửa tự động, công ty chúng tôi cung cấp hộp tiêu âm cửa tự động kiểu nắp gập và kiểu ngăn kéo để khách hàng lựa chọn:</p>
+            <p>Khi khách hàng cần thực hiện kiểm tra âm thanh nhanh chóng trên dây chuyền sản xuất, sử dụng phương thức mở cửa và đóng cửa tự động, công ty chúng tôi cung cấp hộp tiêu âm cửa tự động kiểu nắp gập và kiểu ngăn kéo để khách hàng lựa chọn：</p>
             {% else %}
             <p>When customers need to perform quick acoustic testing on the production line using automated door opening and closing methods, we offer flip-top and drawer-style automatic door soundproof boxes for customers to choose from:</p>
             {% endif %}
         </div>
 
         <!-- Automated Door Types Gallery -->
-        <div class="product-gallery">
-            <div class="row g-4">
+        <div class="product-gallery mt-3">
+            <div class="row g-3">
                 <div class="col-md-6">
-                    <div class="automated-box-type">
+                    <div class="automated-box-type mb-3">
                         {% if current_lang == 'zh' %}
-                        <h4 class="text-center mb-3">自动翻盖式</h4>
+                        <h4 class="text-center mb-2">自动翻盖式</h4>
                         {% elif current_lang == 'vi' %}
-                        <h4 class="text-center mb-3">Kiểu nắp gập tự động</h4>
+                        <h4 class="text-center mb-2">Kiểu nắp gập tự động</h4>
                         {% else %}
-                        <h4 class="text-center mb-3">Automatic Flip-top Style</h4>
+                        <h4 class="text-center mb-2">Automatic Flip-top Style</h4>
                         {% endif %}
-                        <div class="row g-4">
+                        <div class="row g-3">
                             <div class="col-md-6">
                                 <img src="{{ url_for('static', filename='images/products/auto-box-1.jpg') }}" alt="Automatic Flip-top Box 1" class="img-fluid gallery-image">
                             </div>
@@ -155,15 +155,15 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="automated-box-type">
+                    <div class="automated-box-type mb-3">
                         {% if current_lang == 'zh' %}
-                        <h4 class="text-center mb-3">自动抽屉式</h4>
+                        <h4 class="text-center mb-2">自动抽屉式</h4>
                         {% elif current_lang == 'vi' %}
-                        <h4 class="text-center mb-3">Kiểu ngăn kéo tự động</h4>
+                        <h4 class="text-center mb-2">Kiểu ngăn kéo tự động</h4>
                         {% else %}
-                        <h4 class="text-center mb-3">Automatic Drawer Style</h4>
+                        <h4 class="text-center mb-2">Automatic Drawer Style</h4>
                         {% endif %}
-                        <div class="row g-4">
+                        <div class="row g-3">
                             <div class="col-md-6">
                                 <img src="{{ url_for('static', filename='images/products/auto-box-3.jpg') }}" alt="Automatic Drawer Box 1" class="img-fluid gallery-image">
                             </div>
@@ -177,16 +177,16 @@
         </div>
 
         <!-- Client Reference List -->
-        <div class="technical-details mt-5">
+        <div class="technical-details mt-4">
             {% if current_lang == 'zh' %}
-            <h2 class="text-center mb-4">岸肯消声箱客户</h2>
-            <p class="text-center mb-3">(排名不分先后)</p>
+            <h2 class="text-center mb-3">岸肯消声箱客户</h2>
+            <p class="text-center mb-2">(排名不分先后)</p>
             {% elif current_lang == 'vi' %}
-            <h2 class="text-center mb-4">Khách hàng Hộp tiêu âm Anken</h2>
-            <p class="text-center mb-3">(Không theo thứ tự cụ thể)</p>
+            <h2 class="text-center mb-3">Khách hàng Hộp tiêu âm Anken</h2>
+            <p class="text-center mb-2">(Không theo thứ tự cụ thể)</p>
             {% else %}
-            <h2 class="text-center mb-4">Anken Soundproof Box Customers</h2>
-            <p class="text-center mb-3">(In no particular order)</p>
+            <h2 class="text-center mb-3">Anken Soundproof Box Customers</h2>
+            <p class="text-center mb-2">(In no particular order)</p>
             {% endif %}
 
             <div class="client-reference-table">
