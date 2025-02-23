@@ -10,9 +10,36 @@
 <section class="section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="mb-4">Wedge Anechoic Chamber</h2>
-                <!-- Content will be added here -->
+            <div class="col-md-6">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='images/wedge-chamber-detail.jpg') }}" alt="Wedge Anechoic Chamber" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-description">
+                    <h2>尖劈消声室</h2>
+                    <div class="description-text">
+                        {% if current_lang == 'zh' %}
+                        消声室基本概念
+                        全消声室是声学实验和噪声测试中极其重要的实验场所。其作用是提供一个全自由场空间的低噪声测试环境。全消声室的主要功能：提供声学全自由场环境、低噪声测量环境
+                        {% elif current_lang == 'vi' %}
+                        Khái niệm cơ bản về phòng tiêu âm
+                        Phòng tiêu âm hoàn toàn là một địa điểm thí nghiệm vô cùng quan trọng trong thí nghiệm âm học và kiểm tra tiếng ồn. Chức năng của nó là cung cấp một môi trường kiểm tra độ ồn thấp trong không gian trường tự do hoàn toàn. Chức năng chính của phòng tiêu âm: Cung cấp môi trường trường tự do âm học, môi trường đo lường độ ồn thấp
+                        {% else %}
+                        Basic Concept of Anechoic Chamber
+                        A fully anechoic chamber is an extremely important experimental facility for acoustic experiments and noise testing. Its purpose is to provide a low-noise testing environment in a fully free-field space. Main functions of the anechoic chamber: Provides acoustic free-field environment and low-noise measurement environment
+                        {% endif %}
+                    </div>
+                    <div class="consulting-number">
+                        {% if current_lang == 'zh' %}
+                        咨询电话：400-0086-026
+                        {% elif current_lang == 'vi' %}
+                        Số điện thoại tư vấn: 400-0086-026
+                        {% else %}
+                        Consultation Number: 400-0086-026
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
