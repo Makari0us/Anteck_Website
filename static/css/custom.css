@@ -781,13 +781,6 @@
     margin: 0.15rem 0;
 }
 
-/* After page-with-sidebar styles */
-.product-banner {
-    width: 100%;
-    display: block;
-    margin-top: -1px;
-}
-
 /* Contact Info Section */
 .contact-info {
     padding: 1.5rem;
