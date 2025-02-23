@@ -1,5 +1,6 @@
 TRANSLATIONS = {
     'en': {
+        'company_name': 'Suzhou Anken Electronic Technology Co., Ltd.',
         'title': 'Welcome to Our Website',
         'nav_home': 'Home',
         'nav_about': 'About',
@@ -12,6 +13,7 @@ TRANSLATIONS = {
         'contact_text': 'Get in touch with us today',
     },
     'vi': {
+        'company_name': 'Công ty TNHH Công nghệ Điện tử Anken Tô Châu',
         'title': 'Chào mừng đến với Trang web của Chúng tôi',
         'nav_home': 'Trang chủ',
         'nav_about': 'Giới thiệu',
@@ -24,6 +26,7 @@ TRANSLATIONS = {
         'contact_text': 'Hãy liên hệ với chúng tôi ngay hôm nay',
     },
     'zh': {
+        'company_name': '苏州岸肯电子科技有限公司',
         'title': '欢迎访问我们的网站',
         'nav_home': '首页',
         'nav_about': '关于',
