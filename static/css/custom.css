@@ -747,6 +747,23 @@
     margin: 2rem 0;
 }
 
+/* Automated Box Types */
+.automated-box-type {
+    margin-bottom: 2rem;
+}
+
+.automated-box-type h4 {
+    color: var(--bs-light);
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(228, 142, 56, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+.automated-box-type .gallery-image {
+    height: 200px;
+}
+
 /* After page-with-sidebar styles */
 .product-banner {
     width: 100%;

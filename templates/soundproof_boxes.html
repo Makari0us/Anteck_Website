@@ -120,6 +120,61 @@
                 </div>
             </div>
         </div>
+
+        <!-- Automated Door Options -->
+        <div class="technical-details mt-5">
+            {% if current_lang == 'zh' %}
+            <p>当客户需要在生产线上进行快速的声学测试，即采用自动化开门及关门方式，我司提供翻盖式及抽屉式自动门消声箱供客户选择：</p>
+            {% elif current_lang == 'vi' %}
+            <p>Khi khách hàng cần thực hiện kiểm tra âm thanh nhanh chóng trên dây chuyền sản xuất, sử dụng phương thức mở cửa và đóng cửa tự động, công ty chúng tôi cung cấp hộp tiêu âm cửa tự động kiểu nắp gập và kiểu ngăn kéo để khách hàng lựa chọn:</p>
+            {% else %}
+            <p>When customers need to perform quick acoustic testing on the production line using automated door opening and closing methods, we offer flip-top and drawer-style automatic door soundproof boxes for customers to choose from:</p>
+            {% endif %}
+        </div>
+
+        <!-- Automated Door Types Gallery -->
+        <div class="product-gallery">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="automated-box-type">
+                        {% if current_lang == 'zh' %}
+                        <h4 class="text-center mb-3">自动翻盖式</h4>
+                        {% elif current_lang == 'vi' %}
+                        <h4 class="text-center mb-3">Kiểu nắp gập tự động</h4>
+                        {% else %}
+                        <h4 class="text-center mb-3">Automatic Flip-top Style</h4>
+                        {% endif %}
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <img src="{{ url_for('static', filename='images/products/auto-box-1.jpg') }}" alt="Automatic Flip-top Box 1" class="img-fluid gallery-image">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{{ url_for('static', filename='images/products/auto-box-2.jpg') }}" alt="Automatic Flip-top Box 2" class="img-fluid gallery-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="automated-box-type">
+                        {% if current_lang == 'zh' %}
+                        <h4 class="text-center mb-3">自动抽屉式</h4>
+                        {% elif current_lang == 'vi' %}
+                        <h4 class="text-center mb-3">Kiểu ngăn kéo tự động</h4>
+                        {% else %}
+                        <h4 class="text-center mb-3">Automatic Drawer Style</h4>
+                        {% endif %}
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <img src="{{ url_for('static', filename='images/products/auto-box-3.jpg') }}" alt="Automatic Drawer Box 1" class="img-fluid gallery-image">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{{ url_for('static', filename='images/products/auto-box-4.jpg') }}" alt="Automatic Drawer Box 2" class="img-fluid gallery-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
