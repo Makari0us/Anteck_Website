@@ -873,3 +873,19 @@
         margin-bottom: 1.5rem;
     }
 }
+
+/* Product Feature Banner */
+.product-feature-banner {
+    width: 100%;
+    display: block;
+    line-height: 0;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    background: #1a1a1a;
+}
+
+.product-feature-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
