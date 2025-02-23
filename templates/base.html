@@ -31,13 +31,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">{{ content.nav_home }}</a>
+                        <a class="nav-link" href="/">{{ content.nav_home }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">{{ content.nav_about }}</a>
+                        <a class="nav-link" href="{{ url_for('panel_chamber') }}">{{ content.nav_panel_chamber }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">{{ content.nav_contact }}</a>
+                        <a class="nav-link" href="{{ url_for('wedge_chamber') }}">{{ content.nav_wedge_chamber }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('soundproof_boxes') }}">{{ content.nav_boxes }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('silent_rooms') }}">{{ content.nav_rooms }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('products') }}">{{ content.nav_products }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('cases') }}">{{ content.nav_cases }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">{{ content.nav_about }}</a>
                     </li>
                 </ul>
             </div>
