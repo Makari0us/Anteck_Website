@@ -35,44 +35,71 @@
             </div>
         </div>
 
-        <!-- Product Details -->
-        <div class="product-details mt-5">
+        <!-- Product Gallery -->
+        <div class="product-gallery mt-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="{{ url_for('static', filename='images/products/soundproof-box-1.jpg') }}" alt="Soundproof Box Detail 1" class="img-fluid">
+                </div>
+                <div class="col-md-3">
+                    <img src="{{ url_for('static', filename='images/products/soundproof-box-2.jpg') }}" alt="Soundproof Box Detail 2" class="img-fluid">
+                </div>
+                <div class="col-md-3">
+                    <img src="{{ url_for('static', filename='images/products/soundproof-box-3.jpg') }}" alt="Soundproof Box Detail 3" class="img-fluid">
+                </div>
+                <div class="col-md-3">
+                    <img src="{{ url_for('static', filename='images/products/soundproof-box-4.jpg') }}" alt="Soundproof Box Detail 4" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Details -->
+        <div class="technical-details mt-5">
             {% if current_lang == 'zh' %}
-            <h3>1.尖劈消声箱功用：</h3>
-            <p>箱体内部放置人工嘴，人工耳，防真人头，噪音计等，用于测试、调试产品以确保部品通过相关音频测试。</p>
+            <p>某些客户由于空间及成本限制，也不需要精度太高的消声箱，岸肯电子也提供另外一种产品，平板型消声箱。</p>
+            <p>该产品分部采用钢板结构，中间填充高效吸音隔音材料，内部是由岸肯电子专业设计的吸声板板，采用不同材质的吸音材料根据声学原理叠加而成，以达到对不同频段的声波进行吸收。内部有可以活动的拉板，采用吸音设计，以方便测试使用。</p>
 
-            <h3>2.尖劈消声箱大小：</h3>
-            <p>举例：外部1100mm*1100mm*1200mm左右，内部600mm*600mm*600mm。</p>
+            <h3>1.平板消声箱功用：</h3>
+            <p>一般适用于对小型马达，中小型家电，喇叭，手机ACOUSTIC测试。(可配观察窗)</p>
 
-            <h3>3.尖劈消声箱性能：</h3>
-            <p>本底噪音≤25dB，隔离度50dB，截止频率400hz</p>
+            <h3>2.平板消声箱大小：</h3>
+            <p>举例：外部800mm*800mm*800mm左右，内部600mm*600mm*600mm。</p>
 
-            <h3>4.尖劈消声箱特点：</h3>
-            <p>精度高，吸音效果好，即缩小的消声室，占用空间消大，价格翻倍，主要用于对测试准确度比较高的，有足够大空间的实验室内进行测试的客户，用于汽车部件、信息、电子、及家电行业各部件的精确测试。</p>
+            <h3>3.平板消声箱性能：</h3>
+            <p>外部小于70dB，内部小于35dB(A)。</p>
+
+            <h3>4.平板消声箱特点：</h3>
+            <p>独特的吸音和隔音层设计，效果好，占用空间小，使用方便，价格便宜。</p>
             {% elif current_lang == 'vi' %}
-            <h3>1. Công dụng của hộp tiêu âm:</h3>
-            <p>Bên trong hộp được đặt miệng nhân tạo, tai nhân tạo, đầu giả, máy đo tiếng ồn, v.v., dùng để kiểm tra và điều chỉnh sản phẩm để đảm bảo các bộ phận vượt qua các bài kiểm tra âm thanh liên quan.</p>
+            <p>Một số khách hàng do hạn chế về không gian và chi phí, cũng không cần hộp tiêu âm có độ chính xác quá cao, Anken Electronics cũng cung cấp một sản phẩm khác, hộp tiêu âm dạng phẳng.</p>
+            <p>Sản phẩm này được làm bằng cấu trúc tấm thép, với vật liệu cách âm hiệu quả cao ở giữa, bên trong là tấm hấp thụ âm được thiết kế chuyên nghiệp bởi Anken Electronics, sử dụng các vật liệu hấp thụ âm khác nhau được xếp chồng lên nhau theo nguyên lý âm học, để hấp thụ sóng âm ở các tần số khác nhau. Bên trong có tấm kéo có thể di chuyển, được thiết kế để hấp thụ âm, thuận tiện cho việc kiểm tra.</p>
 
-            <h3>2. Kích thước hộp tiêu âm:</h3>
-            <p>Ví dụ: Kích thước ngoài khoảng 1100mm*1100mm*1200mm, kích thước trong 600mm*600mm*600mm.</p>
+            <h3>1. Công dụng của hộp tiêu âm phẳng:</h3>
+            <p>Thường thích hợp để kiểm tra động cơ nhỏ, thiết bị gia dụng cỡ nhỏ và vừa, loa, âm thanh điện thoại. (Có thể lắp cửa sổ quan sát)</p>
 
-            <h3>3. Hiệu suất hộp tiêu âm:</h3>
-            <p>Độ ồn nền ≤25dB, độ cách ly 50dB, tần số cắt 400hz</p>
+            <h3>2. Kích thước hộp tiêu âm phẳng:</h3>
+            <p>Ví dụ: Kích thước ngoài khoảng 800mm*800mm*800mm, kích thước trong 600mm*600mm*600mm.</p>
 
-            <h3>4. Đặc điểm hộp tiêu âm:</h3>
-            <p>Độ chính xác cao, hiệu quả hấp thụ âm tốt, như một phòng tiêu âm thu nhỏ, chiếm không gian lớn, giá cao gấp đôi, chủ yếu dùng cho khách hàng có yêu cầu cao về độ chính xác kiểm tra và có không gian phòng thí nghiệm đủ lớn, dùng để kiểm tra chính xác các bộ phận trong ngành ô tô, thông tin, điện tử và gia dụng.</p>
+            <h3>3. Hiệu suất hộp tiêu âm phẳng:</h3>
+            <p>Bên ngoài nhỏ hơn 70dB, bên trong nhỏ hơn 35dB(A).</p>
+
+            <h3>4. Đặc điểm hộp tiêu âm phẳng:</h3>
+            <p>Thiết kế lớp hấp thụ và cách âm độc đáo, hiệu quả tốt, chiếm ít không gian, dễ sử dụng, giá rẻ.</p>
             {% else %}
-            <h3>1. Soundproof Box Usage:</h3>
-            <p>The box interior accommodates artificial mouth, artificial ear, simulated head, noise meter, etc., used for testing and debugging products to ensure components pass relevant audio tests.</p>
+            <p>Some customers, due to space and cost constraints, don't require high-precision soundproof boxes. For these needs, Anken Electronics offers an alternative product: the flat-panel soundproof box.</p>
+            <p>This product uses a steel plate structure with highly efficient sound-absorbing material in between. The interior features professionally designed absorption panels by Anken Electronics, utilizing different sound-absorbing materials layered according to acoustic principles to absorb sound waves of various frequencies. It includes a movable pull-panel with sound-absorbing design for convenient testing.</p>
 
-            <h3>2. Soundproof Box Dimensions:</h3>
-            <p>Example: External dimensions approximately 1100mm*1100mm*1200mm, internal dimensions 600mm*600mm*600mm.</p>
+            <h3>1. Flat-Panel Soundproof Box Usage:</h3>
+            <p>Generally suitable for testing small motors, small-to-medium household appliances, speakers, and phone ACOUSTIC testing. (Observation window available)</p>
 
-            <h3>3. Soundproof Box Performance:</h3>
-            <p>Background noise ≤25dB, isolation degree 50dB, cutoff frequency 400hz</p>
+            <h3>2. Flat-Panel Soundproof Box Dimensions:</h3>
+            <p>Example: External dimensions approximately 800mm*800mm*800mm, internal dimensions 600mm*600mm*600mm.</p>
 
-            <h3>4. Soundproof Box Features:</h3>
-            <p>High precision, good sound absorption effect, essentially a miniaturized anechoic chamber, occupies significant space, double the price, mainly used for customers requiring high testing accuracy with sufficient laboratory space, used for precise testing of components in automotive, information, electronics, and home appliance industries.</p>
+            <h3>3. Flat-Panel Soundproof Box Performance:</h3>
+            <p>External <70dB, internal <35dB(A).</p>
+
+            <h3>4. Flat-Panel Soundproof Box Features:</h3>
+            <p>Unique sound absorption and isolation layer design, good effectiveness, small footprint, easy to use, cost-effective.</p>
             {% endif %}
         </div>
     </div>
