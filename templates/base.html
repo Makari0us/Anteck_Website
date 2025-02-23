@@ -18,10 +18,16 @@
                     <div class="company-description">{{ content.company_name.split('|')[1].strip() }}</div>
                 </div>
             </a>
-            <div class="language-buttons">
-                <button class="btn btn-sm btn-outline-light language-btn" data-lang="en">EN</button>
-                <button class="btn btn-sm btn-outline-light language-btn" data-lang="vi">VI</button>
-                <button class="btn btn-sm btn-outline-light language-btn" data-lang="zh">中文</button>
+            <div class="d-flex align-items-center">
+                <div class="phone-number me-4">
+                    <img src="{{ url_for('static', filename='images/phone-icon.svg') }}" alt="Phone" class="phone-icon">
+                    {{ content.phone_number }}
+                </div>
+                <div class="language-buttons">
+                    <button class="btn btn-sm btn-outline-light language-btn" data-lang="en">EN</button>
+                    <button class="btn btn-sm btn-outline-light language-btn" data-lang="vi">VI</button>
+                    <button class="btn btn-sm btn-outline-light language-btn" data-lang="zh">中文</button>
+                </div>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
