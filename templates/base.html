@@ -41,35 +41,49 @@
             <div class="d-flex align-items-center">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link active orange-bg" href="/">{{ content.nav_home }}</a>
+                        <a class="nav-link {{ 'active orange-bg' if request.endpoint == 'index' }}" href="/">{{ content.nav_home }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('panel_chamber') }}">{{ content.nav_panel_chamber }}</a>
+                        <a class="nav-link {{ 'active' if request.endpoint == 'panel_chamber' }}" href="{{ url_for('panel_chamber') }}">{{ content.nav_panel_chamber }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('wedge_chamber') }}">{{ content.nav_wedge_chamber }}</a>
+                        <a class="nav-link {{ 'active' if request.endpoint == 'wedge_chamber' }}" href="{{ url_for('wedge_chamber') }}">{{ content.nav_wedge_chamber }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('soundproof_boxes') }}">{{ content.nav_boxes }}</a>
+                        <a class="nav-link {{ 'active' if request.endpoint == 'soundproof_boxes' }}" href="{{ url_for('soundproof_boxes') }}">{{ content.nav_boxes }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('silent_rooms') }}">{{ content.nav_rooms }}</a>
+                        <a class="nav-link {{ 'active' if request.endpoint == 'silent_rooms' }}" href="{{ url_for('silent_rooms') }}">{{ content.nav_rooms }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('products') }}">{{ content.nav_products }}</a>
+                        <a class="nav-link {{ 'active' if request.endpoint == 'products' }}" href="{{ url_for('products') }}">{{ content.nav_products }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('cases') }}">{{ content.nav_cases }}</a>
+                        <a class="nav-link {{ 'active' if request.endpoint == 'cases' }}" href="{{ url_for('cases') }}">{{ content.nav_cases }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('about') }}">{{ content.nav_about }}</a>
+                        <a class="nav-link {{ 'active' if request.endpoint == 'about' }}" href="{{ url_for('about') }}">{{ content.nav_about }}</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    {% block content %}{% endblock %}
+    <!-- Main Content -->
+    <div class="container">
+        {% if request.endpoint != 'index' %}
+        <div class="page-with-sidebar">
+            <div class="sidebar">
+                {% include '_product_sidebar.html' %}
+            </div>
+            <div class="main-content">
+        {% endif %}
+                {% block page_content %}{% endblock %}
+        {% if request.endpoint != 'index' %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
 
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container text-center">
