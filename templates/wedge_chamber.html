@@ -50,4 +50,81 @@
         </div>
     </div>
 </section>
+
+<section class="product-gallery section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/wedge-chamber/image1.jpg') }}" alt="Anechoic Chamber Image 1" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/wedge-chamber/image2.jpg') }}" alt="Anechoic Chamber Image 2" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/wedge-chamber/image3.jpg') }}" alt="Anechoic Chamber Image 3" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/wedge-chamber/image4.jpg') }}" alt="Anechoic Chamber Image 4" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="technical-details section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {% if current_lang == 'zh' %}
+                <div class="details-text">
+                    <h3>全自由场空间</h3>
+                    <p>全消声室的主要功能是为声学测试提供一个全自由场空间。全自由场是指声波在无限大空间传播时，不存在任何反射体（面）。</p>
+                    <p>自然界中的全自由场空间是将声源吊在空中，远离任何反射物，声波可以自由地向360°全方位角传播。</p>
+                    <p>声波在全自由场空间里传播有特定的物理定义为：</p>
+                    <ol>
+                        <li>对点声源声压随距离衰减，这就是声能的反平方律；</li>
+                        <li>声压级在常温压下等于声强级。这是在消声室里测量声功率的理论基础。</li>
+                    </ol>
+
+                    <h3>背景噪声</h3>
+                    <p>全消声室另一个功能是提供低背景噪声的环境以适应测试环境的要求。根据ISO3745-2003 Acoustics-Determination of sound power levels of noise sources using sound pressure、Precision methods for anechoic and hemi-anechoic rooms、ANSI S12.55-2006 Acoustics - Determination of sound power levels of noise sources using sound pressure - Precision methods for anechoic and hemi-anechoic rooms和国标GB6882《声学 噪声源声功率级的测定消声室和半消声室精密法》，在测试频率范围内，背景噪声的声压级至少比被测声源的声压级低6dB，较好的差低12dB。</p>
+
+                    <h3>截止频率</h3>
+                    <p>全消声室是要在室内模拟全自由场空间，所以要求室内每个面吸声系数为99%以上。设计一种能做到全频带（20Hz-20000Hz）的100%的吸声体是不可能的。因为通用的材料对高频声波很容易被吸收，而低频波则和材料的厚度（尖劈尺寸）有关。截止频率是指在频率以上，全消声室是满足自由场条件的，在截止频率以下，全消声室不能保证满足自由场条件。在测试时需要根据GB 6882进行自由场修正。</p>
+
+                    <h3>全消声室的鉴定方法</h3>
+                    <p>在实际工程中，声场自由空间是鉴定消声室好坏的关键依据。ISO 3745、ANSIS12.55和国标GB 6882提供了鉴定全消声室自由空间的鉴定方法。</p>
+                    <p>另外，本底噪声是全消声室的另一个重要指标。测量中得到的本底噪声是仪器的本底噪声加消声室的本底噪声。</p>
+                </div>
+                {% elif current_lang == 'vi' %}
+                <div class="details-text">
+                    <h3>Không gian trường tự do</h3>
+                    <p>Chức năng chính của phòng tiêu âm là cung cấp một không gian trường tự do cho việc kiểm tra âm học. Trường tự do hoàn toàn là nơi sóng âm truyền trong không gian vô hạn mà không có bất kỳ vật phản xạ nào (bề mặt).</p>
+                    <!-- Vietnamese translation continues... -->
+                </div>
+                {% else %}
+                <div class="details-text">
+                    <h3>Free-Field Space</h3>
+                    <p>The main function of an anechoic chamber is to provide a free-field space for acoustic testing. A free field refers to sound wave propagation in an infinite space without any reflecting surfaces.</p>
+                    <p>In nature, a free-field space is achieved by suspending the sound source in the air, far from any reflecting objects, allowing sound waves to propagate freely in all 360° directions.</p>
+                    <p>Sound wave propagation in free-field space has specific physical definitions:</p>
+                    <ol>
+                        <li>For point sources, sound pressure decreases with distance according to the inverse square law;</li>
+                        <li>Under standard temperature and pressure, the sound pressure level equals the sound intensity level. This is the theoretical basis for measuring sound power in anechoic chambers.</li>
+                    </ol>
+
+                    <h3>Background Noise</h3>
+                    <p>Another function of the anechoic chamber is to provide a low background noise environment to meet testing requirements. According to ISO3745-2003, ANSI S12.55-2006, and GB6882 standards, within the test frequency range, the background noise level should be at least 6dB lower than the sound source being measured, with 12dB being preferable.</p>
+
+                    <h3>Cut-off Frequency</h3>
+                    <p>An anechoic chamber simulates free-field space indoors, requiring absorption coefficients above 99% on all surfaces. Designing a 100% absorptive material across the full frequency range (20Hz-20000Hz) is impossible. Common materials easily absorb high-frequency waves, while low-frequency absorption relates to material thickness (wedge size). The cut-off frequency defines the point above which free-field conditions are met.</p>
+
+                    <h3>Anechoic Chamber Verification Methods</h3>
+                    <p>In practical engineering, free-field space verification is crucial for determining chamber quality. ISO 3745, ANSI S12.55, and GB 6882 provide methods for verifying anechoic chamber free-field conditions.</p>
+                    <p>Additionally, background noise is another crucial indicator, measured as the combination of instrument and chamber background noise.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

@@ -510,14 +510,14 @@
 }
 
 /* Technical Details */
-.product-technical-details {
+.technical-details {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.product-technical-details h3 {
+.technical-details h3 {
     color: var(--bs-light);
     font-size: 1.2rem;
     margin-top: 2rem;
@@ -526,18 +526,18 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.product-technical-details h3:first-child {
+.technical-details h3:first-child {
     margin-top: 0;
 }
 
-.product-technical-details p {
+.technical-details p {
     font-size: 0.95rem;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1.5rem;
 }
 
-.product-technical-details p:last-child {
+.technical-details p:last-child {
     margin-bottom: 0;
 }
 
@@ -550,6 +550,11 @@
 .g-4 {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 1.5rem;
+}
+
+/* Product Gallery Section */
+.product-gallery {
+    margin: 2rem 0;
 }
 
 /* After page-with-sidebar styles */
