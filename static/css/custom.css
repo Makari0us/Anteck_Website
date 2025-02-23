@@ -551,3 +551,16 @@
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 1.5rem;
 }
+
+/* After page-with-sidebar styles */
+.product-banner {
+    width: 100%;
+    display: block;
+    margin-top: -1px; /* Remove any gap */
+}
+
+.product-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
