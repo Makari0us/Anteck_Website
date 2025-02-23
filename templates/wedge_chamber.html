@@ -17,7 +17,13 @@
             </div>
             <div class="col-md-6">
                 <div class="product-description">
+                    {% if current_lang == 'zh' %}
                     <h2>尖劈消声室</h2>
+                    {% elif current_lang == 'vi' %}
+                    <h2>Phòng tiêu âm hình nêm</h2>
+                    {% else %}
+                    <h2>Wedge Anechoic Chamber</h2>
+                    {% endif %}
                     <div class="description-text">
                         {% if current_lang == 'zh' %}
                         消声室基本概念
@@ -32,11 +38,11 @@
                     </div>
                     <div class="consulting-number">
                         {% if current_lang == 'zh' %}
-                        咨询电话：400-0086-026
+                        咨询电话：+86 (134) 5166-1990
                         {% elif current_lang == 'vi' %}
-                        Số điện thoại tư vấn: 400-0086-026
+                        Số điện thoại tư vấn: +86 (134) 5166-1990
                         {% else %}
-                        Consultation Number: 400-0086-026
+                        Consultation Number: +1 (949) 992-3596
                         {% endif %}
                     </div>
                 </div>
