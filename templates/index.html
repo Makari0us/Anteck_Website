@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero-section text-center text-light">
+    <div class="container">
+        <h1 class="display-4">{{ content.hero_title }}</h1>
+        <p class="lead">{{ content.hero_text }}</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">{{ content.about_title }}</h2>
+                <p class="lead">{{ content.about_text }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section bg-dark text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">{{ content.contact_title }}</h2>
+                <p class="lead">{{ content.contact_text }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

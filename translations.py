@@ -1,0 +1,38 @@
+TRANSLATIONS = {
+    'en': {
+        'title': 'Welcome to Our Website',
+        'nav_home': 'Home',
+        'nav_about': 'About',
+        'nav_contact': 'Contact',
+        'hero_title': 'Learn About Our Services',
+        'hero_text': 'We provide quality solutions for your needs',
+        'about_title': 'About Us',
+        'about_text': 'We are a dedicated team working to deliver excellence',
+        'contact_title': 'Contact Us',
+        'contact_text': 'Get in touch with us today',
+    },
+    'vi': {
+        'title': 'Chào mừng đến với Trang web của Chúng tôi',
+        'nav_home': 'Trang chủ',
+        'nav_about': 'Giới thiệu',
+        'nav_contact': 'Liên hệ',
+        'hero_title': 'Tìm hiểu về Dịch vụ của Chúng tôi',
+        'hero_text': 'Chúng tôi cung cấp giải pháp chất lượng cho nhu cầu của bạn',
+        'about_title': 'Về Chúng tôi',
+        'about_text': 'Chúng tôi là một đội ngũ tận tâm làm việc để mang lại sự xuất sắc',
+        'contact_title': 'Liên hệ với Chúng tôi',
+        'contact_text': 'Hãy liên hệ với chúng tôi ngay hôm nay',
+    },
+    'zh': {
+        'title': '欢迎访问我们的网站',
+        'nav_home': '首页',
+        'nav_about': '关于',
+        'nav_contact': '联系',
+        'hero_title': '了解我们的服务',
+        'hero_text': '我们为您的需求提供优质解决方案',
+        'about_title': '关于我们',
+        'about_text': '我们是一个致力于追求卓越的专业团队',
+        'contact_title': '联系我们',
+        'contact_text': '立即与我们联系',
+    }
+}

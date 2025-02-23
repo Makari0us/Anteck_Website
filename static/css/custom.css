@@ -1,0 +1,37 @@
+/* Custom fonts for different languages */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+/* Language-specific font families */
+[lang="en"] {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+[lang="vi"] {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+[lang="zh"] {
+    font-family: 'Noto Sans SC', 'Noto Sans TC', sans-serif;
+}
+
+/* Language selector styling */
+.language-selector {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+.language-selector .btn {
+    margin: 0 0.25rem;
+}
+
+/* Custom spacing utilities */
+.hero-section {
+    padding: 4rem 0;
+    background: var(--bs-dark);
+}
+
+.section {
+    padding: 3rem 0;
+}
