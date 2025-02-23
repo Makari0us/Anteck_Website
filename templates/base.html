@@ -78,21 +78,21 @@
 
     <!-- Main Content -->
     <div class="container">
-        {% if request.endpoint != 'index' %}
-        <div class="page-with-sidebar">
-            <div class="sidebar">
-                {% include '_product_sidebar.html' %}
-            </div>
-            <div class="main-content">
-        {% endif %}
-                {% block page_content %}{% endblock %}
-                {% if request.endpoint not in ['index', 'cases', 'about'] %}
-                {% include '_contact_info.html' %}
-                {% endif %}
-        {% if request.endpoint != 'index' %}
-            </div>
+        <div class="page-content">
+            {% if request.endpoint != 'index' %}
+                <div class="page-with-sidebar">
+                    <div class="sidebar">
+                        {% include '_product_sidebar.html' %}
+                        {% if request.endpoint not in ['cases', 'about'] %}
+                        {% include '_contact_info.html' %}
+                        {% endif %}
+                    </div>
+                    <div class="main-content">
+                    </div>
+                </div>
+            {% endif %}
+            {% block page_content %}{% endblock %}
         </div>
-        {% endif %}
     </div>
 
     <footer class="bg-dark text-light py-4 mt-5">
