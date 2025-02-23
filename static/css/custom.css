@@ -107,10 +107,11 @@
 .hero-section {
     padding: 4rem 0;
     background: var(--bs-dark);
+    margin-bottom: 1rem; /* Added margin for better spacing */
 }
 
 .section {
-    padding: 3rem 0;
+    padding: 2rem 0; /* Updated padding */
 }
 
 /* Carousel styling */
@@ -398,11 +399,17 @@
     }
 }
 
-/* Product Detail Page Styles */
+/* Product Detail Page Styles - UPDATED */
 .product-image {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.product-image:hover {
+    transform: translateY(-5px);
 }
 
 .product-image img {
@@ -416,6 +423,7 @@
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
 }
 
 .product-description h2 {
@@ -452,13 +460,18 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Product Introduction Styles */
+
+/* Gallery Section */
+.gallery-section {
+    margin: 2rem 0;
+}
+
+/* Product Introduction */
 .product-introduction {
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 1rem;
 }
 
 .introduction-text {
@@ -468,13 +481,12 @@
     margin-bottom: 0;
 }
 
-/* Product Categories Styles */
+/* Product Categories */
 .product-categories {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 1rem;
 }
 
 .product-categories h3 {
@@ -497,13 +509,12 @@
     margin-bottom: 1rem;
 }
 
-/* Product Technical Details Styles */
+/* Technical Details */
 .product-technical-details {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 2rem;
 }
 
 .product-technical-details h3 {
@@ -528,4 +539,15 @@
 
 .product-technical-details p:last-child {
     margin-bottom: 0;
+}
+
+/* Section Spacing */
+.section {
+    padding: 2rem 0;
+}
+
+/* Responsive Grid */
+.g-4 {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
 }
