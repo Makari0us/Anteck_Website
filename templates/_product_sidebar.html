@@ -1,30 +1,42 @@
 <!-- Product Center Sidebar -->
 <div class="product-sidebar">
-    <h2 class="sidebar-header">{{ content.product_center }}</h2>
+    <h2 class="sidebar-header">产品中心</h2>
     <div class="sidebar-menu">
         <a href="{{ url_for('panel_chamber') }}" class="menu-item">
-            {{ content.nav_panel_chamber }}
+            平板消声室
+            <span class="menu-icon">⌘</span>
         </a>
         <a href="{{ url_for('wedge_chamber') }}" class="menu-item">
-            {{ content.nav_wedge_chamber }}
+            尖劈消声室
+            <span class="menu-icon">⌘</span>
         </a>
         <a href="{{ url_for('soundproof_boxes') }}" class="menu-item">
-            {{ content.nav_boxes }}
+            消声箱静音箱
+            <span class="menu-icon">⌘</span>
+        </a>
+        <a href="#" class="menu-item">
+            听音室视听室
+            <span class="menu-icon">⌘</span>
         </a>
         <a href="{{ url_for('silent_rooms') }}" class="menu-item">
-            {{ content.nav_rooms }}
+            静音室隔音室
+            <span class="menu-icon">⌘</span>
         </a>
         <a href="#" class="menu-item">
-            {{ content.nav_isolation_cover }}
+            隔声罩
+            <span class="menu-icon">⌘</span>
         </a>
         <a href="#" class="menu-item">
-            {{ content.nav_reverb_room }}
+            混响室
+            <span class="menu-icon">⌘</span>
         </a>
         <a href="#" class="menu-item">
-            {{ content.nav_online_acoustic_test }}
+            生产线在线声学检测房
+            <span class="menu-icon">⌘</span>
         </a>
         <a href="#" class="menu-item">
-            {{ content.nav_acoustic_instruments }}
+            声学测试仪器
+            <span class="menu-icon">⌘</span>
         </a>
     </div>
 </div>
