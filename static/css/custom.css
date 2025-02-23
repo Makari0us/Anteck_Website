@@ -329,14 +329,14 @@
 }
 
 /* Product Sidebar Styles */
-.product-sidebar {
+.product-sidebar, .contact-info {
     background: #3c7ab7;
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 20px;
 }
 
-.sidebar-header {
+.sidebar-header, .contact-info h3 {
     background: #3c7ab7;
     color: white;
     padding: 15px;
@@ -372,23 +372,41 @@
     border-bottom: none;
 }
 
-/* Layout for pages with sidebar */
+/* Page Layout with Sidebar */
 .page-with-sidebar {
     display: flex;
     gap: 30px;
     padding: 30px 0;
 }
 
+.main-content {
+    flex-grow: 1;
+    order: 1; /* This ensures main content appears first */
+}
+
 .sidebar {
     width: 280px;
     flex-shrink: 0;
+    order: 2; /* This ensures sidebar appears second */
 }
 
-.main-content {
-    flex-grow: 1;
+
+.contact-details {
+    color: white;
 }
 
-/* Add media query for responsive design */
+.contact-details p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    padding: 0 15px;
+}
+
+.contact-details p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .page-with-sidebar {
         flex-direction: column;
@@ -396,6 +414,12 @@
 
     .sidebar {
         width: 100%;
+        margin-bottom: 1.5rem;
+        order: 2; /* Keep sidebar below on mobile */
+    }
+
+    .main-content {
+        order: 1; /* Keep main content on top on mobile */
     }
 }
 
@@ -694,29 +718,31 @@
 /* Contact Info Section - Updated for sidebar placement */
 .contact-info {
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 1.5rem;
+    background: #3c7ab7;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 20px;
 }
 
 .contact-info h3 {
-    color: var(--bs-light);
+    background: #3c7ab7;
+    color: white;
+    padding: 15px;
+    margin: -1.5rem -1.5rem 15px -1.5rem;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid rgba(228, 142, 56, 0.5);
-    display: inline-block;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-details {
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
 }
 
 .contact-details p {
     margin-bottom: 0.5rem;
     line-height: 1.5;
     font-size: 0.9rem;
+    padding: 0 15px;
 }
 
 .contact-details p:last-child {
@@ -727,6 +753,16 @@
 .sidebar {
     width: 280px;
     flex-shrink: 0;
+}
+
+.page-with-sidebar {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.main-content {
+    flex-grow: 1;
 }
 
 @media (max-width: 768px) {

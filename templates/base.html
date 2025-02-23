@@ -81,17 +81,19 @@
         <div class="page-content">
             {% if request.endpoint != 'index' %}
                 <div class="page-with-sidebar">
+                    <div class="main-content">
+                        {% block page_content %}{% endblock %}
+                    </div>
                     <div class="sidebar">
                         {% include '_product_sidebar.html' %}
                         {% if request.endpoint not in ['cases', 'about'] %}
                         {% include '_contact_info.html' %}
                         {% endif %}
                     </div>
-                    <div class="main-content">
-                    </div>
                 </div>
+            {% else %}
+                {% block page_content %}{% endblock %}
             {% endif %}
-            {% block page_content %}{% endblock %}
         </div>
     </div>
 

@@ -1,5 +1,11 @@
 <div class="contact-info">
-    <h3>{{ content.contact_us }}</h3>
+    {% if current_lang == 'zh' %}
+    <h3>联系方式</h3>
+    {% elif current_lang == 'vi' %}
+    <h3>Thông tin liên hệ</h3>
+    {% else %}
+    <h3>Our Contact Info</h3>
+    {% endif %}
     <div class="contact-details">
         {% if current_lang == 'zh' %}
         <p>苏州岸肯电子科技有限公司</p>
