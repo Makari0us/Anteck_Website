@@ -764,17 +764,37 @@
     height: 200px;
 }
 
+/* Client Reference Table */
+.client-reference-table {
+    margin-top: 2rem;
+}
+
+.client-reference-table .table {
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.client-reference-table .table td {
+    padding: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border-color: rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.client-reference-table .table td br {
+    content: "";
+    display: block;
+    margin: 0.2rem 0;
+}
+
 /* After page-with-sidebar styles */
 .product-banner {
     width: 100%;
     display: block;
     margin-top: -1px; /* Remove any gap */
-}
-
-.product-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* Contact Info Section - Updated for sidebar placement */
