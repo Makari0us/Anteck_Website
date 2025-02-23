@@ -64,6 +64,121 @@
     </div>
 </section>
 
+<!-- Product Showcase Section -->
+<section class="product-showcase">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Panel Anechoic Chamber -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/products/panel-chamber.jpg') }}" alt="Panel Anechoic Chamber">
+                    </div>
+                    <div class="product-title">
+                        {% if current_lang == 'zh' %}
+                        <h3>平板消声室</h3>
+                        {% elif current_lang == 'vi' %}
+                        <h3>Phòng tiêu âm phẳng</h3>
+                        {% else %}
+                        <h3>Panel Anechoic Chamber</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wedge Anechoic Chamber -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/products/wedge-chamber.jpg') }}" alt="Wedge Anechoic Chamber">
+                    </div>
+                    <div class="product-title">
+                        {% if current_lang == 'zh' %}
+                        <h3>尖劈消声室</h3>
+                        {% elif current_lang == 'vi' %}
+                        <h3>Phòng tiêu âm hình nêm</h3>
+                        {% else %}
+                        <h3>Wedge Anechoic Chamber</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soundproof Box -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/products/soundproof-box.jpg') }}" alt="Soundproof Box">
+                    </div>
+                    <div class="product-title">
+                        {% if current_lang == 'zh' %}
+                        <h3>消声箱|静音箱</h3>
+                        {% elif current_lang == 'vi' %}
+                        <h3>Hộp tiêu âm | Hộp cách âm</h3>
+                        {% else %}
+                        <h3>Soundproof Box | Silent Box</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listening Room -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/products/listening-room.jpg') }}" alt="Listening Room">
+                    </div>
+                    <div class="product-title">
+                        {% if current_lang == 'zh' %}
+                        <h3>听音室|视听室</h3>
+                        {% elif current_lang == 'vi' %}
+                        <h3>Phòng nghe | Phòng nghe nhìn</h3>
+                        {% else %}
+                        <h3>Listening Room | AV Room</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Silent Room -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/products/silent-room.jpg') }}" alt="Silent Room">
+                    </div>
+                    <div class="product-title">
+                        {% if current_lang == 'zh' %}
+                        <h3>静音室|隔音室</h3>
+                        {% elif current_lang == 'vi' %}
+                        <h3>Phòng cách âm | Phòng cách ly âm</h3>
+                        {% else %}
+                        <h3>Silent Room | Soundproof Room</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reverb Room -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/products/reverb-room.jpg') }}" alt="Reverb Room">
+                    </div>
+                    <div class="product-title">
+                        {% if current_lang == 'zh' %}
+                        <h3>混响室</h3>
+                        {% elif current_lang == 'vi' %}
+                        <h3>Phòng vang âm</h3>
+                        {% else %}
+                        <h3>Reverberation Room</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- About Section -->
 <section id="about" class="section">
     <div class="container">
