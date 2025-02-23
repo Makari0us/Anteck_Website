@@ -9,11 +9,71 @@
 
 <section class="section">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="mb-4">Soundproof Boxes</h2>
-                <!-- Content will be added here -->
+        <!-- Main Product Introduction -->
+        <div class="row align-items-start g-4">
+            <div class="col-lg-6">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='images/products/soundproof-box-main.jpg') }}" alt="Soundproof Box" class="img-fluid">
+                </div>
             </div>
+            <div class="col-lg-6">
+                <div class="product-description">
+                    {% if current_lang == 'zh' %}
+                    <h2>消声箱静音箱</h2>
+                    <p class="description-text">该款消声箱按照我司专利隔音技术，可以在隔音壁体100mm即可达到50dB以上的隔音量，是目前市场上隔离度较高的箱体类产品。</p>
+                    <p class="consulting-number">咨询电话：+86 (134) 5166-1990</p>
+                    {% elif current_lang == 'vi' %}
+                    <h2>Hộp tiêu âm | Hộp cách âm</h2>
+                    <p class="description-text">Hộp tiêu âm này, theo công nghệ cách âm độc quyền của công ty chúng tôi, có thể đạt được mức cách âm trên 50dB chỉ với vách ngăn dày 100mm, là sản phẩm có độ cách ly cao nhất trên thị trường hiện nay.</p>
+                    <p class="consulting-number">Số tư vấn: +86 (134) 5166-1990</p>
+                    {% else %}
+                    <h2>Soundproof Box | Silent Box</h2>
+                    <p class="description-text">This soundproof box, utilizing our patented soundproofing technology, can achieve over 50dB of sound isolation with just 100mm thick walls, making it one of the highest isolation enclosures currently available in the market.</p>
+                    <p class="consulting-number">Consulting Number: +1 (949) 992-3596</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details mt-5">
+            {% if current_lang == 'zh' %}
+            <h3>1.尖劈消声箱功用：</h3>
+            <p>箱体内部放置人工嘴，人工耳，防真人头，噪音计等，用于测试、调试产品以确保部品通过相关音频测试。</p>
+
+            <h3>2.尖劈消声箱大小：</h3>
+            <p>举例：外部1100mm*1100mm*1200mm左右，内部600mm*600mm*600mm。</p>
+
+            <h3>3.尖劈消声箱性能：</h3>
+            <p>本底噪音≤25dB，隔离度50dB，截止频率400hz</p>
+
+            <h3>4.尖劈消声箱特点：</h3>
+            <p>精度高，吸音效果好，即缩小的消声室，占用空间消大，价格翻倍，主要用于对测试准确度比较高的，有足够大空间的实验室内进行测试的客户，用于汽车部件、信息、电子、及家电行业各部件的精确测试。</p>
+            {% elif current_lang == 'vi' %}
+            <h3>1. Công dụng của hộp tiêu âm:</h3>
+            <p>Bên trong hộp được đặt miệng nhân tạo, tai nhân tạo, đầu giả, máy đo tiếng ồn, v.v., dùng để kiểm tra và điều chỉnh sản phẩm để đảm bảo các bộ phận vượt qua các bài kiểm tra âm thanh liên quan.</p>
+
+            <h3>2. Kích thước hộp tiêu âm:</h3>
+            <p>Ví dụ: Kích thước ngoài khoảng 1100mm*1100mm*1200mm, kích thước trong 600mm*600mm*600mm.</p>
+
+            <h3>3. Hiệu suất hộp tiêu âm:</h3>
+            <p>Độ ồn nền ≤25dB, độ cách ly 50dB, tần số cắt 400hz</p>
+
+            <h3>4. Đặc điểm hộp tiêu âm:</h3>
+            <p>Độ chính xác cao, hiệu quả hấp thụ âm tốt, như một phòng tiêu âm thu nhỏ, chiếm không gian lớn, giá cao gấp đôi, chủ yếu dùng cho khách hàng có yêu cầu cao về độ chính xác kiểm tra và có không gian phòng thí nghiệm đủ lớn, dùng để kiểm tra chính xác các bộ phận trong ngành ô tô, thông tin, điện tử và gia dụng.</p>
+            {% else %}
+            <h3>1. Soundproof Box Usage:</h3>
+            <p>The box interior accommodates artificial mouth, artificial ear, simulated head, noise meter, etc., used for testing and debugging products to ensure components pass relevant audio tests.</p>
+
+            <h3>2. Soundproof Box Dimensions:</h3>
+            <p>Example: External dimensions approximately 1100mm*1100mm*1200mm, internal dimensions 600mm*600mm*600mm.</p>
+
+            <h3>3. Soundproof Box Performance:</h3>
+            <p>Background noise ≤25dB, isolation degree 50dB, cutoff frequency 400hz</p>
+
+            <h3>4. Soundproof Box Features:</h3>
+            <p>High precision, good sound absorption effect, essentially a miniaturized anechoic chamber, occupies significant space, double the price, mainly used for customers requiring high testing accuracy with sufficient laboratory space, used for precise testing of components in automotive, information, electronics, and home appliance industries.</p>
+            {% endif %}
         </div>
     </div>
 </section>
