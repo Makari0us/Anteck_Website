@@ -70,7 +70,7 @@
         <div class="row g-4">
             <!-- Panel Anechoic Chamber -->
             <div class="col-md-4">
-                <div class="product-card">
+                <a href="{{ url_for('panel_chamber') }}" class="product-card">
                     <div class="image-container">
                         <img src="{{ url_for('static', filename='images/products/panel-chamber.jpg') }}" alt="Panel Anechoic Chamber">
                     </div>
@@ -83,12 +83,12 @@
                         <h3>Panel Anechoic Chamber</h3>
                         {% endif %}
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Wedge Anechoic Chamber -->
             <div class="col-md-4">
-                <div class="product-card">
+                <a href="{{ url_for('wedge_chamber') }}" class="product-card">
                     <div class="image-container">
                         <img src="{{ url_for('static', filename='images/products/wedge-chamber.jpg') }}" alt="Wedge Anechoic Chamber">
                     </div>
@@ -101,12 +101,12 @@
                         <h3>Wedge Anechoic Chamber</h3>
                         {% endif %}
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Soundproof Box -->
             <div class="col-md-4">
-                <div class="product-card">
+                <a href="{{ url_for('soundproof_boxes') }}" class="product-card">
                     <div class="image-container">
                         <img src="{{ url_for('static', filename='images/products/soundproof-box.jpg') }}" alt="Soundproof Box">
                     </div>
@@ -119,13 +119,13 @@
                         <h3>Soundproof Box | Silent Box</h3>
                         {% endif %}
                     </div>
-                </div>
+                </a>
             </div>
 
-            <!-- Listening Room -->
+            <!-- Second Row - Non-linked products -->
             <div class="col-md-4">
                 <div class="product-card">
-                    <div class="image-container">
+                    <div class="image-container hexagon">
                         <img src="{{ url_for('static', filename='images/products/listening-room.jpg') }}" alt="Listening Room">
                     </div>
                     <div class="product-title">
@@ -140,10 +140,9 @@
                 </div>
             </div>
 
-            <!-- Silent Room -->
             <div class="col-md-4">
                 <div class="product-card">
-                    <div class="image-container">
+                    <div class="image-container hexagon">
                         <img src="{{ url_for('static', filename='images/products/silent-room.jpg') }}" alt="Silent Room">
                     </div>
                     <div class="product-title">
@@ -158,10 +157,9 @@
                 </div>
             </div>
 
-            <!-- Reverb Room -->
             <div class="col-md-4">
                 <div class="product-card">
-                    <div class="image-container">
+                    <div class="image-container hexagon">
                         <img src="{{ url_for('static', filename='images/products/reverb-room.jpg') }}" alt="Reverb Room">
                     </div>
                     <div class="product-title">

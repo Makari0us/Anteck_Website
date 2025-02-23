@@ -266,6 +266,8 @@
 }
 
 .product-card {
+    display: block;
+    text-decoration: none;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -283,6 +285,12 @@
     position: relative;
     height: 240px;
     overflow: hidden;
+}
+
+.product-card .image-container.hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 20px;
+    height: 200px;
 }
 
 .product-card .image-container img {
@@ -307,6 +315,11 @@
     margin: 0;
     color: var(--bs-light);
     font-weight: 500;
+}
+
+/* First row special styling */
+.product-card:hover .product-title {
+    background: rgba(228, 142, 56, 0.2); /* Orange tint on hover */
 }
 
 /* Add padding between sections */
