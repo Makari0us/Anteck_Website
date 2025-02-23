@@ -14,21 +14,6 @@
     font-family: 'Noto Sans SC', 'Noto Sans TC', sans-serif;
 }
 
-/* Language selector styling */
-.language-selector {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1000;
-    background-color: var(--bs-dark);
-    padding: 0.5rem 1rem;
-    width: 100%;
-}
-
-.language-selector .btn {
-    margin-right: 0.5rem;
-}
-
 /* Logo styling */
 .navbar-brand {
     display: flex;
@@ -60,6 +45,43 @@
     font-size: 0.85rem;
     line-height: 1.2;
     opacity: 0.9;
+}
+
+/* Menu bar styling */
+.menu-bar {
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-bar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.menu-bar .nav-link:hover {
+    color: white;
+}
+
+.menu-bar .nav-link.active {
+    background-color: transparent;
+    color: white;
+}
+
+.menu-bar .nav-link.orange-bg {
+    background-color: #e48e38;
+    color: white;
+}
+
+.menu-bar .nav-link.orange-bg:hover {
+    background-color: #d17f2d;
+}
+
+/* Language buttons */
+.language-buttons .btn {
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
 }
 
 /* Custom spacing utilities */

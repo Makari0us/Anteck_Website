@@ -21,10 +21,21 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+        </div>
+    </nav>
+
+    <!-- Menu Bar -->
+    <div class="menu-bar bg-dark">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <div class="language-buttons me-4">
+                    <button class="btn btn-sm btn-outline-light language-btn" data-lang="en">EN</button>
+                    <button class="btn btn-sm btn-outline-light language-btn" data-lang="vi">VI</button>
+                    <button class="btn btn-sm btn-outline-light language-btn" data-lang="zh">中文</button>
+                </div>
+                <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">{{ content.nav_home }}</a>
+                        <a class="nav-link active orange-bg" href="/">{{ content.nav_home }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('panel_chamber') }}">{{ content.nav_panel_chamber }}</a>
@@ -49,15 +60,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
-
-    <!-- Language Selector -->
-    <div class="language-selector">
-        <div class="container">
-            <button class="btn btn-sm btn-outline-light language-btn" data-lang="en">EN</button>
-            <button class="btn btn-sm btn-outline-light language-btn" data-lang="vi">VI</button>
-            <button class="btn btn-sm btn-outline-light language-btn" data-lang="zh">中文</button>
         </div>
     </div>
 
