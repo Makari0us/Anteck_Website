@@ -126,6 +126,100 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="product-technical-details">
+                    {% if current_lang == 'zh' %}
+                    <h3>消声室功用</h3>
+                    <p>主要用于汽车、机电、家电、通讯产品等标准实验精密测试。</p>
+
+                    <h3>消声室大小</h3>
+                    <p>举例：外部5600mm*3200mm*4500mm左右<br>
+                       内部3000mm*2500mm*3000mm</p>
+
+                    <h3>消声室性能</h3>
+                    <p>举例：本底噪音小于5dB，截止频率80hz 。</p>
+
+                    <h3>消声室特点</h3>
+                    <p>标准声学自由场空间，用于精密声学测试,出具第三方检测校准报告。</p>
+
+                    <h3>消声室（半消声室）基本概念</h3>
+                    <p>消声室（半消声室）是进行各种噪声测试和声学研究的不可缺少的试验环境。岸肯公司在继承了所多年声学领域研究成果的同时，结合自身在工程方面的实际经验，在国内设计和建造了多个各具特色的消声室。</p>
+
+                    <h3>设计</h3>
+                    <p>在充分了解客户的需求后，岸肯公司根据标准对消声室进行设计。设计中的声学指标包括本底噪声、截止频率、可用空间、减振等。在满足声学指标的前提下，设计中同时考虑使用的方便性、尖劈门、试件（产品）的安装与搬运、通风状况、仪器的走线、监控条件、室内环境等。岸肯公司设计的每一个消声室都是内装修的精品。</p>
+
+                    <h3>施工</h3>
+                    <p>在施工过程中，公司广泛控制材料的选用，以确保室内环境污染符合国家标准要求。</p>
+
+                    <h3>自由场空间</h3>
+                    <p>消声室的主要功能是为声学测试提供一个自由场空间或半自由场空间。自由场是指声波在无限大空间里传播时，不存在任何反射体和反射面。自然界中的自由场空间是将声源置于空中，远离任何反射物，声波可自由地向360°全方位角传播。半自由场空间是指自由空间中有一个反射面，声波只能在180°半球方位自由传播。常见的半自由场空间如水泥地面的大型露天停车场、室外篮球场、停机坪...等。</p>
+
+                    <h3>波在自由场半自由场空间里传播有特定的物理定义</h3>
+                    <p>(1) 对点声源声压随距离衰减，这就是声能的反平方律<br>
+                       (2) 声压级在常温常压下等于声强级，这是在消声室里测量声功率的理论基础。</p>
+
+                    <h3>背景噪声</h3>
+                    <p>尽管水泥地面的大型露天停车场、室外篮球场、停机坪...等也能提供半自由场空间，但测量时会受背景噪声的影响。试想，冰箱的噪声在30dB (A) 而环境的背景噪声在45dB (A)，要测量冰箱的噪声是不可能的。所以消声室另一个功能是提供低背景噪声的环境以适应测试环境的要求。<br>
+                       根据国标GB6882-86<<声学 噪声源声功率级的测定消声室和半消声室精密法>>，在测试频率范围内，背景噪声的声压级至少比被测声源的声压级低6dB，较好的低12dB。</p>
+
+                    <h3>截止频率</h3>
+                    <p>消声室是要在室内模拟自由场或半自由场空间，所以要求墙面吸声系数为99%以上。半自由场地面的反射系数为95%以上。设计一种能做到全频带（20 Hz－20000 Hz）的100%吸声体，是不可能的。因为迎面的材料对高频声波很容易被吸收，而低频吸收则和材料的厚度（尖劈的长度）有关。截止频率是指在此频率以上，墙面的吸声系数能保证99%的吸声系数。实际工程中的（半）自由场空间指对截止频率以上的声波，消声室内为（半）自由场空间，截止频率越低，尖劈的长度要求就越大。一般而言，尖劈的长度适用于1/4波长理论。</p>
+
+                    <h3>消声室的鉴定方法</h3>
+                    <p>在实际工程中，声场自由空间是鉴定消声室好坏的关键依据。国标ISO 3744和国标GB 6882-2016了鉴定消声室自由空间的鉴定方法。<br>
+                       另外，本底噪声是消声室的另一个重要指标。测量中得到的本底噪声是仪器的本底噪声加消声室的本底噪声。</p>
+                    {% elif current_lang == 'vi' %}
+                    <h3>Mục đích sử dụng phòng tiêu âm</h3>
+                    <p>Chủ yếu được sử dụng cho thử nghiệm chính xác theo tiêu chuẩn cho ô tô, thiết bị điện cơ, thiết bị gia dụng và sản phẩm viễn thông.</p>
+
+                    {% comment %} Rest of Vietnamese translation... {% endcomment %}
+                    {% else %}
+                    <h3>Anechoic Chamber Usage</h3>
+                    <p>Primarily used for standardized precision testing of automotive, electromechanical, household appliances, and telecommunications products.</p>
+
+                    <h3>Chamber Dimensions</h3>
+                    <p>Example: External dimensions approximately 5600mm*3200mm*4500mm<br>
+                       Internal dimensions 3000mm*2500mm*3000mm</p>
+
+                    <h3>Chamber Performance</h3>
+                    <p>Example: Background noise less than 5dB, cutoff frequency 80hz.</p>
+
+                    <h3>Chamber Features</h3>
+                    <p>Standard acoustic free-field space, used for precision acoustic testing, provides third-party testing and calibration reports.</p>
+
+                    <h3>Basic Concept of Anechoic Chamber (Semi-Anechoic)</h3>
+                    <p>The anechoic chamber (semi-anechoic) is an essential testing environment for various noise tests and acoustic research. Anken company has inherited years of acoustic research results while combining practical engineering experience to design and construct multiple distinctive anechoic chambers domestically.</p>
+
+                    <h3>Design</h3>
+                    <p>After fully understanding client requirements, Anken company designs anechoic chambers according to standards. The acoustic indicators in the design include background noise, cutoff frequency, usable space, and vibration reduction. While meeting acoustic indicators, the design also considers convenience, wedge doors, test specimen installation and transport, ventilation conditions, instrument wiring, monitoring conditions, and indoor environment. Every anechoic chamber designed by Anken company is a masterpiece of interior finishing.</p>
+
+                    <h3>Construction</h3>
+                    <p>During construction, the company extensively controls material selection to ensure indoor environmental pollution meets national standard requirements.</p>
+
+                    <h3>Free-Field Space</h3>
+                    <p>The main function of an anechoic chamber is to provide a free-field or semi-free-field space for acoustic testing. A free field refers to sound wave propagation in infinite space without any reflecting bodies or surfaces. In nature, a free-field space is created by placing the sound source in the air, far from any reflecting objects, allowing sound waves to propagate freely in 360° all directions. A semi-free-field space has one reflecting surface in the free space, where sound waves can only propagate freely in a 180° hemisphere. Common semi-free-field spaces include large outdoor parking lots with cement surfaces, outdoor basketball courts, and aircraft parking areas.</p>
+
+                    <h3>Wave Propagation Physics in Free-Field and Semi-Free-Field Spaces</h3>
+                    <p>(1) For point sound sources, sound pressure decreases with distance, following the inverse square law of sound energy<br>
+                       (2) Sound pressure level equals sound intensity level under normal temperature and pressure, which is the theoretical basis for measuring sound power in anechoic chambers.</p>
+
+                    <h3>Background Noise</h3>
+                    <p>Although large outdoor parking lots with cement surfaces, outdoor basketball courts, and aircraft parking areas can provide semi-free-field spaces, measurements are affected by background noise. Consider that a refrigerator's noise at 30dB (A) cannot be measured when environmental background noise is 45dB (A). Therefore, another function of anechoic chambers is to provide a low background noise environment suitable for testing requirements.<br>
+                       According to national standard GB6882-86 "Acoustics - Determination of Sound Power Levels of Noise Sources Using Sound Pressure - Precision Methods for Anechoic and Hemi-Anechoic Rooms," within the test frequency range, background noise level must be at least 6dB lower than the measured source's sound pressure level, preferably 12dB lower.</p>
+
+                    <h3>Cutoff Frequency</h3>
+                    <p>An anechoic chamber simulates free-field or semi-free-field space indoors, requiring wall surface absorption coefficients above 99%. Semi-free-field ground reflection coefficients should be above 95%. Designing a 100% sound absorber across the full frequency band (20 Hz－20000 Hz) is impossible. High-frequency sound waves are easily absorbed by front-facing materials, while low-frequency absorption relates to material thickness (wedge length). The cutoff frequency indicates frequencies above which wall surfaces maintain 99% absorption coefficient. In practical engineering, (semi-)free-field space refers to sound waves above the cutoff frequency, with lower cutoff frequencies requiring longer wedges. Generally, wedge length follows the quarter-wavelength theory.</p>
+
+                    <h3>Chamber Verification Methods</h3>
+                    <p>In practical engineering, free-field space characteristics are key criteria for verifying anechoic chamber quality. National standards ISO 3744 and GB 6882-2016 specify methods for verifying anechoic chamber free-field space.<br>
+                       Additionally, background noise is another crucial indicator. The measured background noise combines instrument background noise and chamber background noise.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
