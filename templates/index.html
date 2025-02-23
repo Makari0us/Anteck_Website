@@ -34,7 +34,9 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-4">
-                <img src="{{ url_for('static', filename='images/testing-room.jpg') }}" class="img-fluid mb-4" alt="Testing Room">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/testing-room.jpg') }}" alt="Testing Room">
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="testing-description text-center">
@@ -54,7 +56,9 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <img src="{{ url_for('static', filename='images/technicians.jpg') }}" class="img-fluid mb-4" alt="Testing Process">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/technicians.jpg') }}" alt="Testing Process">
+                </div>
             </div>
         </div>
     </div>

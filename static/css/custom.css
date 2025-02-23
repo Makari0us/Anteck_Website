@@ -167,24 +167,59 @@
     padding-top: 2rem;
 }
 
-.testing-facility img {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+.testing-facility .image-container {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
 }
 
-.testing-facility img:hover {
-    transform: scale(1.02);
+.testing-facility .image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.testing-facility .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.testing-facility .image-container:hover img {
+    transform: scale(1.05);
 }
 
 .testing-description {
-    padding: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 1rem;
 }
 
 .testing-description h2 {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
     color: var(--bs-light);
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.testing-description h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: #e48e38;
 }
 
 .testing-description p {
@@ -198,5 +233,27 @@
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
     font-style: italic;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.testing-description .signature:before,
+.testing-description .signature:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 20px;
+    top: 50%;
+}
+
+.testing-description .signature:before {
+    right: 100%;
+    margin-right: 10px;
+}
+
+.testing-description .signature:after {
+    left: 100%;
+    margin-left: 10px;
 }
