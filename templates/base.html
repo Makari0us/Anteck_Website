@@ -86,6 +86,9 @@
             <div class="main-content">
         {% endif %}
                 {% block page_content %}{% endblock %}
+                {% if request.endpoint not in ['index', 'cases', 'about'] %}
+                {% include '_contact_info.html' %}
+                {% endif %}
         {% if request.endpoint != 'index' %}
             </div>
         </div>
