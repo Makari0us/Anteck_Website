@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-<section class="hero-section">
-    <div class="container">
-        <h1 class="display-4">{{ content.nav_boxes }}</h1>
-    </div>
-</section>
+<div class="container">
+    <h1 class="display-4 mt-4">{{ content.nav_boxes }}</h1>
+</div>
 
 <section class="section">
     <div class="container">
@@ -38,17 +36,14 @@
         <!-- Product Gallery -->
         <div class="product-gallery mt-4">
             <div class="row g-3">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <img src="{{ url_for('static', filename='images/products/soundproof-box-1.jpg') }}" alt="Soundproof Box Detail 1" class="img-fluid gallery-image">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <img src="{{ url_for('static', filename='images/products/soundproof-box-2.jpg') }}" alt="Soundproof Box Detail 2" class="img-fluid gallery-image">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <img src="{{ url_for('static', filename='images/products/soundproof-box-3.jpg') }}" alt="Soundproof Box Detail 3" class="img-fluid gallery-image">
-                </div>
-                <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-4.jpg') }}" alt="Soundproof Box Detail 4" class="img-fluid gallery-image">
                 </div>
             </div>
         </div>
@@ -115,9 +110,6 @@
                 <div class="col-md-3">
                     <img src="{{ url_for('static', filename='images/products/soundproof-box-7.jpg') }}" alt="Soundproof Box Additional 3" class="img-fluid gallery-image">
                 </div>
-                <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/auto-box-4.jpg') }}" alt="Soundproof Box Additional 4" class="img-fluid gallery-image">
-                </div>
             </div>
         </div>
 
@@ -168,7 +160,7 @@
                                 <img src="{{ url_for('static', filename='images/products/auto-box-3.jpg') }}" alt="Automatic Drawer Box 1" class="img-fluid gallery-image">
                             </div>
                             <div class="col-md-6">
-                                <img src="{{ url_for('static', filename='images/products/auto-box-4.jpg') }}" alt="Automatic Drawer Box 2" class="img-fluid gallery-image">
+                                <img src="{{ url_for('static', filename='images/products/auto-box-3.jpg') }}" alt="Automatic Drawer Box 2" class="img-fluid gallery-image">
                             </div>
                         </div>
                     </div>
