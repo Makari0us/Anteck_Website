@@ -33,6 +33,33 @@
                 </div>
             </div>
         </div>
+
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <div class="product-image mb-4">
+                    <img src="{{ url_for('static', filename='images/panel-chamber-huawei.jpg') }}" alt="Panel Anechoic Chamber - Huawei Installation" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-image mb-4">
+                    <img src="{{ url_for('static', filename='images/panel-chamber-interior.jpg') }}" alt="Panel Anechoic Chamber - Interior View" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="product-introduction">
+                    {% if current_lang == 'zh' %}
+                    <p class="introduction-text">我司依然提供传统尖劈消声室，其产品不但性能优越，价格优惠，并且外观美观，材料环保，产品出口美国，新加坡，俄罗斯，印度，日本，台湾等国家和地区，符合欧盟及北美地区严格的环保及性能要求。</p>
+                    {% elif current_lang == 'vi' %}
+                    <p class="introduction-text">Chúng tôi vẫn cung cấp phòng tiêu âm hình nêm truyền thống, sản phẩm không chỉ có hiệu suất vượt trội, giá cả phải chăng mà còn có thiết kế đẹp mắt, thân thiện với môi trường. Sản phẩm được xuất khẩu sang Mỹ, Singapore, Nga, Ấn Độ, Nhật Bản, Đài Loan và các quốc gia, khu vực khác, đáp ứng các yêu cầu nghiêm ngặt về môi trường và hiệu suất của EU và Bắc Mỹ.</p>
+                    {% else %}
+                    <p class="introduction-text">We continue to offer traditional wedge anechoic chambers, which not only deliver superior performance at competitive prices but also feature aesthetic design and eco-friendly materials. Our products are exported to the United States, Singapore, Russia, India, Japan, Taiwan, and other countries and regions, meeting the strict environmental and performance requirements of the EU and North America.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
