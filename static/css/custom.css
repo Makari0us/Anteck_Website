@@ -105,20 +105,13 @@
 
 /* Custom spacing utilities */
 .hero-section {
-    padding: 1.5rem 0;
+    padding: 4rem 0;
     background: var(--bs-dark);
-    margin-bottom: 0;
-}
-
-.hero-section .display-4 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    margin: 0;
+    margin-bottom: 1rem; /* Added margin for better spacing */
 }
 
 .section {
-    padding: 2rem 0;
+    padding: 2rem 0; /* Updated padding */
 }
 
 /* Carousel styling */
@@ -325,10 +318,12 @@
     font-weight: 500;
 }
 
+/* First row special styling */
 .product-card:hover .product-title {
-    background: rgba(228, 142, 56, 0.2);
+    background: rgba(228, 142, 56, 0.2); /* Orange tint on hover */
 }
 
+/* Add padding between sections */
 .testing-facility + .product-showcase {
     padding-top: 2rem;
 }
@@ -386,14 +381,15 @@
 
 .main-content {
     flex-grow: 1;
-    order: 1;
+    order: 1; /* This ensures main content appears first */
 }
 
 .sidebar {
     width: 280px;
     flex-shrink: 0;
-    order: 2;
+    order: 2; /* This ensures sidebar appears second */
 }
+
 
 .contact-details {
     color: white;
@@ -419,15 +415,15 @@
     .sidebar {
         width: 100%;
         margin-bottom: 1.5rem;
-        order: 2;
+        order: 2; /* Keep sidebar below on mobile */
     }
 
     .main-content {
-        order: 1;
+        order: 1; /* Keep main content on top on mobile */
     }
 }
 
-/* Product Detail Page Styles */
+/* Product Detail Page Styles - UPDATED */
 .product-image {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -521,21 +517,22 @@
 /* Page Layout for Soundproof Boxes */
 .soundproof-page {
     display: flex;
-    gap: 2rem;
+    gap: 2rem; /* Adjust gap as needed */
 }
 
 .soundproof-page .product-image-container {
-    width: 50%;
+    width: 50%; /* Adjust width as needed */
 }
 
 .soundproof-page .description-container {
-    width: 50%;
+    width: 50%; /* Adjust width as needed */
 }
 
 .soundproof-page .product-details {
-    width: 100%;
+    width: 100%; /* Full width for product details */
     margin-top: 2rem;
 }
+
 
 /* Gallery Section */
 .gallery-section {
@@ -587,16 +584,21 @@
 
 /* Product Gallery Section */
 .product-gallery {
-    padding: 1rem 0;
+    padding: 2rem 0;
     background: rgba(255, 255, 255, 0.02);
+}
+
+.product-gallery .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
 }
 
 .gallery-image {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -609,36 +611,43 @@
 
 /* Technical Details Section */
 .technical-details {
-    padding: 1.5rem;
+    padding: 2rem;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 .technical-details h3 {
     color: var(--bs-light);
-    font-size: 1.2rem;
-    margin-top: 1.25rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;  /* Reduced from 2.5rem */
+    margin-bottom: 1rem; /* Reduced from 1.5rem */
+    padding-bottom: 0.5rem; /* Reduced from 0.75rem */
+    border-bottom: 2px solid rgba(228, 142, 56, 0.5);
+    display: inline-block;
+}
+
+.technical-details h3:first-child {
+    margin-top: 0;
 }
 
 .technical-details p {
     font-size: 1rem;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem; /* Reduced from 1.5rem */
     text-align: justify;
 }
 
 .technical-details ol {
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Reduced from 2rem */
     padding-left: 1.2rem;
 }
 
 .technical-details li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* Reduced from 0.75rem */
     line-height: 1.6;
 }
 
@@ -740,7 +749,7 @@
 
 /* Automated Box Types */
 .automated-box-type {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .automated-box-type h4 {
@@ -757,7 +766,7 @@
 
 /* Client Reference Table */
 .client-reference-table {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 .client-reference-table .table {
@@ -767,21 +776,28 @@
 }
 
 .client-reference-table .table td {
-    padding: 0.75rem;
+    padding: 1rem;
     vertical-align: middle;
     text-align: center;
     border-color: rgba(255, 255, 255, 0.1);
-    font-size: 0.85rem;
-    line-height: 1.3;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .client-reference-table .table td br {
     content: "";
     display: block;
-    margin: 0.15rem 0;
+    margin: 0.2rem 0;
 }
 
-/* Contact Info Section */
+/* After page-with-sidebar styles */
+.product-banner {
+    width: 100%;
+    display: block;
+    margin-top: -1px; /* Remove any gap */
+}
+
+/* Contact Info Section - Updated for sidebar placement */
 .contact-info {
     padding: 1.5rem;
     background: #3c7ab7;
@@ -839,17 +855,5 @@
     .sidebar {
         width: 100%;
         margin-bottom: 1.5rem;
-    }
-
-    .hero-section {
-        padding: 1.5rem 0;
-    }
-
-    .hero-section .display-4 {
-        font-size: 2rem;
-    }
-
-    .gallery-image {
-        height: 150px;
     }
 }
