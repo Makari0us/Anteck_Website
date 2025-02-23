@@ -1,41 +1,103 @@
 <!-- Product Center Sidebar -->
 <div class="product-sidebar">
-    <h2 class="sidebar-header">产品中心</h2>
+    <h2 class="sidebar-header">
+        {% if current_lang == 'zh' %}
+        产品中心
+        {% elif current_lang == 'vi' %}
+        Trung tâm sản phẩm
+        {% else %}
+        Product Center
+        {% endif %}
+    </h2>
     <div class="sidebar-menu">
         <a href="{{ url_for('panel_chamber') }}" class="menu-item">
+            {% if current_lang == 'zh' %}
             平板消声室
+            {% elif current_lang == 'vi' %}
+            Phòng tiêu âm phẳng
+            {% else %}
+            Panel Anechoic Chamber
+            {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
         <a href="{{ url_for('wedge_chamber') }}" class="menu-item">
+            {% if current_lang == 'zh' %}
             尖劈消声室
+            {% elif current_lang == 'vi' %}
+            Phòng tiêu âm hình nêm
+            {% else %}
+            Wedge Anechoic Chamber
+            {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
         <a href="{{ url_for('soundproof_boxes') }}" class="menu-item">
+            {% if current_lang == 'zh' %}
             消声箱静音箱
+            {% elif current_lang == 'vi' %}
+            Hộp tiêu âm | Hộp cách âm
+            {% else %}
+            Soundproof Box | Silent Box
+            {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
         <a href="#" class="menu-item">
+            {% if current_lang == 'zh' %}
             听音室视听室
+            {% elif current_lang == 'vi' %}
+            Phòng nghe | Phòng nghe nhìn
+            {% else %}
+            Listening Room | AV Room
+            {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
         <a href="{{ url_for('silent_rooms') }}" class="menu-item">
+            {% if current_lang == 'zh' %}
             静音室隔音室
+            {% elif current_lang == 'vi' %}
+            Phòng cách âm | Phòng cách ly âm
+            {% else %}
+            Silent Room | Soundproof Room
+            {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
         <a href="#" class="menu-item">
+            {% if current_lang == 'zh' %}
             隔声罩
+            {% elif current_lang == 'vi' %}
+            Vỏ cách âm
+            {% else %}
+            Sound Isolation Cover
+            {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
         <a href="#" class="menu-item">
+            {% if current_lang == 'zh' %}
             混响室
+            {% elif current_lang == 'vi' %}
+            Phòng vang âm
+            {% else %}
+            Reverberation Room
+            {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
         <a href="#" class="menu-item">
+            {% if current_lang == 'zh' %}
             生产线在线声学检测房
+            {% elif current_lang == 'vi' %}
+            Phòng kiểm tra âm học trực tuyến
+            {% else %}
+            Online Acoustic Testing Chamber
+            {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
         <a href="#" class="menu-item">
+            {% if current_lang == 'zh' %}
             声学测试仪器
+            {% elif current_lang == 'vi' %}
+            Thiết bị kiểm tra âm học
+            {% else %}
+            Acoustic Testing Instruments
+            {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
     </div>
