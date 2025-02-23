@@ -20,7 +20,10 @@
         <div class="container">
             <a class="navbar-brand" href="/">
                 <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo">
-                {{ content.company_name }}
+                <div class="brand-text">
+                    <div class="company-name">{{ content.company_name.split('|')[0].strip() }}</div>
+                    <div class="company-description">{{ content.company_name.split('|')[1].strip() }}</div>
+                </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -45,7 +48,7 @@
 
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container text-center">
-            <p>&copy; 2024 {{ content.company_name }}</p>
+            <p>&copy; 2024 {{ content.company_name.split('|')[0].strip() }}</p>
         </div>
     </footer>
 
