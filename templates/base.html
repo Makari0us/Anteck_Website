@@ -8,13 +8,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
 </head>
 <body>
-    <!-- Language Selector -->
-    <div class="language-selector">
-        <button class="btn btn-sm btn-outline-light language-btn" data-lang="en">EN</button>
-        <button class="btn btn-sm btn-outline-light language-btn" data-lang="vi">VI</button>
-        <button class="btn btn-sm btn-outline-light language-btn" data-lang="zh">中文</button>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -58,6 +51,15 @@
             </div>
         </div>
     </nav>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <div class="container">
+            <button class="btn btn-sm btn-outline-light language-btn" data-lang="en">EN</button>
+            <button class="btn btn-sm btn-outline-light language-btn" data-lang="vi">VI</button>
+            <button class="btn btn-sm btn-outline-light language-btn" data-lang="zh">中文</button>
+        </div>
+    </div>
 
     {% block content %}{% endblock %}
 
