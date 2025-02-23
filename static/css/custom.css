@@ -106,7 +106,7 @@
 /* Custom spacing utilities */
 .hero-section {
     padding: 2rem 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/product-banner.jpg') center/cover no-repeat;
+    background: var(--bs-dark);
     margin-bottom: 0;
     position: relative;
 }
