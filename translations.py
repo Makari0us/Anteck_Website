@@ -1,6 +1,6 @@
 TRANSLATIONS = {
     'en': {
-        'company_name': 'Professional Development and Production of Anechoic Chamber Equipment, Soundproof Electroacoustic and Electromagnetic Shielding Equipment',
+        'company_name': 'Suzhou Anken Electronic Technology Co., Ltd. | Professional Development and Production of Anechoic Chamber Equipment, Soundproof Electroacoustic and Electromagnetic Shielding Equipment',
         'title': 'Welcome to Our Website',
         'nav_home': 'Home',
         'nav_about': 'About',
@@ -13,7 +13,7 @@ TRANSLATIONS = {
         'contact_text': 'Get in touch with us today',
     },
     'vi': {
-        'company_name': 'Chuyên Phát triển và Sản xuất Thiết bị Phòng Tiêu âm, Thiết bị Điện âm Cách âm và Thiết bị Chắn Điện từ',
+        'company_name': 'Công ty TNHH Công nghệ Điện tử Anken Tô Châu | Chuyên Phát triển và Sản xuất Thiết bị Phòng Tiêu âm, Thiết bị Điện âm Cách âm và Thiết bị Chắn Điện từ',
         'title': 'Chào mừng đến với Trang web của Chúng tôi',
         'nav_home': 'Trang chủ',
         'nav_about': 'Giới thiệu',
@@ -26,7 +26,7 @@ TRANSLATIONS = {
         'contact_text': 'Hãy liên hệ với chúng tôi ngay hôm nay',
     },
     'zh': {
-        'company_name': '专业从事消声室设备、隔声电声和电磁屏蔽设备的开发生产',
+        'company_name': '苏州岸肯电子科技有限公司 | 专业从事消声室设备、隔声电声和电磁屏蔽设备的开发生产',
         'title': '欢迎访问我们的网站',
         'nav_home': '首页',
         'nav_about': '关于',
