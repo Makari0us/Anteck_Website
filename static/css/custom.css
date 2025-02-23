@@ -412,7 +412,7 @@
 }
 
 .product-description {
-    padding: 2rem;
+    padding: 1.5rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -420,10 +420,10 @@
 
 .product-description h2 {
     color: var(--bs-light);
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 0.75rem;
 }
 
 .product-description h2:after {
@@ -436,8 +436,18 @@
     background: #e48e38;
 }
 
-.product-description .lead {
-    font-size: 1.1rem;
-    line-height: 1.8;
+.description-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+.consulting-number {
+    font-size: 1rem;
+    color: #e48e38;
+    font-weight: 500;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
