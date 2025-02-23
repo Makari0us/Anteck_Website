@@ -584,7 +584,7 @@
 
 /* Product Gallery Section */
 .product-gallery {
-    padding: 3rem 0;
+    padding: 2rem 0;
     background: rgba(255, 255, 255, 0.02);
 }
 
@@ -593,13 +593,9 @@
     --bs-gutter-y: 1.5rem;
 }
 
-.product-gallery .col-md-6 {
-    margin-bottom: 1.5rem;
-}
-
-.product-gallery img {
+.gallery-image {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -607,7 +603,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.product-gallery img:hover {
+.gallery-image:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     border-color: rgba(255, 255, 255, 0.2);
