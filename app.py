@@ -83,3 +83,10 @@ def listening_room():
     return render_template('listening_room.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
+
+@app.route('/reverb-room')
+def reverb_room():
+    language = get_user_language()
+    return render_template('reverb_room.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)

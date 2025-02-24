@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<section class="hero-section text-center text-light">
+    <div class="container">
+        <h1 class="display-4">{{ content.nav_reverb_room }}</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='images/products/reverb-room-detail.jpg') }}" alt="Reverberation Room" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-description">
+                    {% if current_lang == 'zh' %}
+                    <h2>混响室</h2>
+                    <div class="description-text">
+                        <p>混响室是一种特殊的声学测试设施，用于测量声源的声功率级和吸声材料的吸声系数。其特点是：</p>
+                        <ul>
+                            <li>反射性强的墙面</li>
+                            <li>不规则形状设计</li>
+                            <li>精确的声场扩散性</li>
+                            <li>符合国际标准</li>
+                        </ul>
+                    </div>
+                    <div class="consulting-number">咨询电话：+86 (134) 5166-1990</div>
+                    
+                    {% elif current_lang == 'vi' %}
+                    <h2>Phòng vang âm</h2>
+                    <div class="description-text">
+                        <p>Phòng vang âm là một cơ sở kiểm tra âm học đặc biệt, được sử dụng để đo mức công suất âm thanh của nguồn âm và hệ số hấp thụ của vật liệu hấp thụ âm. Đặc điểm của nó là:</p>
+                        <ul>
+                            <li>Tường có độ phản xạ cao</li>
+                            <li>Thiết kế hình dạng không đều</li>
+                            <li>Độ khuếch tán trường âm chính xác</li>
+                            <li>Tuân thủ tiêu chuẩn quốc tế</li>
+                        </ul>
+                    </div>
+                    <div class="consulting-number">Số điện thoại tư vấn: +86 (134) 5166-1990</div>
+                    
+                    {% else %}
+                    <h2>Reverberation Room</h2>
+                    <div class="description-text">
+                        <p>A reverberation room is a specialized acoustic testing facility used for measuring sound power levels of sound sources and absorption coefficients of sound-absorbing materials. Its features include:</p>
+                        <ul>
+                            <li>Highly reflective walls</li>
+                            <li>Irregular shape design</li>
+                            <li>Precise sound field diffusivity</li>
+                            <li>International standard compliance</li>
+                        </ul>
+                    </div>
+                    <div class="consulting-number">Consultation Number: +1 (949) 992-3596</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="technical-specs section">
+    <div class="container">
+        {% if current_lang == 'zh' %}
+        <h3>技术规格</h3>
+        <div class="specs-content">
+            <ul>
+                <li>体积：≥200m³</li>
+                <li>截止频率：100Hz</li>
+                <li>衰减时间：1-2s（500Hz）</li>
+                <li>符合标准：ISO 354, ASTM C423</li>
+            </ul>
+        </div>
+        {% elif current_lang == 'vi' %}
+        <h3>Thông số kỹ thuật</h3>
+        <div class="specs-content">
+            <ul>
+                <li>Thể tích: ≥200m³</li>
+                <li>Tần số cắt: 100Hz</li>
+                <li>Thời gian suy giảm: 1-2s (500Hz)</li>
+                <li>Đáp ứng tiêu chuẩn: ISO 354, ASTM C423</li>
+            </ul>
+        </div>
+        {% else %}
+        <h3>Technical Specifications</h3>
+        <div class="specs-content">
+            <ul>
+                <li>Volume: ≥200m³</li>
+                <li>Cut-off frequency: 100Hz</li>
+                <li>Decay time: 1-2s (500Hz)</li>
+                <li>Standards compliance: ISO 354, ASTM C423</li>
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="applications section">
+    <div class="container">
+        {% if current_lang == 'zh' %}
+        <h3>应用领域</h3>
+        <div class="application-content">
+            <ul>
+                <li>建筑声学材料测试</li>
+                <li>工业设备声功率测量</li>
+                <li>吸声系数测定</li>
+                <li>声学研究与开发</li>
+            </ul>
+        </div>
+        {% elif current_lang == 'vi' %}
+        <h3>Lĩnh vực ứng dụng</h3>
+        <div class="application-content">
+            <ul>
+                <li>Kiểm tra vật liệu âm học xây dựng</li>
+                <li>Đo công suất âm thanh của thiết bị công nghiệp</li>
+                <li>Xác định hệ số hấp thụ âm</li>
+                <li>Nghiên cứu và phát triển âm học</li>
+            </ul>
+        </div>
+        {% else %}
+        <h3>Applications</h3>
+        <div class="application-content">
+            <ul>
+                <li>Building acoustics material testing</li>
+                <li>Industrial equipment sound power measurement</li>
+                <li>Absorption coefficient determination</li>
+                <li>Acoustic research and development</li>
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
