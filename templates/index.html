@@ -124,7 +124,7 @@
 
             <!-- Second Row - Non-linked products -->
             <div class="col-md-4">
-                <div class="product-card">
+                <a href="{{ url_for('listening_room') }}" class="product-card">
                     <div class="image-container hexagon">
                         <img src="{{ url_for('static', filename='images/products/listening-room.jpg') }}" alt="Listening Room">
                     </div>
@@ -137,7 +137,7 @@
                         <h3>Listening Room | AV Room</h3>
                         {% endif %}
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="col-md-4">
