@@ -5,18 +5,16 @@ from pathlib import Path
 static_dir = Path("static/images/products")
 static_dir.mkdir(parents=True, exist_ok=True)
 
-# List of images to convert
-images = [
-    "acoustic-testing-equipment.jpg",
-    "acoustic-testing-device.jpg",
-    "testing-chamber-1.jpg",
-    "testing-chamber-2.jpg",
-    "testing-chamber-3.jpg",
-    "testing-chamber-4.jpg"
-]
+# Specific image mappings
+image_mappings = {
+    "截屏2025-02-23 下午7.29.23.png": "acoustic-testing-equipment.jpg",
+    "截屏2025-02-23 下午7.32.36.png": "acoustic-testing-device.jpg"
+}
 
 # Convert images
-for img in images:
-    output_path = static_dir / img
-    if not output_path.exists():
-        os.system(f'convert attached_assets/*.png -quality 90 {output_path}')
+for source_name, target_name in image_mappings.items():
+    source_path = f"attached_assets/{source_name}"
+    output_path = static_dir / target_name
+    if os.path.exists(source_path) and not output_path.exists():
+        os.system(f'convert "{source_path}" -quality 90 "{output_path}"')
+        print(f"Converted {source_path} to {output_path}")
