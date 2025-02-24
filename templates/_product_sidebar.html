@@ -70,7 +70,7 @@
             {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
-        <a href="#" class="menu-item">
+        <a href="{{ url_for('reverb_room') }}" class="menu-item">
             {% if current_lang == 'zh' %}
             混响室
             {% elif current_lang == 'vi' %}
