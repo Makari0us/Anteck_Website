@@ -105,6 +105,23 @@
                 </div>
             </div>
         </div>
+
+        <!-- Product Range Description -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="content-box p-4 border rounded">
+                    {% if current_lang == 'zh' %}
+                    <p class="mb-0">我公司目前已代理各类测试传声器、声级计和噪声测量仪器、环境噪声自动监测系统、电声测量仪器、振动测量仪器和校准测试仪器等系列产品，产品品种100多个，涵盖了环境噪声测量、工业噪声测量、机场噪声测量、建筑声学测量、电声测量、机器振动测量、环境和人体振动测量等领域。</p>
+
+                    {% elif current_lang == 'vi' %}
+                    <p class="mb-0">Công ty chúng tôi hiện đại diện cho nhiều loại microphone kiểm tra, máy đo độ ồn và thiết bị đo tiếng ồn, hệ thống giám sát tiếng ồn môi trường tự động, thiết bị đo âm thanh điện tử, thiết bị đo độ rung và thiết bị kiểm tra hiệu chuẩn, với hơn 100 sản phẩm khác nhau, bao gồm đo tiếng ồn môi trường, đo tiếng ồn công nghiệp, đo tiếng ồn sân bay, đo âm học kiến trúc, đo âm thanh điện tử, đo độ rung máy móc, đo độ rung môi trường và con người.</p>
+
+                    {% else %}
+                    <p class="mb-0">Our company currently represents various testing microphones, sound level meters and noise measurement instruments, environmental noise automatic monitoring systems, electroacoustic measurement instruments, vibration measurement instruments, and calibration testing instruments, with over 100 different products, covering environmental noise measurement, industrial noise measurement, airport noise measurement, architectural acoustics measurement, electroacoustic measurement, machine vibration measurement, and environmental and human vibration measurement fields.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
