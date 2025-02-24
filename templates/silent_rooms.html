@@ -10,13 +10,11 @@
 <section class="section py-5">
     <div class="container">
         <div class="row align-items-start">
-            <!-- Image Column -->
             <div class="col-lg-6">
                 <div class="product-image">
                     <img src="{{ url_for('static', filename='images/products/silent-room.jpg') }}" alt="Silent Room" class="img-fluid">
                 </div>
             </div>
-            <!-- Description Column -->
             <div class="col-lg-6">
                 <div class="product-description">
                     {% if current_lang == 'zh' %}
@@ -60,7 +58,6 @@
             </div>
         </div>
 
-        <!-- Additional Product Information -->
         <div class="product-additional-info mt-5">
             {% if current_lang == 'zh' %}
             <div class="text-content">
@@ -85,20 +82,17 @@
     </div>
 </section>
 
-<!-- Technical Details Section -->
 <section class="technical-specs py-5">
     <div class="container">
         <div class="specs-content">
             {% if current_lang == 'zh' %}
             <div class="row">
-                <!-- Text Content -->
                 <div class="col-lg-4">
                     <div class="specs-section mb-5">
                         <h3 class="section-title mb-4">静音室功用</h3>
                         <p>主要用于汽车电子、机电、家电、通讯产品等快速模拟声学测试。</p>
                     </div>
                 </div>
-                <!-- Images -->
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="col-md-6">
@@ -115,10 +109,28 @@
                 </div>
             </div>
 
-            <div class="specs-section mb-5">
-                <h3 class="section-title mb-4">静音室大小</h3>
-                <p>举例：外部2000mm*2000mm*2000mm<br>
-                内部1700mm*1700mm*1800mm</p>
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-interior.jpg') }}" alt="Silent Room Interior" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-exterior.jpg') }}" alt="Silent Room Exterior" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="specs-section">
+                        <h3 class="section-title mb-4">静音室大小</h3>
+                        <p>举例：外部2000mm*2000mm*2000mm<br>
+                        内部1700mm*1700mm*1800mm</p>
+                    </div>
+                </div>
             </div>
 
             <div class="specs-section mb-5">
@@ -131,7 +143,6 @@
                 <p>本底噪音小，对少量产品进行测试比较方便，如进行产品量产测试，因需要人工将产品拿到房间内部，不方便，可采用我司在线检测静音室。</p>
             </div>
             {% elif current_lang == 'vi' %}
-            <!-- Vietnamese content with same structure -->
             <div class="row">
                 <div class="col-lg-4">
                     <div class="specs-section mb-5">
@@ -155,10 +166,28 @@
                 </div>
             </div>
 
-            <div class="specs-section mb-5">
-                <h3 class="section-title mb-4">Kích thước phòng cách âm</h3>
-                <p>Ví dụ: Ngoại thất 2000mm*2000mm*2000mm<br>
-                Nội thất 1700mm*1700mm*1800mm</p>
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-interior.jpg') }}" alt="Silent Room Interior" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-exterior.jpg') }}" alt="Silent Room Exterior" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="specs-section">
+                        <h3 class="section-title mb-4">Kích thước phòng cách âm</h3>
+                        <p>Ví dụ: Ngoại thất 2000mm*2000mm*2000mm<br>
+                        Nội thất 1700mm*1700mm*1800mm</p>
+                    </div>
+                </div>
             </div>
 
             <div class="specs-section mb-5">
@@ -171,7 +200,6 @@
                 <p>Độ ồn nền thấp, thuận tiện để kiểm tra số lượng nhỏ sản phẩm. Đối với kiểm tra sản xuất hàng loạt, do cần đưa sản phẩm vào phòng thủ công nên không thuận tiện, có thể sử dụng phòng cách âm kiểm tra trực tuyến của công ty chúng tôi.</p>
             </div>
             {% else %}
-            <!-- English content with same structure -->
             <div class="row">
                 <div class="col-lg-4">
                     <div class="specs-section mb-5">
@@ -195,10 +223,28 @@
                 </div>
             </div>
 
-            <div class="specs-section mb-5">
-                <h3 class="section-title mb-4">Silent Room Dimensions</h3>
-                <p>Example: External 2000mm*2000mm*2000mm<br>
-                Internal 1700mm*1700mm*1800mm</p>
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-interior.jpg') }}" alt="Silent Room Interior" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-exterior.jpg') }}" alt="Silent Room Exterior" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="specs-section">
+                        <h3 class="section-title mb-4">Silent Room Dimensions</h3>
+                        <p>Example: External 2000mm*2000mm*2000mm<br>
+                        Internal 1700mm*1700mm*1800mm</p>
+                    </div>
+                </div>
             </div>
 
             <div class="specs-section mb-5">
