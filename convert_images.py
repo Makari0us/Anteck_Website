@@ -19,7 +19,7 @@ image_mappings = {
     "截屏2025-02-23 下午8.14.50.png": "patents/patent1.jpg",
     "截屏2025-02-23 下午8.15.13.png": "patents/patent2.jpg",
     "截屏2025-02-23 下午8.15.24.png": "patents/patent3.jpg",
-    "截屏2025-02-23 下午8.15.30.png": "patents/patent4.jpg",
+    "截屏2025-02-23 下午8.15.30.png": "patents/patent4.jpg"
 }
 
 # Convert images
