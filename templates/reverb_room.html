@@ -10,86 +10,150 @@
 <section class="section">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <div class="product-description mb-5">
+            <div class="col-md-6">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='images/products/reverb-room-interior.jpg') }}" alt="Reverberation Room" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-description">
                     {% if current_lang == 'zh' %}
                     <h2>混响室</h2>
+                    <h3>产品介绍</h3>
                     <p class="description-text">
-                        我司根据客户需求，设计，制作专业级混响室。无论是美观程度，可拆装程度，混响均匀度，均为世界水平。
+                        声学混响室是一个能在所有边界上全部反射声能，并在其中充分扩散，使形成各处能量密度均匀、在各传播方向作无规则分布的扩散场的实验室。
                     </p>
-                    <div class="consulting-number mb-4">咨询电话：+86 (134) 5166-1990</div>
+                    <h3>功用</h3>
+                    <p class="description-text">
+                        声学混响室的功用主要是：测定材料的吸声系数，空气中的声吸收，声源和机器、设备等的声功率及频谱，测量某些电声器件和设备的效率等声学性能以及对灵敏机件作噪声疲劳试验等等。
+                    </p>
+                    <h3>要求</h3>
+                    <p class="description-text">
+                        混响室的混响时间应尽量长，以保证声能充分扩散，故一般建成各表面不相互平行的不规则房间，或是长、宽、高中任何两个尺度之比不等于或很接近于某一整数的矩形房间，几个国际标准化组织推荐采用的比值（长:宽:高）为1.54:1.28:1；1.58:1.25:1;1.69:1.17:1;2.13:1.17:1；2.38:1.62:1;房间全部表面的平均吸声系数应不超过0.06，一般可用在房间的表面上刷瓷漆、铺瓷砖或贴铜箔等方法来实现。为了增加声能的扩散及声场的均匀性，可在房间内悬挂固定的扩散片，安装大型转动或摆动的扩散体，壁面应实实，以避免本身发生共振而吸收很多声能。还应避免由于尺寸太大而漏声或不厚实而发生共振声。
+                    </p>
+                    <h3>评定</h3>
+                    <p class="description-text">
+                        对混响室的评定，除测量混响时间外，还应检测房间中扩散场条件的符合情况，一般在声场中任选6个以上的测点。测点间隔应大于λ/2,测得的声压级的标准偏差应小于±1dB。
+                        混响室与基础之间应有隔振措施，以减小本底噪声。
+                    </p>
+                    <div class="consulting-number">咨询电话：+86 (134) 5166-1990</div>
 
                     {% elif current_lang == 'vi' %}
                     <h2>Phòng vang âm</h2>
+                    <h3>Giới thiệu sản phẩm</h3>
                     <p class="description-text">
-                        Công ty chúng tôi thiết kế và sản xuất phòng vang âm chuyên nghiệp theo yêu cầu của khách hàng. Về mặt thẩm mỹ, khả năng tháo lắp và độ đồng đều của âm vang đều đạt tiêu chuẩn quốc tế.
+                        Phòng vang âm âm học là một phòng thí nghiệm có khả năng phản xạ hoàn toàn năng lượng âm thanh trên tất cả các biên giới và phân tán đầy đủ trong đó, tạo ra một trường khuếch tán với mật độ năng lượng đồng nhất ở mọi nơi và phân bố không đều theo mọi hướng truyền.
                     </p>
-                    <div class="consulting-number mb-4">Số điện thoại tư vấn: +86 (134) 5166-1990</div>
+                    <h3>Chức năng</h3>
+                    <p class="description-text">
+                        Chức năng chính của phòng vang âm là: đo hệ số hấp thụ âm của vật liệu, hấp thụ âm trong không khí, công suất âm thanh và phổ của nguồn âm và máy móc, thiết bị, đo hiệu suất và tính năng âm học của một số thiết bị điện âm và thiết bị, cũng như thử nghiệm mỏi do tiếng ồn trên các bộ phận nhạy cảm.
+                    </p>
+                    <h3>Yêu cầu</h3>
+                    <p class="description-text">
+                        Thời gian vang âm của phòng nên càng dài càng tốt để đảm bảo sự khuếch tán đầy đủ của năng lượng âm thanh. Do đó, thường được xây dựng như một phòng không đều với các bề mặt không song song, hoặc một phòng hình chữ nhật trong đó tỷ lệ giữa bất kỳ hai kích thước nào trong chiều dài, rộng, cao không bằng hoặc gần với một số nguyên. Các tỷ lệ được khuyến nghị bởi các tổ chức tiêu chuẩn hóa quốc tế (dài:rộng:cao) là 1.54:1.28:1; 1.58:1.25:1; 1.69:1.17:1; 2.13:1.17:1; 2.38:1.62:1. Hệ số hấp thụ âm trung bình của toàn bộ bề mặt phòng không được vượt quá 0.06.
+                    </p>
+                    <h3>Đánh giá</h3>
+                    <p class="description-text">
+                        Để đánh giá phòng vang âm, ngoài việc đo thời gian vang âm, cần kiểm tra sự phù hợp của điều kiện trường khuếch tán trong phòng, thường chọn ít nhất 6 điểm đo trong trường âm. Khoảng cách giữa các điểm đo phải lớn hơn λ/2, độ lệch chuẩn của mức áp suất âm đo được phải nhỏ hơn ±1dB.
+                        Phòng vang âm phải có biện pháp cách rung với nền móng để giảm tiếng ồn nền.
+                    </p>
+                    <div class="consulting-number">Số điện thoại tư vấn: +86 (134) 5166-1990</div>
 
                     {% else %}
                     <h2>Reverberation Room</h2>
+                    <h3>Product Introduction</h3>
                     <p class="description-text">
-                        Our company designs and manufactures professional-grade reverberation rooms according to customer requirements. In terms of aesthetics, dismantling capability, and reverberation uniformity, all meet world-class standards.
+                        An acoustic reverberation room is a laboratory that can fully reflect sound energy on all boundaries and fully diffuse within it, creating a diffusion field with uniform energy density everywhere and irregular distribution in all propagation directions.
                     </p>
-                    <div class="consulting-number mb-4">Consultation Number: +1 (949) 992-3596</div>
-                    {% endif %}
-                </div>
-
-                <div class="specifications-box p-4 bg-light rounded mb-5">
-                    {% if current_lang == 'zh' %}
-                    <h3 class="mb-4">技术规格</h3>
-                    <ul class="list-unstyled">
-                        <li>体积：≥200m³</li>
-                        <li>截止频率：100Hz</li>
-                        <li>衰减时间：1-2s（500Hz）</li>
-                        <li>符合标准：ISO 354, ASTM C423</li>
-                    </ul>
-
-                    <h3 class="mt-4 mb-4">应用领域</h3>
-                    <ul class="list-unstyled">
-                        <li>建筑声学材料测试</li>
-                        <li>工业设备声功率测量</li>
-                        <li>吸声系数测定</li>
-                        <li>声学研究与开发</li>
-                    </ul>
-
-                    {% elif current_lang == 'vi' %}
-                    <h3 class="mb-4">Thông số kỹ thuật</h3>
-                    <ul class="list-unstyled">
-                        <li>Thể tích: ≥200m³</li>
-                        <li>Tần số cắt: 100Hz</li>
-                        <li>Thời gian suy giảm: 1-2s (500Hz)</li>
-                        <li>Đáp ứng tiêu chuẩn: ISO 354, ASTM C423</li>
-                    </ul>
-
-                    <h3 class="mt-4 mb-4">Lĩnh vực ứng dụng</h3>
-                    <ul class="list-unstyled">
-                        <li>Kiểm tra vật liệu âm học xây dựng</li>
-                        <li>Đo công suất âm thanh của thiết bị công nghiệp</li>
-                        <li>Xác định hệ số hấp thụ âm</li>
-                        <li>Nghiên cứu và phát triển âm học</li>
-                    </ul>
-
-                    {% else %}
-                    <h3 class="mb-4">Technical Specifications</h3>
-                    <ul class="list-unstyled">
-                        <li>Volume: ≥200m³</li>
-                        <li>Cut-off frequency: 100Hz</li>
-                        <li>Decay time: 1-2s (500Hz)</li>
-                        <li>Standards compliance: ISO 354, ASTM C423</li>
-                    </ul>
-
-                    <h3 class="mt-4 mb-4">Applications</h3>
-                    <ul class="list-unstyled">
-                        <li>Building acoustics material testing</li>
-                        <li>Industrial equipment sound power measurement</li>
-                        <li>Absorption coefficient determination</li>
-                        <li>Acoustic research and development</li>
-                    </ul>
+                    <h3>Functions</h3>
+                    <p class="description-text">
+                        The main functions of the acoustic reverberation room are: measuring materials' absorption coefficients, air sound absorption, sound power and spectra of sound sources and machinery, equipment performance and acoustic properties of certain electroacoustic devices and equipment, as well as conducting noise fatigue tests on sensitive components.
+                    </p>
+                    <h3>Requirements</h3>
+                    <p class="description-text">
+                        The reverberation time of the room should be as long as possible to ensure full diffusion of sound energy. Therefore, it is generally built as an irregular room with non-parallel surfaces, or a rectangular room where the ratio of any two dimensions in length, width, height is not equal to or very close to an integer. The ratios recommended by international standardization organizations (length:width:height) are 1.54:1.28:1; 1.58:1.25:1; 1.69:1.17:1; 2.13:1.17:1; 2.38:1.62:1. The average sound absorption coefficient of all room surfaces should not exceed 0.06.
+                    </p>
+                    <h3>Evaluation</h3>
+                    <p class="description-text">
+                        For the evaluation of the reverberation room, besides measuring reverberation time, the compliance of diffusion field conditions in the room should be checked, generally selecting 6 or more measuring points in the sound field. The spacing between measuring points should be greater than λ/2, and the standard deviation of measured sound pressure levels should be less than ±1dB.
+                        The reverberation room should have vibration isolation measures with the foundation to reduce background noise.
+                    </p>
+                    <div class="consulting-number">Consultation Number: +1 (949) 992-3596</div>
                     {% endif %}
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section class="technical-specs section">
+    <div class="container">
+        {% if current_lang == 'zh' %}
+        <h3>技术规格</h3>
+        <div class="specs-content">
+            <ul>
+                <li>体积：≥200m³</li>
+                <li>截止频率：100Hz</li>
+                <li>衰减时间：1-2s（500Hz）</li>
+                <li>符合标准：ISO 354, ASTM C423</li>
+            </ul>
+        </div>
+        {% elif current_lang == 'vi' %}
+        <h3>Thông số kỹ thuật</h3>
+        <div class="specs-content">
+            <ul>
+                <li>Thể tích: ≥200m³</li>
+                <li>Tần số cắt: 100Hz</li>
+                <li>Thời gian suy giảm: 1-2s (500Hz)</li>
+                <li>Đáp ứng tiêu chuẩn: ISO 354, ASTM C423</li>
+            </ul>
+        </div>
+        {% else %}
+        <h3>Technical Specifications</h3>
+        <div class="specs-content">
+            <ul>
+                <li>Volume: ≥200m³</li>
+                <li>Cut-off frequency: 100Hz</li>
+                <li>Decay time: 1-2s (500Hz)</li>
+                <li>Standards compliance: ISO 354, ASTM C423</li>
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="applications section">
+    <div class="container">
+        {% if current_lang == 'zh' %}
+        <h3>应用领域</h3>
+        <div class="application-content">
+            <ul>
+                <li>建筑声学材料测试</li>
+                <li>工业设备声功率测量</li>
+                <li>吸声系数测定</li>
+                <li>声学研究与开发</li>
+            </ul>
+        </div>
+        {% elif current_lang == 'vi' %}
+        <h3>Lĩnh vực ứng dụng</h3>
+        <div class="application-content">
+            <ul>
+                <li>Kiểm tra vật liệu âm học xây dựng</li>
+                <li>Đo công suất âm thanh của thiết bị công nghiệp</li>
+                <li>Xác định hệ số hấp thụ âm</li>
+                <li>Nghiên cứu và phát triển âm học</li>
+            </ul>
+        </div>
+        {% else %}
+        <h3>Applications</h3>
+        <div class="application-content">
+            <ul>
+                <li>Building acoustics material testing</li>
+                <li>Industrial equipment sound power measurement</li>
+                <li>Absorption coefficient determination</li>
+                <li>Acoustic research and development</li>
+            </ul>
+        </div>
+        {% endif %}
     </div>
 </section>
 {% endblock %}
