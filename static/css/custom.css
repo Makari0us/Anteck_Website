@@ -942,14 +942,29 @@
 
 /* Full Patent View */
 .full-patent-view {
-    padding: 2rem 0;
+    padding: 4rem 0;
+    background: rgba(0, 0, 0, 0.8);
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .full-patent-image {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
+    height: auto;
     margin: 0 auto;
     display: block;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
 }
+
+.patent-back-button {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+</}

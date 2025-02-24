@@ -2,14 +2,12 @@
 
 {% block content %}
 <section class="full-patent-view">
-    <div class="container">
+    <div class="container-fluid">
         <div class="text-center">
             <img src="{{ url_for('static', filename='images/patents/patent' + number|string + '.jpg') }}" 
                  alt="Full Patent Certificate {{ number }}" 
                  class="full-patent-image">
-        </div>
-        <div class="text-center mt-4">
-            <a href="{{ url_for('honorary_qualification') }}" class="btn btn-primary">Back to Certificates</a>
+            <a href="{{ url_for('honorary_qualification') }}" class="btn btn-primary patent-back-button">Back to Certificates</a>
         </div>
     </div>
 </section>
