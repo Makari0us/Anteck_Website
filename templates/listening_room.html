@@ -34,6 +34,60 @@
                 </div>
             </div>
         </div>
+
+        <!-- Technical Specifications -->
+        <div class="technical-details mt-4">
+            {% if current_lang == 'zh' %}
+            <h3>电测听音室，听音室，视听室 技术要求：</h3>
+            <ol>
+                <li>提供一个标准的，高品质的听音环境，满足multichannel 7.1 的测试要求。</li>
+                <li>提供一个可以进行回放的标准测试环境，以进行产品对比试验及开发。</li>
+                <li>提供一个调整的测试环境，以达到测试在不同声音环境下，喇叭、功放等产品的声学表现力。</li>
+            </ol>
+            <p class="technical-text">
+                房间建成后房间混响时间可通过对房间内部吸音体、扩散体等声学部件进行调整而进行改变。
+                房间建成后房间混响时间在0.3s-0.5s，偏离值不大于15%（至少六点混响测试125Hz，250Hz，500Hz，1000Hz，2000Hz，4000Hz）。低于300H-350Hz的低频声音，通过房间的尺寸，吸音墙体吸音率及喇叭的相对位置及听音者的位置进行设计控制，防止300Hz以下频率的驻波。高于300Hz的中高频声音，通过设计房间的墙体反射体，控制房间内部整体音色，空间感，房间频响曲线平滑，无声染色；声场均匀度最大声压级与最小声压级比<3dB；最大/最小声压级与平均声压级标准偏差小于3dB。
+            </p>
+            {% elif current_lang == 'vi' %}
+            <h3>Yêu cầu kỹ thuật của phòng nghe điện tử, phòng nghe, phòng nghe nhìn:</h3>
+            <ol>
+                <li>Cung cấp môi trường nghe chuẩn, chất lượng cao, đáp ứng yêu cầu kiểm tra multichannel 7.1.</li>
+                <li>Cung cấp môi trường kiểm tra chuẩn có thể phát lại để so sánh và phát triển sản phẩm.</li>
+                <li>Cung cấp môi trường kiểm tra có thể điều chỉnh để đánh giá hiệu suất âm thanh của loa, amply trong các môi trường âm thanh khác nhau.</li>
+            </ol>
+            <p class="technical-text">
+                Thời gian vang sau khi hoàn thành phòng có thể được thay đổi bằng cách điều chỉnh các thành phần âm học như vật liệu hấp thụ âm, khuếch tán bên trong phòng.
+                Thời gian vang sau khi hoàn thành phòng từ 0.3s-0.5s, độ lệch không quá 15% (kiểm tra vang tối thiểu sáu điểm tại 125Hz, 250Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz). Đối với âm thanh tần số thấp dưới 300H-350Hz, thông qua kích thước phòng, tỷ lệ hấp thụ âm của tường và vị trí tương đối của loa và người nghe được thiết kế và kiểm soát để ngăn sóng đứng ở tần số dưới 300Hz. Đối với âm thanh tần số trung-cao trên 300Hz, thông qua thiết kế bề mặt phản xạ của tường phòng, kiểm soát tổng thể âm sắc, không gian trong phòng, đường cong tần số đáp ứng phòng mượt mà, không có màu âm; độ đồng đều trường âm với tỷ lệ mức áp suất âm thanh tối đa/tối thiểu <3dB; độ lệch chuẩn giữa mức áp suất âm thanh tối đa/tối thiểu và trung bình nhỏ hơn 3dB.
+            </p>
+            {% else %}
+            <h3>Technical Requirements for Electronic Testing Listening Room, Listening Room, Audio-Visual Room:</h3>
+            <ol>
+                <li>Provide a standard, high-quality listening environment that meets multichannel 7.1 testing requirements.</li>
+                <li>Provide a standard testing environment for playback to conduct product comparison tests and development.</li>
+                <li>Provide an adjustable testing environment to achieve testing of speakers, amplifiers, and other products' acoustic performance under different sound environments.</li>
+            </ol>
+            <p class="technical-text">
+                After room completion, the room reverberation time can be changed by adjusting acoustic components such as absorbers and diffusers inside the room.
+                After room completion, the room reverberation time is 0.3s-0.5s, with deviation not greater than 15% (minimum six-point reverberation testing at 125Hz, 250Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz). For low-frequency sounds below 300H-350Hz, through room dimensions, wall absorption rates, and relative positions of speakers and listeners, design control is implemented to prevent standing waves below 300Hz. For mid-high frequency sounds above 300Hz, through designing room wall reflectors, control overall room timbre, spatiality, smooth room frequency response curve, no sound coloration; sound field uniformity with maximum/minimum sound pressure level ratio <3dB; standard deviation between maximum/minimum and average sound pressure levels less than 3dB.
+            </p>
+            {% endif %}
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="room-gallery mt-4">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="gallery-image">
+                        <img src="{{ url_for('static', filename='images/products/listening-room-interior-1.jpg') }}" alt="Listening Room Interior View 1" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-image">
+                        <img src="{{ url_for('static', filename='images/products/listening-room-interior-2.jpg') }}" alt="Listening Room Interior View 2" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
