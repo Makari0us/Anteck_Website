@@ -69,3 +69,10 @@ def set_language(lang):
     if lang in TRANSLATIONS:
         session['language'] = lang
     return redirect(url_for('index'))
+
+@app.route('/listening-room')
+def listening_room():
+    language = get_user_language()
+    return render_template('listening_room.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)

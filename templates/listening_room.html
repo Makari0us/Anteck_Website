@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<section class="hero-section text-center text-light py-4">
+    <div class="container">
+        <h1 class="display-5 mb-0">{{ content.nav_listening_room }}</h1>
+    </div>
+</section>
+
+<section class="section product-content">
+    <div class="container">
+        <!-- Main Product Introduction -->
+        <div class="row align-items-start g-4">
+            <div class="col-lg-6">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='images/products/listening-room-main.jpg') }}" alt="Listening Room" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-description">
+                    {% if current_lang == 'zh' %}
+                    <h2>听音室|视听室</h2>
+                    <p class="description-text">我司目前包括为Microsoft 建立标准Cortana听音室, 包括科大讯飞，今日头条，快手，Realtek，FLEX，华为，Vivo等科技公司建立专业听音室。根据我司专利技术，听音室可根据调整墙体上声学模块，混响时间可调节，多可至4档，满足模拟多种场景的测试需求。</p>
+                    <p class="consulting-number">咨询电话：+86 (134) 5166-1990</p>
+                    {% elif current_lang == 'vi' %}
+                    <h2>Phòng nghe | Phòng nghe nhìn</h2>
+                    <p class="description-text">Hiện tại, công ty chúng tôi bao gồm việc thiết lập phòng nghe Cortana tiêu chuẩn cho Microsoft, xây dựng phòng nghe chuyên nghiệp cho các công ty công nghệ như iFlytek, TikTok, Kuaishou, Realtek, FLEX, Huawei, Vivo. Theo công nghệ độc quyền của công ty chúng tôi, phòng nghe có thể điều chỉnh các mô-đun âm học trên tường, thời gian vang có thể điều chỉnh, lên đến 4 cấp độ, đáp ứng nhu cầu kiểm tra mô phỏng nhiều tình huống khác nhau.</p>
+                    <p class="consulting-number">Số tư vấn: +86 (134) 5166-1990</p>
+                    {% else %}
+                    <h2>Listening Room | Audio-Visual Room</h2>
+                    <p class="description-text">Our company currently includes establishing standard Cortana listening rooms for Microsoft, and building professional listening rooms for tech companies including iFlytek, ByteDance, Kuaishou, Realtek, FLEX, Huawei, Vivo, etc. According to our patented technology, the listening room can adjust acoustic modules on the walls, with adjustable reverberation time up to 4 levels, meeting testing requirements for simulating various scenarios.</p>
+                    <p class="consulting-number">Consulting Number: +1 (949) 992-3596</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Gallery Section -->
+        <div class="product-gallery mt-4">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/products/listening-room-1.jpg') }}" alt="Listening Room Detail 1" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/products/listening-room-2.jpg') }}" alt="Listening Room Detail 2" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/products/listening-room-3.jpg') }}" alt="Listening Room Detail 3" class="img-fluid gallery-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

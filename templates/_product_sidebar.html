@@ -40,7 +40,7 @@
             {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
-        <a href="#" class="menu-item">
+        <a href="{{ url_for('listening_room') }}" class="menu-item">
             {% if current_lang == 'zh' %}
             听音室视听室
             {% elif current_lang == 'vi' %}
