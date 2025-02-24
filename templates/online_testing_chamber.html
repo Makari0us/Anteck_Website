@@ -76,6 +76,80 @@
                 </div>
             </div>
         </div>
+
+        <!-- Detailed Technical Information -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="content-box p-4 border rounded">
+                    {% if current_lang == 'zh' %}
+                    <h3>一、在线检测静音室结构</h3>
+                    <ol>
+                        <li>产线穿过静音室结构</li>
+                        <li>进出口自动门结构</li>
+                        <li>悬浮减震结构</li>
+                        <li>通风消音系统结构</li>
+                    </ol>
+
+                    <h3>二、在线检测静音室功用</h3>
+                    <p>主要用于工厂车间在线测试，测试产品通过流水线进入房间，自动门关闭后进行测试；测试完毕自动门打开，产品流出。</p>
+
+                    <h3>三、在线检测静音室大小</h3>
+                    <p>举例：外部2000mm*2000mm*2000mm<br>
+                       内部1700mm*1700mm*1800mm</p>
+
+                    <h3>四、在线检测静音室性能</h3>
+                    <p>举例：外部环境噪音≤75dB，内部环境噪音≤35dB。</p>
+
+                    <h3>五、在线检测静音室特点</h3>
+                    <p>本底噪音小，使用方便，实用于量产产品测试要求。自动化程度高，节约时间。</p>
+
+                    {% elif current_lang == 'vi' %}
+                    <h3>1. Cấu trúc phòng kiểm tra trực tuyến</h3>
+                    <ol>
+                        <li>Cấu trúc dây chuyền sản xuất đi qua phòng cách âm</li>
+                        <li>Cấu trúc cửa tự động vào/ra</li>
+                        <li>Cấu trúc giảm chấn treo</li>
+                        <li>Cấu trúc hệ thống thông gió và tiêu âm</li>
+                    </ol>
+
+                    <h3>2. Công năng phòng kiểm tra trực tuyến</h3>
+                    <p>Chủ yếu dùng cho kiểm tra trực tuyến trong xưởng sản xuất, sản phẩm đi vào phòng qua dây chuyền, tiến hành kiểm tra sau khi cửa tự động đóng; mở cửa tự động sau khi kiểm tra xong và sản phẩm đi ra.</p>
+
+                    <h3>3. Kích thước phòng kiểm tra</h3>
+                    <p>Ví dụ: Bên ngoài 2000mm*2000mm*2000mm<br>
+                       Bên trong 1700mm*1700mm*1800mm</p>
+
+                    <h3>4. Hiệu suất phòng kiểm tra</h3>
+                    <p>Ví dụ: Độ ồn môi trường bên ngoài ≤75dB, độ ồn môi trường bên trong ≤35dB.</p>
+
+                    <h3>5. Đặc điểm phòng kiểm tra</h3>
+                    <p>Độ ồn nền thấp, dễ sử dụng, phù hợp với yêu cầu kiểm tra sản phẩm sản xuất hàng loạt. Mức độ tự động hóa cao, tiết kiệm thời gian.</p>
+
+                    {% else %}
+                    <h3>1. Online Testing Chamber Structure</h3>
+                    <ol>
+                        <li>Production line through soundproof room structure</li>
+                        <li>Automatic entrance/exit door structure</li>
+                        <li>Floating vibration reduction structure</li>
+                        <li>Ventilation and sound reduction system structure</li>
+                    </ol>
+
+                    <h3>2. Online Testing Chamber Function</h3>
+                    <p>Mainly used for in-factory online testing, where products enter the room via conveyor belt, testing is conducted after automatic door closure; automatic door opens after testing completion and product flows out.</p>
+
+                    <h3>3. Online Testing Chamber Dimensions</h3>
+                    <p>Example: External 2000mm*2000mm*2000mm<br>
+                       Internal 1700mm*1700mm*1800mm</p>
+
+                    <h3>4. Online Testing Chamber Performance</h3>
+                    <p>Example: External environment noise ≤75dB, internal environment noise ≤35dB.</p>
+
+                    <h3>5. Online Testing Chamber Features</h3>
+                    <p>Low background noise, convenient to use, practical for mass production testing requirements. High degree of automation, time-saving.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
