@@ -18,7 +18,7 @@ def index():
 @app.route('/panel-chamber')
 def panel_chamber():
     language = get_user_language()
-    return render_template('panel_chamber.html',
+    return render_template('panel-chamber.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
