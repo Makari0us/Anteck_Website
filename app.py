@@ -18,7 +18,7 @@ def index():
 @app.route('/panel-chamber')
 def panel_chamber():
     language = get_user_language()
-    return render_template('panel-chamber.html',
+    return render_template('panel_chamber.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -32,14 +32,14 @@ def wedge_chamber():
 @app.route('/soundproof-boxes')
 def soundproof_boxes():
     language = get_user_language()
-    return render_template('soundproof_boxes.html',
+    return render_template('soundproof-boxes.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
 @app.route('/silent-rooms')
 def silent_rooms():
     language = get_user_language()
-    return render_template('silent_rooms.html',
+    return render_template('silent-rooms.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -73,6 +73,6 @@ def set_language(lang):
 @app.route('/listening-room')
 def listening_room():
     language = get_user_language()
-    return render_template('listening_room.html',
+    return render_template('listening-room.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
