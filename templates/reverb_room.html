@@ -12,48 +12,30 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="product-image">
-                    <img src="{{ url_for('static', filename='images/products/reverb-room-detail.jpg') }}" alt="Reverberation Room" class="img-fluid">
+                    <img src="{{ url_for('static', filename='images/products/reverb-room-interior.jpg') }}" alt="Reverberation Room" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="product-description">
                     {% if current_lang == 'zh' %}
                     <h2>混响室</h2>
-                    <div class="description-text">
-                        <p>混响室是一种特殊的声学测试设施，用于测量声源的声功率级和吸声材料的吸声系数。其特点是：</p>
-                        <ul>
-                            <li>反射性强的墙面</li>
-                            <li>不规则形状设计</li>
-                            <li>精确的声场扩散性</li>
-                            <li>符合国际标准</li>
-                        </ul>
-                    </div>
+                    <p class="description-text">
+                        我司根据客户需求，设计，制作专业级混响室。无论是美观程度，可拆装程度，混响均匀度，均为世界水平。
+                    </p>
                     <div class="consulting-number">咨询电话：+86 (134) 5166-1990</div>
-                    
+
                     {% elif current_lang == 'vi' %}
                     <h2>Phòng vang âm</h2>
-                    <div class="description-text">
-                        <p>Phòng vang âm là một cơ sở kiểm tra âm học đặc biệt, được sử dụng để đo mức công suất âm thanh của nguồn âm và hệ số hấp thụ của vật liệu hấp thụ âm. Đặc điểm của nó là:</p>
-                        <ul>
-                            <li>Tường có độ phản xạ cao</li>
-                            <li>Thiết kế hình dạng không đều</li>
-                            <li>Độ khuếch tán trường âm chính xác</li>
-                            <li>Tuân thủ tiêu chuẩn quốc tế</li>
-                        </ul>
-                    </div>
+                    <p class="description-text">
+                        Công ty chúng tôi thiết kế và sản xuất phòng vang âm chuyên nghiệp theo yêu cầu của khách hàng. Về mặt thẩm mỹ, khả năng tháo lắp và độ đồng đều của âm vang đều đạt tiêu chuẩn quốc tế.
+                    </p>
                     <div class="consulting-number">Số điện thoại tư vấn: +86 (134) 5166-1990</div>
-                    
+
                     {% else %}
                     <h2>Reverberation Room</h2>
-                    <div class="description-text">
-                        <p>A reverberation room is a specialized acoustic testing facility used for measuring sound power levels of sound sources and absorption coefficients of sound-absorbing materials. Its features include:</p>
-                        <ul>
-                            <li>Highly reflective walls</li>
-                            <li>Irregular shape design</li>
-                            <li>Precise sound field diffusivity</li>
-                            <li>International standard compliance</li>
-                        </ul>
-                    </div>
+                    <p class="description-text">
+                        Our company designs and manufactures professional-grade reverberation rooms according to customer requirements. In terms of aesthetics, dismantling capability, and reverberation uniformity, all meet world-class standards.
+                    </p>
                     <div class="consulting-number">Consultation Number: +1 (949) 992-3596</div>
                     {% endif %}
                 </div>
