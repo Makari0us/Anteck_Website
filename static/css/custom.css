@@ -896,7 +896,7 @@ footer {
 
 /* Contact Page Styles */
 .contact-info-main {
-    background: #3c7ab7; 
+    background: #3c7ab7;
     color: white;
     height: 100%;
     display: flex;
@@ -964,8 +964,7 @@ footer {
 }
 
 .patent-item:hover {
-        transform: scale(1.05);
-}
+    transform: scale(1.05);}
 
 .patent-image {
     width: 100%;
@@ -1046,5 +1045,74 @@ footer {
 @media (max-width: 768px) {
     .contact-info-main {
         margin-bottom: 2rem;
+    }
+}
+
+/* Advantages Section */
+.advantages-section {
+    padding: 4rem 0;
+    background: linear-gradient(145deg, var(--bs-dark) 0%, #2a2a2a 100%);
+}
+
+.advantages-section h2 {
+    color: #e48e38;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.advantages-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #e48e38, rgba(228, 142, 56, 0.3));
+}
+
+.advantage-item {
+    padding: 2rem;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(228, 142, 56, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.advantage-item i {
+    font-size: 2.5rem;
+    color: #e48e38;
+    margin-bottom: 1.5rem;
+}
+
+.advantage-item h3 {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.advantage-item p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .advantage-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .advantages-section {
+        padding: 3rem 0;
     }
 }

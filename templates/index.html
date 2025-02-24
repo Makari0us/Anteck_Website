@@ -189,16 +189,125 @@
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section bg-dark text-light">
+<!-- Advantages Section -->
+<section class="advantages-section section bg-dark text-light">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="mb-4">{{ content.contact_title }}</h2>
-                <p class="lead">{{ content.contact_text }}</p>
+        <div class="row text-center">
+            <div class="col-12 mb-4">
+                <h2>
+                    {% if current_lang == 'zh' %}
+                    选择岸肯的4大优势
+                    {% elif current_lang == 'vi' %}
+                    4 Lợi thế khi chọn Anken
+                    {% else %}
+                    4 Key Advantages of Choosing Anken
+                    {% endif %}
+                </h2>
+                <p class="text-muted">
+                    {% if current_lang == 'zh' %}
+                    岸肯电子集销售、生产、售后于一体服务
+                    {% elif current_lang == 'vi' %}
+                    Anken Electronics tích hợp dịch vụ bán hàng, sản xuất và hậu mãi
+                    {% else %}
+                    Anken Electronics integrates sales, production, and after-sales service
+                    {% endif %}
+                </p>
+            </div>
+            <div class="col-md-3">
+                <div class="advantage-item">
+                    <i class="fas fa-star mb-3"></i>
+                    <h3>
+                        {% if current_lang == 'zh' %}
+                        实力优势
+                        {% elif current_lang == 'vi' %}
+                        Lợi thế năng lực
+                        {% else %}
+                        Strong Capabilities
+                        {% endif %}
+                    </h3>
+                    <p>
+                        {% if current_lang == 'zh' %}
+                        专注声学13年，为众多世界500强企业提供解决方案
+                        {% elif current_lang == 'vi' %}
+                        13 năm trong lĩnh vực âm học, cung cấp giải pháp cho nhiều doanh nghiệp Fortune 500
+                        {% else %}
+                        13 years in acoustics, providing solutions for many Fortune 500 companies
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="advantage-item">
+                    <i class="fas fa-users mb-3"></i>
+                    <h3>
+                        {% if current_lang == 'zh' %}
+                        服务优势
+                        {% elif current_lang == 'vi' %}
+                        Lợi thế dịch vụ
+                        {% else %}
+                        Service Excellence
+                        {% endif %}
+                    </h3>
+                    <p>
+                        {% if current_lang == 'zh' %}
+                        专业团队为您提供售前、售中、售后，专业周到
+                        {% elif current_lang == 'vi' %}
+                        Đội ngũ chuyên nghiệp phục vụ trước, trong và sau bán hàng
+                        {% else %}
+                        Professional team providing pre-sales, sales, and after-sales service
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="advantage-item">
+                    <i class="fas fa-globe mb-3"></i>
+                    <h3>
+                        {% if current_lang == 'zh' %}
+                        产品优势
+                        {% elif current_lang == 'vi' %}
+                        Lợi thế sản phẩm
+                        {% else %}
+                        Product Advantage
+                        {% endif %}
+                    </h3>
+                    <p>
+                        {% if current_lang == 'zh' %}
+                        产品出口美国，日本，墨西哥，印度，越南，台湾等国家和地区
+                        {% elif current_lang == 'vi' %}
+                        Sản phẩm xuất khẩu sang Mỹ, Nhật, Mexico, Ấn Độ, Việt Nam, Đài Loan
+                        {% else %}
+                        Products exported to USA, Japan, Mexico, India, Vietnam, Taiwan and other regions
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="advantage-item">
+                    <i class="fas fa-headset mb-3"></i>
+                    <h3>
+                        {% if current_lang == 'zh' %}
+                        售后优势
+                        {% elif current_lang == 'vi' %}
+                        Lợi thế hậu mãi
+                        {% else %}
+                        After-sales Support
+                        {% endif %}
+                    </h3>
+                    <p>
+                        {% if current_lang == 'zh' %}
+                        及时有效的售后服务，专家团队全程为您服务
+                        {% elif current_lang == 'vi' %}
+                        Dịch vụ hậu mãi kịp thời và hiệu quả, đội ngũ chuyên gia phục vụ
+                        {% else %}
+                        Timely and effective after-sales service, expert team at your service
+                        {% endif %}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 {{ super() }}
 {% endblock %}
