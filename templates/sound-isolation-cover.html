@@ -2,67 +2,33 @@
 
 {% block content %}
 <div class="container mt-5">
-    <!-- Product Header -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <h1>{{ content.sound_isolation_cover.title }}</h1>
-            <p class="lead">{{ content.sound_isolation_cover.description }}</p>
+    <div class="row align-items-start">
+        <div class="col-lg-6">
+            <div class="product-image">
+                <img src="{{ url_for('static', filename='images/products/sound-isolation-cover.jpg') }}" alt="Sound Isolation Cover" class="img-fluid rounded shadow">
+            </div>
         </div>
-    </div>
-
-    <!-- Main Product Image -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <img src="{{ url_for('static', filename='images/products/sound-isolation-cover.jpg') }}" 
-                 alt="Sound Isolation Cover" 
-                 class="img-fluid rounded shadow">
-        </div>
-    </div>
-
-    <!-- Features -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <h2>{{ content.sound_isolation_cover.features_title }}</h2>
-            <ul class="list-group list-group-flush">
-                {% for feature in content.sound_isolation_cover.features %}
-                <li class="list-group-item">{{ feature }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-
-    <!-- Technical Specifications -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <h2>{{ content.sound_isolation_cover.specs_title }}</h2>
-            <table class="table">
-                <tbody>
-                    {% for spec in content.sound_isolation_cover.specifications %}
-                    <tr>
-                        <th scope="row">{{ spec.name }}</th>
-                        <td>{{ spec.value }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- Applications -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <h2>{{ content.sound_isolation_cover.applications_title }}</h2>
-            <div class="row">
-                {% for application in content.sound_isolation_cover.applications %}
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ application.title }}</h5>
-                            <p class="card-text">{{ application.description }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
+        <div class="col-lg-6">
+            <div class="product-description">
+                {% if current_lang == 'zh' %}
+                <h2>隔声罩</h2>
+                <p class="description-text">
+                    隔声罩是用来把噪声较大的装置封闭起来，可以有效地阻隔噪声的外传和扩散，隔声效果可达20~40dB。隔声罩外壳由一层不透气的具有一定重量和刚性的金属材料制成，一般用2~3mm厚的钢，铺上一层阻尼层。隔声罩可隔离设备的高噪声，作为高噪声车间的控制室，减少噪声对人体的危害。同时配备有通风降温、散热装置和进、排风消音器等，保证设备正常工作。
+                </p>
+                <p class="consulting-number">咨询电话：<a href="tel:+8613451661990">+86 (134) 5166-1990</a></p>
+                {% elif current_lang == 'vi' %}
+                <h2>Vỏ cách âm</h2>
+                <p class="description-text">
+                    Vỏ cách âm được sử dụng để bao bọc các thiết bị có độ ồn cao, có thể ngăn chặn hiệu quả sự truyền và lan truyền của tiếng ồn, với hiệu quả cách âm có thể đạt 20~40dB. Vỏ ngoài của vỏ cách âm được làm từ vật liệu kim loại không thấm khí có trọng lượng và độ cứng nhất định, thường sử dụng thép dày 2~3mm, phủ một lớp giảm chấn. Vỏ cách âm có thể cách ly tiếng ồn cao của thiết bị, được sử dụng làm phòng điều khiển trong các phân xưởng có độ ồn cao, giảm tác hại của tiếng ồn đối với cơ thể người. Đồng thời được trang bị hệ thống thông gió làm mát, tản nhiệt và bộ giảm âm cho khí vào và ra, đảm bảo thiết bị hoạt động bình thường.
+                </p>
+                <p class="consulting-number">Số tư vấn: <a href="tel:+8613451661990">+86 (134) 5166-1990</a></p>
+                {% else %}
+                <h2>Sound Isolation Cover</h2>
+                <p class="description-text">
+                    The sound isolation cover is designed to enclose high-noise equipment, effectively preventing noise transmission and diffusion, with sound isolation effects reaching 20~40dB. The cover's shell is made from an airtight metallic material with specific weight and rigidity, typically using 2~3mm thick steel with a damping layer. The isolation cover can isolate high equipment noise, serving as a control room in high-noise workshops, reducing noise hazards to human health. It's equipped with ventilation cooling, heat dissipation devices, and intake/exhaust silencers to ensure normal equipment operation.
+                </p>
+                <p class="consulting-number">Contact us: <a href="tel:+19499923596">+1 (949) 992-3596</a></p>
+                {% endif %}
             </div>
         </div>
     </div>
