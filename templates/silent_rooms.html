@@ -59,6 +59,29 @@
                 </div>
             </div>
         </div>
+
+        <!-- Additional Product Information -->
+        <div class="product-additional-info mt-5">
+            {% if current_lang == 'zh' %}
+            <div class="text-content">
+                <p>隔音室(静音室)一种为有测试要求的产品制造车间设计的隔声测试装置，在隔声间内进行吸声处理，使其成为一个小型的无声室，在里面可测试一些小型的产品，如电机、音响、变压器等。</p>
+                <p>隔音室(静音室)是用于检测设备的工作间，可为活动静音房。静音房采用四面及顶面吸声，底层隔声的方式使室内达到低于20-40dB(A)。静音房除设置吸声系统外，按实际需要设置隔声门、窗和通风系统、电气系统等。</p>
+                <p>静音电可以根据客户的要求定制厂间、产线等比较嘈杂的环境中使用的静音房，其效果可以达到本底噪音（20dB (A)（背景噪音（80dB)。外表美观，可以按照客户要求是否安装滑轮移动，可以拆装使用。我公司可按照客户的要求制作隔音房，隔音量可达50dB以上。</p>
+            </div>
+            {% elif current_lang == 'vi' %}
+            <div class="text-content">
+                <p>Phòng cách âm (phòng yên tĩnh) là một thiết bị kiểm tra cách âm được thiết kế cho các phân xưởng sản xuất có yêu cầu kiểm tra, xử lý hấp thụ âm trong phòng cách âm để tạo thành một phòng không âm nhỏ, có thể kiểm tra các sản phẩm nhỏ như động cơ điện, thiết bị âm thanh, máy biến áp, v.v.</p>
+                <p>Phòng cách âm (phòng yên tĩnh) là phòng làm việc để kiểm tra thiết bị, có thể là phòng yên tĩnh di động. Phòng yên tĩnh sử dụng hấp thụ âm bốn mặt và trần, cách âm sàn để đạt được mức âm trong phòng dưới 20-40dB(A). Ngoài hệ thống hấp thụ âm, phòng yên tĩnh còn được trang bị cửa cách âm, cửa sổ, hệ thống thông gió và hệ thống điện theo nhu cầu thực tế.</p>
+                <p>Phòng yên tĩnh có thể được tùy chỉnh theo yêu cầu của khách hàng để sử dụng trong môi trường ồn ào như nhà xưởng, dây chuyền sản xuất, có thể đạt được độ ồn nền 20dB(A) (độ ồn nền 80dB). Thiết kế đẹp mắt, có thể lắp đặt bánh xe di động theo yêu cầu của khách hàng, có thể tháo lắp. Công ty chúng tôi có thể sản xuất phòng cách âm theo yêu cầu của khách hàng, với mức cách âm trên 50dB.</p>
+            </div>
+            {% else %}
+            <div class="text-content">
+                <p>The soundproof room (silent room) is a sound insulation testing device designed for product manufacturing workshops with testing requirements. Sound absorption treatment is performed inside the isolation room to create a small anechoic chamber, where small products such as motors, audio equipment, and transformers can be tested.</p>
+                <p>The soundproof room (silent room) is a workspace for equipment testing and can be a mobile quiet room. The quiet room uses sound absorption on four sides and ceiling, with floor sound insulation to achieve room levels below 20-40dB(A). In addition to the sound absorption system, the quiet room is equipped with soundproof doors, windows, ventilation system, and electrical system according to actual needs.</p>
+                <p>Silent rooms can be customized according to customer requirements for use in noisy environments such as factories and production lines, achieving background noise levels of 20dB(A) (against background noise of 80dB). Aesthetically pleasing appearance, can be installed with movable wheels according to customer requirements, can be dismantled and reassembled. Our company can produce soundproof rooms according to customer requirements, with sound insulation levels above 50dB.</p>
+            </div>
+            {% endif %}
+        </div>
     </div>
 </section>
 {% endblock %}
