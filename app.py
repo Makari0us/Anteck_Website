@@ -74,7 +74,7 @@ def reverb_room():
 @app.route('/online-testing-chamber')
 def online_testing_chamber():
     language = get_user_language()
-    return render_template('online_testing_chamber.html',
+    return render_template('online-testing-chamber.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -104,3 +104,24 @@ def set_language(lang):
     if lang in TRANSLATIONS:
         session['language'] = lang
     return redirect(url_for('index'))
+
+@app.route('/honored-customers')
+def honored_customers():
+    language = get_user_language()
+    return render_template('honored_customers.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
+@app.route('/honorary-qualification')
+def honorary_qualification():
+    language = get_user_language()
+    return render_template('honorary_qualification.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
+@app.route('/contact-location')
+def contact_location():
+    language = get_user_language()
+    return render_template('contact_location.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
