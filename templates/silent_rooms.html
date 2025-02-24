@@ -90,9 +90,29 @@
     <div class="container">
         <div class="specs-content">
             {% if current_lang == 'zh' %}
-            <div class="specs-section mb-5">
-                <h3 class="section-title mb-4">静音室功用</h3>
-                <p>主要用于汽车电子、机电、家电、通讯产品等快速模拟声学测试。</p>
+            <div class="row">
+                <!-- Text Content -->
+                <div class="col-lg-4">
+                    <div class="specs-section mb-5">
+                        <h3 class="section-title mb-4">静音室功用</h3>
+                        <p>主要用于汽车电子、机电、家电、通讯产品等快速模拟声学测试。</p>
+                    </div>
+                </div>
+                <!-- Images -->
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-tall.jpg') }}" alt="Silent Room Tall" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-compact.jpg') }}" alt="Silent Room Compact" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="specs-section mb-5">
@@ -111,9 +131,28 @@
                 <p>本底噪音小，对少量产品进行测试比较方便，如进行产品量产测试，因需要人工将产品拿到房间内部，不方便，可采用我司在线检测静音室。</p>
             </div>
             {% elif current_lang == 'vi' %}
-            <div class="specs-section mb-5">
-                <h3 class="section-title mb-4">Chức năng phòng cách âm</h3>
-                <p>Chủ yếu được sử dụng để mô phỏng nhanh kiểm tra âm học cho các sản phẩm điện tử ô tô, điện cơ, đồ gia dụng và thiết bị viễn thông.</p>
+            <!-- Vietnamese content with same structure -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="specs-section mb-5">
+                        <h3 class="section-title mb-4">Chức năng phòng cách âm</h3>
+                        <p>Chủ yếu được sử dụng để mô phỏng nhanh kiểm tra âm học cho các sản phẩm điện tử ô tô, điện cơ, đồ gia dụng và thiết bị viễn thông.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-tall.jpg') }}" alt="Phòng cách âm cao" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-compact.jpg') }}" alt="Phòng cách âm nhỏ gọn" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="specs-section mb-5">
@@ -132,9 +171,28 @@
                 <p>Độ ồn nền thấp, thuận tiện để kiểm tra số lượng nhỏ sản phẩm. Đối với kiểm tra sản xuất hàng loạt, do cần đưa sản phẩm vào phòng thủ công nên không thuận tiện, có thể sử dụng phòng cách âm kiểm tra trực tuyến của công ty chúng tôi.</p>
             </div>
             {% else %}
-            <div class="specs-section mb-5">
-                <h3 class="section-title mb-4">Silent Room Function</h3>
-                <p>Mainly used for rapid acoustic testing simulation of automotive electronics, electromechanical, household appliances, and communication products.</p>
+            <!-- English content with same structure -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="specs-section mb-5">
+                        <h3 class="section-title mb-4">Silent Room Function</h3>
+                        <p>Mainly used for rapid acoustic testing simulation of automotive electronics, electromechanical, household appliances, and communication products.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-tall.jpg') }}" alt="Silent Room Tall" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image-container mb-4">
+                                <img src="{{ url_for('static', filename='images/products/silent-room-compact.jpg') }}" alt="Silent Room Compact" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="specs-section mb-5">
