@@ -65,6 +65,77 @@
                 </div>
             </div>
         </div>
+
+        <!-- Application Scope and Features -->
+        <div class="product-details mt-5">
+            {% if current_lang == 'zh' %}
+            <div class="application-scope mb-4">
+                <h3>应用范围</h3>
+                <ul class="list-unstyled">
+                    <li>- 冲床、铣床等机器、设备隔声罩</li>
+                    <li>- 空压机、风机、水泵隔声罩</li>
+                    <li>- 鼓风机、引风机、发电机、变压器、粉碎机、球磨机、电动机、水泵、木工机械印刷等隔声罩</li>
+                    <li>- 空调室外机组隔声罩</li>
+                    <li>- 车间办公室、操作间隔声罩</li>
+                </ul>
+            </div>
+            <div class="features">
+                <h3>特点</h3>
+                <ol class="list-unstyled">
+                    <li>1、可快速拆卸和安装</li>
+                    <li>2、外表面隔声、内表面吸声</li>
+                    <li>3、可安装隔声门、隔声窗</li>
+                    <li>4、可对温度、风速、火灾、气体、烟雾实时监测和控制</li>
+                    <li>5、可安装于室内或室外，防水、防潮、抗紫外线</li>
+                    <li>6、可由钢板、铝板、不锈钢板制成</li>
+                </ol>
+            </div>
+            {% elif current_lang == 'vi' %}
+            <div class="application-scope mb-4">
+                <h3>Phạm vi ứng dụng</h3>
+                <ul class="list-unstyled">
+                    <li>- Vỏ cách âm cho máy dập, máy phay và các thiết bị khác</li>
+                    <li>- Vỏ cách âm cho máy nén khí, quạt, bơm nước</li>
+                    <li>- Vỏ cách âm cho quạt thổi, quạt hút, máy phát điện, máy biến áp, máy nghiền, máy nghiền bi, động cơ điện, bơm nước, máy móc gỗ và in ấn</li>
+                    <li>- Vỏ cách âm cho dàn nóng điều hòa</li>
+                    <li>- Vỏ cách âm cho văn phòng và phòng vận hành trong xưởng</li>
+                </ul>
+            </div>
+            <div class="features">
+                <h3>Đặc điểm</h3>
+                <ol class="list-unstyled">
+                    <li>1. Có thể tháo lắp nhanh chóng</li>
+                    <li>2. Bề mặt ngoài cách âm, bề mặt trong hấp thụ âm</li>
+                    <li>3. Có thể lắp đặt cửa và cửa sổ cách âm</li>
+                    <li>4. Có thể theo dõi và kiểm soát nhiệt độ, tốc độ gió, cháy, khí gas, khói theo thời gian thực</li>
+                    <li>5. Có thể lắp đặt trong nhà hoặc ngoài trời, chống nước, chống ẩm, chống tia UV</li>
+                    <li>6. Có thể được làm từ thép, nhôm hoặc thép không gỉ</li>
+                </ol>
+            </div>
+            {% else %}
+            <div class="application-scope mb-4">
+                <h3>Application Scope</h3>
+                <ul class="list-unstyled">
+                    <li>- Sound isolation covers for punch presses, milling machines, and other equipment</li>
+                    <li>- Sound isolation covers for air compressors, fans, and water pumps</li>
+                    <li>- Sound isolation covers for blowers, induced draft fans, generators, transformers, crushers, ball mills, electric motors, water pumps, woodworking machinery, and printing equipment</li>
+                    <li>- Sound isolation covers for outdoor air conditioning units</li>
+                    <li>- Sound isolation covers for workshop offices and operation rooms</li>
+                </ul>
+            </div>
+            <div class="features">
+                <h3>Features</h3>
+                <ol class="list-unstyled">
+                    <li>1. Quick assembly and disassembly</li>
+                    <li>2. Sound isolation on external surfaces, sound absorption on internal surfaces</li>
+                    <li>3. Can be equipped with soundproof doors and windows</li>
+                    <li>4. Real-time monitoring and control of temperature, wind speed, fire, gas, and smoke</li>
+                    <li>5. Suitable for indoor or outdoor installation, waterproof, moisture-proof, and UV-resistant</li>
+                    <li>6. Can be manufactured from steel, aluminum, or stainless steel plates</li>
+                </ol>
+            </div>
+            {% endif %}
+        </div>
     </div>
 </section>
 {% endblock %}
