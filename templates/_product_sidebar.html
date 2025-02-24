@@ -90,7 +90,7 @@
             {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
-        <a href="#" class="menu-item">
+        <a href="{{ url_for('acoustic_instruments') }}" class="menu-item">
             {% if current_lang == 'zh' %}
             声学测试仪器
             {% elif current_lang == 'vi' %}
