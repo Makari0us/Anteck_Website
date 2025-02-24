@@ -923,8 +923,52 @@
 }
 
 .map-container {
-    height: 100%;
-    min-height: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .contact-info-main {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: var(--bs-dark) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0; /* Added padding for better spacing */
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    margin-right: 2rem;
+}
+
+.footer-contact-info { /* Renamed for clarity */
+    text-align: left;
+}
+
+.footer-contact-info p { /* Renamed for clarity */
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-contact-info p:last-child { /* Renamed for clarity */
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {    .footer-logo {
+        margin: 0 auto 1rem;
+        display: block;
+    }
+
+    .footer-contact-info { /* Renamed for clarity */
+        text-align: center;
+    }
 }
 
 /* Product Feature Banner */
