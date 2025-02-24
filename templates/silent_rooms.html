@@ -7,12 +7,31 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="mb-4">Silent Rooms</h2>
-                <!-- Content will be added here -->
+        <div class="row align-items-start">
+            <!-- Image Column -->
+            <div class="col-lg-6">
+                <img src="/static/images/products/silent-room-main.jpg" alt="Silent Room" class="img-fluid rounded shadow">
+            </div>
+            <!-- Description Column -->
+            <div class="col-lg-6">
+                <h2 class="mb-4">静音室结构</h2>
+                <ul class="list-unstyled">
+                    <li class="mb-3">1、单层隔音围护结构</li>
+                    <li class="mb-3">2、双层中空隔音围护结构</li>
+                    <li class="mb-3">3、悬浮减震结构</li>
+                    <li class="mb-3">4、通风消音系统结构</li>
+                </ul>
+
+                <div class="mt-5">
+                    <h3 class="h4 mb-3">{{ content.consulting_title }}</h3>
+                    {% if content.language_code == 'en' %}
+                        <p class="lead">Contact us: <a href="tel:+19499923596">+1 (949) 992-3596</a></p>
+                    {% else %}
+                        <p class="lead">联系我们: <a href="tel:+8613451661990">+86 (134) 5166-1990</a></p>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
