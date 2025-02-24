@@ -41,6 +41,41 @@
                 </div>
             </div>
         </div>
+
+        <!-- Technical Specifications Box -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="content-box p-4 border rounded">
+                    {% if current_lang == 'zh' %}
+                    <p class="mb-0">
+                        在有流水线穿过房间的前提下，可以达到外部75db，内部小于35db（A）的技术要求，直接提升了客户的声学测试能力。
+                    </p>
+                    {% elif current_lang == 'vi' %}
+                    <p class="mb-0">
+                        Với điều kiện có dây chuyền sản xuất đi qua phòng, có thể đạt được yêu cầu kỹ thuật với độ ồn bên ngoài 75dB và bên trong nhỏ hơn 35dB (A), trực tiếp nâng cao khả năng kiểm tra âm học của khách hàng.
+                    </p>
+                    {% else %}
+                    <p class="mb-0">
+                        With the production line passing through the room, it can achieve technical requirements of 75dB outside and less than 35dB (A) inside, directly enhancing the customer's acoustic testing capabilities.
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Chamber Images -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="chamber-image">
+                    <img src="{{ url_for('static', filename='images/products/testing-chamber-1.jpg') }}" alt="Testing Chamber View 1" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="chamber-image">
+                    <img src="{{ url_for('static', filename='images/products/testing-chamber-2.jpg') }}" alt="Testing Chamber View 2" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
