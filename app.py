@@ -125,3 +125,13 @@ def contact_location():
     return render_template('contact_location.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
+
+@app.route('/view-patent/<int:number>')
+def view_patent(number):
+    if 1 <= number <= 4:  # Validate patent number range
+        language = get_user_language()
+        return render_template('view_patent.html',
+                            content=TRANSLATIONS[language],
+                            current_lang=language,
+                            number=number)
+    return redirect(url_for('honorary_qualification'))

@@ -696,7 +696,6 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-
 /* Product Description Enhancement */
 .product-description {
     padding: 2rem;
@@ -908,4 +907,49 @@
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Patent Gallery Section */
+.patent-gallery {
+    padding: 2rem 0;
+}
+
+.patent-item {
+    position: relative;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+    display: block;
+    text-decoration: none;
+}
+
+.patent-item:hover {
+    transform: scale(1.05);
+}
+
+.patent-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.patent-caption {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--bs-light);
+    font-size: 1.1rem;
+}
+
+/* Full Patent View */
+.full-patent-view {
+    padding: 2rem 0;
+}
+
+.full-patent-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
 }
