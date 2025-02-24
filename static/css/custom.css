@@ -327,15 +327,15 @@
 }
 
 /* Product Sidebar Styles */
-.product-sidebar, .contact-info {
-    background: #3c7ab7;
+.product-sidebar {
+    background: #3c7ab7; /*Removed blue background*/
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 20px;
 }
 
-.sidebar-header, .contact-info h3 {
-    background: #3c7ab7;
+.sidebar-header {
+    background: #3c7ab7; /*Removed blue background*/
     color: white;
     padding: 15px;
     margin: 0;
@@ -835,14 +835,14 @@
 /* Contact Info Section - Updated for sidebar placement */
 .contact-info {
     padding: 1.5rem;
-    background: #3c7ab7;
+    background: #3c7ab7; /* Removed blue background */
     border-radius: 4px;
     overflow: hidden;
     margin-top: 20px;
 }
 
 .contact-info h3 {
-    background: #3c7ab7;
+    background: #3c7ab7; /* Removed blue background */
     color: white;
     padding: 15px;
     margin: -1.5rem -1.5rem 15px -1.5rem;
@@ -895,7 +895,7 @@
 
 /* Contact Page Styles */
 .contact-info-main {
-    background: #3c7ab7;
+    background: #3c7ab7; /* Removed blue background */
     color: white;
     height: 100%;
     display: flex;
