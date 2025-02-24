@@ -29,17 +29,17 @@ def wedge_chamber():
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
-@app.route('/soundproof-boxes')
+@app.route('/soundproof_boxes')
 def soundproof_boxes():
     language = get_user_language()
-    return render_template('soundproof-boxes.html',
+    return render_template('soundproof_boxes.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
-@app.route('/silent-rooms')
+@app.route('/silent_rooms')
 def silent_rooms():
     language = get_user_language()
-    return render_template('silent-rooms.html',
+    return render_template('silent_rooms.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -77,9 +77,9 @@ def set_language(lang):
         session['language'] = lang
     return redirect(url_for('index'))
 
-@app.route('/listening-room')
+@app.route('/listening_room')
 def listening_room():
     language = get_user_language()
-    return render_template('listening-room.html',
+    return render_template('listening_room.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
