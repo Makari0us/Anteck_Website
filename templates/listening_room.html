@@ -88,6 +88,48 @@
                 </div>
             </div>
         </div>
+
+        <!-- Client Reference List -->
+        <div class="client-reference-table mt-4">
+            {% if current_lang == 'zh' %}
+            <h2 class="text-center mb-3">岸肯电测听音室客户</h2>
+            <p class="text-center mb-3">(排名不分先后)</p>
+            {% elif current_lang == 'vi' %}
+            <h2 class="text-center mb-3">Khách hàng Phòng nghe điện tử Anken</h2>
+            <p class="text-center mb-3">(Không theo thứ tự cụ thể)</p>
+            {% else %}
+            <h2 class="text-center mb-3">Anken Electronic Listening Room Customers</h2>
+            <p class="text-center mb-3">(In no particular order)</p>
+            {% endif %}
+
+            <table class="table table-borderless">
+                <tr>
+                    <td>苏州会议中心</td>
+                    <td>上海世博园英国展厅</td>
+                    <td>上海世博园法国展厅</td>
+                </tr>
+                <tr>
+                    <td>日本NIPPON</td>
+                    <td>北京中关村剧院</td>
+                    <td>深圳ZEALER</td>
+                </tr>
+                <tr>
+                    <td>南京SHARP</td>
+                    <td>HARMAN汽车电子</td>
+                    <td>华为</td>
+                </tr>
+                <tr>
+                    <td>今日头条</td>
+                    <td>Microsoft</td>
+                    <td>VIVO</td>
+                </tr>
+                <tr>
+                    <td>Realtek</td>
+                    <td>Flex</td>
+                    <td>等等</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </section>
 {% endblock %}
