@@ -12,25 +12,100 @@
         <div class="row align-items-start">
             <!-- Image Column -->
             <div class="col-lg-6">
-                <img src="/static/images/products/silent-room-main.jpg" alt="Silent Room" class="img-fluid rounded shadow">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='images/products/silent-room-main.jpg') }}" alt="Silent Room" class="img-fluid">
+                </div>
             </div>
             <!-- Description Column -->
             <div class="col-lg-6">
-                <h2 class="mb-4">静音室结构</h2>
-                <ul class="list-unstyled">
-                    <li class="mb-3">1、单层隔音围护结构</li>
-                    <li class="mb-3">2、双层中空隔音围护结构</li>
-                    <li class="mb-3">3、悬浮减震结构</li>
-                    <li class="mb-3">4、通风消音系统结构</li>
-                </ul>
-
-                <div class="mt-5">
-                    <h3 class="h4 mb-3">{{ content.consulting_title }}</h3>
-                    {% if content.language_code == 'en' %}
-                        <p class="lead">Contact us: <a href="tel:+19499923596">+1 (949) 992-3596</a></p>
+                <div class="product-description">
+                    {% if current_lang == 'zh' %}
+                    <h2>静音室</h2>
+                    <p class="description-text">
+                        我们的静音室采用先进的声学隔离技术，为您提供最佳的声学测试环境。特点包括：
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">1、单层隔音围护结构</li>
+                        <li class="mb-3">2、双层中空隔音围护结构</li>
+                        <li class="mb-3">3、悬浮减震结构</li>
+                        <li class="mb-3">4、通风消音系统结构</li>
+                    </ul>
+                    <p class="consulting-number">咨询电话：<a href="tel:+8613451661990">+86 (134) 5166-1990</a></p>
+                    {% elif current_lang == 'vi' %}
+                    <h2>Phòng cách âm</h2>
+                    <p class="description-text">
+                        Phòng cách âm của chúng tôi sử dụng công nghệ cách âm tiên tiến, cung cấp môi trường thử nghiệm âm thanh tốt nhất. Đặc điểm bao gồm:
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">1、Cấu trúc bảo vệ cách âm một lớp</li>
+                        <li class="mb-3">2、Cấu trúc bảo vệ cách âm rỗng hai lớp</li>
+                        <li class="mb-3">3、Cấu trúc giảm chấn nổi</li>
+                        <li class="mb-3">4、Cấu trúc hệ thống thông gió giảm âm</li>
+                    </ul>
+                    <p class="consulting-number">Số tư vấn: <a href="tel:+8613451661990">+86 (134) 5166-1990</a></p>
                     {% else %}
-                        <p class="lead">联系我们: <a href="tel:+8613451661990">+86 (134) 5166-1990</a></p>
+                    <h2>Silent Room</h2>
+                    <p class="description-text">
+                        Our silent rooms utilize advanced acoustic isolation technology to provide the optimal environment for acoustic testing. Features include:
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">1. Single-layer sound insulation structure</li>
+                        <li class="mb-3">2. Double-layer hollow sound insulation structure</li>
+                        <li class="mb-3">3. Floating vibration reduction structure</li>
+                        <li class="mb-3">4. Ventilation noise reduction system structure</li>
+                    </ul>
+                    <p class="consulting-number">Contact us: <a href="tel:+19499923596">+1 (949) 992-3596</a></p>
                     {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Details -->
+        <div class="technical-details mt-5">
+            {% if current_lang == 'zh' %}
+            <h3>技术规格</h3>
+            <p>静音室采用先进的隔音技术，可实现：</p>
+            <ul>
+                <li>隔音量：≥40dB (1000Hz)</li>
+                <li>本底噪音：≤30dB(A)</li>
+                <li>适用范围：办公环境、实验室、录音室等</li>
+            </ul>
+            {% elif current_lang == 'vi' %}
+            <h3>Thông số kỹ thuật</h3>
+            <p>Phòng cách âm sử dụng công nghệ cách âm tiên tiến, có thể đạt được:</p>
+            <ul>
+                <li>Mức cách âm: ≥40dB (1000Hz)</li>
+                <li>Độ ồn nền: ≤30dB(A)</li>
+                <li>Phạm vi ứng dụng: Môi trường văn phòng, phòng thí nghiệm, phòng thu âm, v.v.</li>
+            </ul>
+            {% else %}
+            <h3>Technical Specifications</h3>
+            <p>The silent room employs advanced soundproofing technology to achieve:</p>
+            <ul>
+                <li>Sound Insulation: ≥40dB (1000Hz)</li>
+                <li>Background Noise: ≤30dB(A)</li>
+                <li>Applications: Office environments, laboratories, recording studios, etc.</li>
+            </ul>
+            {% endif %}
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section mt-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/silent-room-1.jpg') }}" alt="Silent Room Interior" class="gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/silent-room-2.jpg') }}" alt="Silent Room Exterior" class="gallery-image">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/silent-room-3.jpg') }}" alt="Silent Room Application" class="gallery-image">
+                    </div>
                 </div>
             </div>
         </div>
