@@ -1,118 +1,100 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-<section class="hero-section text-center text-light">
+<section class="hero-section text-center text-light py-4">
     <div class="container">
-        <h1 class="display-4">{{ content.nav_reverb_room }}</h1>
+        <h1 class="display-5 mb-0">{{ content.nav_reverb_room }}</h1>
     </div>
 </section>
 
-<section class="section">
+<section class="section product-content">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
+        <div class="row g-4">
+            <!-- Main Product Information -->
+            <div class="col-lg-6">
                 <div class="product-image">
                     <img src="{{ url_for('static', filename='images/products/reverb-room-interior.jpg') }}" alt="Reverberation Room" class="img-fluid">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <div class="product-description">
                     {% if current_lang == 'zh' %}
-                    <h2>混响室</h2>
+                    <h2>产品介绍</h2>
                     <p class="description-text">
-                        我司根据客户需求，设计，制作专业级混响室。无论是美观程度，可拆装程度，混响均匀度，均为世界水平。
+                        声学混响室是一个能在所有边界上全部反射声能，并在其中充分扩散，使形成各处能量密度均匀、在各传播方向作无规分布的扩散场的实验室。
                     </p>
                     <div class="consulting-number">咨询电话：+86 (134) 5166-1990</div>
 
                     {% elif current_lang == 'vi' %}
-                    <h2>Phòng vang âm</h2>
+                    <h2>Giới thiệu sản phẩm</h2>
                     <p class="description-text">
-                        Công ty chúng tôi thiết kế và sản xuất phòng vang âm chuyên nghiệp theo yêu cầu của khách hàng. Về mặt thẩm mỹ, khả năng tháo lắp và độ đồng đều của âm vang đều đạt tiêu chuẩn quốc tế.
+                        Phòng thử nghiệm vang âm là một phòng thí nghiệm có khả năng phản xạ năng lượng âm thanh trên tất cả các ranh giới và khuếch tán đầy đủ bên trong, tạo ra một trường khuếch tán với mật độ năng lượng đồng nhất ở mọi vị trí và phân bố không đều theo mọi hướng truyền.
                     </p>
                     <div class="consulting-number">Số điện thoại tư vấn: +86 (134) 5166-1990</div>
 
                     {% else %}
-                    <h2>Reverberation Room</h2>
+                    <h2>Product Introduction</h2>
                     <p class="description-text">
-                        Our company designs and manufactures professional-grade reverberation rooms according to customer requirements. In terms of aesthetics, dismantling capability, and reverberation uniformity, all meet world-class standards.
+                        An acoustic reverberation room is a laboratory that can fully reflect sound energy on all boundaries and fully diffuse within it, creating a diffuse field with uniform energy density everywhere and irregular distribution in all propagation directions.
                     </p>
                     <div class="consulting-number">Consultation Number: +1 (949) 992-3596</div>
                     {% endif %}
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<section class="technical-specs section">
-    <div class="container">
-        {% if current_lang == 'zh' %}
-        <h3>技术规格</h3>
-        <div class="specs-content">
-            <ul>
-                <li>体积：≥200m³</li>
-                <li>截止频率：100Hz</li>
-                <li>衰减时间：1-2s（500Hz）</li>
-                <li>符合标准：ISO 354, ASTM C423</li>
-            </ul>
-        </div>
-        {% elif current_lang == 'vi' %}
-        <h3>Thông số kỹ thuật</h3>
-        <div class="specs-content">
-            <ul>
-                <li>Thể tích: ≥200m³</li>
-                <li>Tần số cắt: 100Hz</li>
-                <li>Thời gian suy giảm: 1-2s (500Hz)</li>
-                <li>Đáp ứng tiêu chuẩn: ISO 354, ASTM C423</li>
-            </ul>
-        </div>
-        {% else %}
-        <h3>Technical Specifications</h3>
-        <div class="specs-content">
-            <ul>
-                <li>Volume: ≥200m³</li>
-                <li>Cut-off frequency: 100Hz</li>
-                <li>Decay time: 1-2s (500Hz)</li>
-                <li>Standards compliance: ISO 354, ASTM C423</li>
-            </ul>
-        </div>
-        {% endif %}
-    </div>
-</section>
+            <!-- Technical Specifications -->
+            <div class="col-12">
+                {% if current_lang == 'zh' %}
+                <h3>技术规格</h3>
+                <ul>
+                    <li>体积：≥200m³</li>
+                    <li>截止频率：100Hz</li>
+                    <li>衰减时间：1-2s (500Hz)</li>
+                    <li>符合标准：ISO 354, ASTM C423</li>
+                </ul>
+                {% elif current_lang == 'vi' %}
+                <h3>Thông số kỹ thuật</h3>
+                <ul>
+                    <li>Thể tích: ≥200m³</li>
+                    <li>Tần số cắt: 100Hz</li>
+                    <li>Thời gian suy giảm: 1-2s (500Hz)</li>
+                    <li>Đáp ứng tiêu chuẩn: ISO 354, ASTM C423</li>
+                </ul>
+                {% else %}
+                <h3>Technical Specifications</h3>
+                <ul>
+                    <li>Volume: ≥200m³</li>
+                    <li>Cut-off frequency: 100Hz</li>
+                    <li>Decay time: 1-2s (500Hz)</li>
+                    <li>Standards compliance: ISO 354, ASTM C423</li>
+                </ul>
+                {% endif %}
+            </div>
 
-<section class="applications section">
-    <div class="container">
-        {% if current_lang == 'zh' %}
-        <h3>应用领域</h3>
-        <div class="application-content">
-            <ul>
-                <li>建筑声学材料测试</li>
-                <li>工业设备声功率测量</li>
-                <li>吸声系数测定</li>
-                <li>声学研究与开发</li>
-            </ul>
+            <!-- Applications -->
+            <div class="col-12">
+                {% if current_lang == 'zh' %}
+                <h3>功用</h3>
+                <p>声学混响室的功用主要是：测定材料的吸声系数，空气中的声吸收，声源和机器、设备等的声功率及频谱，测量某些电声器件和设备的效率等声学性能以及对灵敏机件作噪声疲劳试验等等。</p>
+                {% elif current_lang == 'vi' %}
+                <h3>Ứng dụng</h3>
+                <ul>
+                    <li>Kiểm tra vật liệu âm học xây dựng</li>
+                    <li>Đo công suất âm thanh của thiết bị công nghiệp</li>
+                    <li>Xác định hệ số hấp thụ âm</li>
+                    <li>Nghiên cứu và phát triển âm học</li>
+                </ul>
+                {% else %}
+                <h3>Applications</h3>
+                <ul>
+                    <li>Building acoustics material testing</li>
+                    <li>Industrial equipment sound power measurement</li>
+                    <li>Absorption coefficient determination</li>
+                    <li>Acoustic research and development</li>
+                </ul>
+                {% endif %}
+            </div>
         </div>
-        {% elif current_lang == 'vi' %}
-        <h3>Lĩnh vực ứng dụng</h3>
-        <div class="application-content">
-            <ul>
-                <li>Kiểm tra vật liệu âm học xây dựng</li>
-                <li>Đo công suất âm thanh của thiết bị công nghiệp</li>
-                <li>Xác định hệ số hấp thụ âm</li>
-                <li>Nghiên cứu và phát triển âm học</li>
-            </ul>
-        </div>
-        {% else %}
-        <h3>Applications</h3>
-        <div class="application-content">
-            <ul>
-                <li>Building acoustics material testing</li>
-                <li>Industrial equipment sound power measurement</li>
-                <li>Absorption coefficient determination</li>
-                <li>Acoustic research and development</li>
-            </ul>
-        </div>
-        {% endif %}
     </div>
 </section>
 {% endblock %}
