@@ -62,9 +62,6 @@
                         <a class="nav-link {{ 'active' if request.endpoint == 'products' }}" href="{{ url_for('products') }}">{{ content.nav_products }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ 'active' if request.endpoint == 'cases' }}" href="{{ url_for('cases') }}">{{ content.nav_cases }}</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link {{ 'active' if request.endpoint == 'about' }}" href="{{ url_for('about') }}">{{ content.nav_about }}</a>
                     </li>
                 </ul>
@@ -72,7 +69,7 @@
         </div>
     </div>
 
-    {% if request.endpoint not in ['index', 'cases', 'about'] %}
+    {% if request.endpoint not in ['index', 'about'] %}
     <!-- Product Banner -->
     <div class="product-feature-banner">
         <img src="{{ url_for('static', filename='images/products/feature-banner.jpg') }}" alt="专业消声静音设备供应商">
@@ -89,7 +86,7 @@
                     </div>
                     <div class="sidebar">
                         {% include '_product_sidebar.html' %}
-                        {% if request.endpoint not in ['cases', 'about'] %}
+                        {% if request.endpoint not in ['about'] %}
                         {% include '_contact_info.html' %}
                         {% endif %}
                     </div>
