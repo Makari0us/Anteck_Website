@@ -24,9 +24,9 @@
                     {{ content.phone_number }}
                 </div>
                 <div class="language-buttons">
-                    <button class="btn btn-sm btn-outline-light language-btn" data-lang="en">EN</button>
-                    <button class="btn btn-sm btn-outline-light language-btn" data-lang="vi">VI</button>
-                    <button class="btn btn-sm btn-outline-light language-btn" data-lang="zh">中文</button>
+                    <button class="btn btn-sm btn-outline-light language-btn" onclick="setLanguage('en')">EN</button>
+                    <button class="btn btn-sm btn-outline-light language-btn" onclick="setLanguage('vi')">VI</button>
+                    <button class="btn btn-sm btn-outline-light language-btn" onclick="setLanguage('zh')">中文</button>
                 </div>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -112,6 +112,12 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    function setLanguage(lang) {
+        window.location.href = '/set-language/' + lang;
+    }
+    </script>
 
     </body>
 </html>
