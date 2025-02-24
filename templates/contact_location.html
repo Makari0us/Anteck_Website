@@ -9,7 +9,30 @@
 
 <section class="section">
     <div class="container">
-        <!-- Content will be added later -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info-main p-4 rounded">
+                    <h3>{{ content.contact_title }}</h3>
+                    <div class="contact-details">
+                        <p><strong>{{ content.company_name.split('|')[0] }}</strong></p>
+                        <p>Workshop 108, No. 288 Gaoshan Road,<br>New District, Suzhou</p>
+                        <p>{{ content.phone_number }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map-container rounded overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.085!2d120.5437!3d31.3886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b3a5c8d8d8d8d8%3A0x8d8d8d8d8d8d8d8d!2s288%20Gaoshan%20Rd%2C%20Suzhou%20New%20District%2C%20Suzhou%2C%20Jiangsu%2C%20China!5e0!3m2!1sen!2s!4v1625647893694!5m2!1sen!2s"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
