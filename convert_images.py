@@ -8,7 +8,8 @@ static_dir.mkdir(parents=True, exist_ok=True)
 # Specific image mappings
 image_mappings = {
     "截屏2025-02-23 下午7.29.23.png": "acoustic-testing-equipment.jpg",
-    "截屏2025-02-23 下午7.32.36.png": "acoustic-testing-device.jpg"
+    "截屏2025-02-23 下午7.32.36.png": "acoustic-testing-device.jpg",
+    "截屏2025-02-23 下午7.36.56.png": "acoustic-testing-instruments.jpg"
 }
 
 # Convert images
