@@ -41,6 +41,61 @@
                 </div>
             </div>
         </div>
+
+        <!-- Product List Section -->
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <div class="content-box p-4 border rounded">
+                    {% if current_lang == 'zh' %}
+                    <h3>主要产品包括：</h3>
+                    <ol>
+                        <li>声级计及噪声测量仪器</li>
+                        <li>振动测量仪器</li>
+                        <li>电声测量仪器</li>
+                        <li>实时信号分析仪</li>
+                        <li>环境噪声自动监测系统</li>
+                        <li>声强测量分析仪</li>
+                        <li>测试传声器及前置放大器</li>
+                        <li>建筑声学测量仪器</li>
+                        <li>声校准器</li>
+                    </ol>
+
+                    {% elif current_lang == 'vi' %}
+                    <h3>Sản phẩm chính bao gồm:</h3>
+                    <ol>
+                        <li>Máy đo độ ồn và thiết bị đo tiếng ồn</li>
+                        <li>Thiết bị đo độ rung</li>
+                        <li>Thiết bị đo âm thanh điện tử</li>
+                        <li>Máy phân tích tín hiệu thời gian thực</li>
+                        <li>Hệ thống giám sát tiếng ồn môi trường tự động</li>
+                        <li>Máy phân tích đo cường độ âm thanh</li>
+                        <li>Microphone kiểm tra và bộ tiền khuếch đại</li>
+                        <li>Thiết bị đo âm học kiến trúc</li>
+                        <li>Máy hiệu chuẩn âm thanh</li>
+                    </ol>
+
+                    {% else %}
+                    <h3>Main Products Include:</h3>
+                    <ol>
+                        <li>Sound Level Meters and Noise Measurement Instruments</li>
+                        <li>Vibration Measurement Instruments</li>
+                        <li>Electroacoustic Measurement Instruments</li>
+                        <li>Real-time Signal Analyzers</li>
+                        <li>Environmental Noise Automatic Monitoring Systems</li>
+                        <li>Sound Intensity Measurement Analyzers</li>
+                        <li>Test Microphones and Preamplifiers</li>
+                        <li>Architectural Acoustics Measurement Instruments</li>
+                        <li>Sound Calibrators</li>
+                    </ol>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="equipment-image">
+                    <img src="{{ url_for('static', filename='images/products/acoustic-testing-device.jpg') }}" alt="Acoustic Testing Device" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
