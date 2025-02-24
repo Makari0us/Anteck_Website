@@ -10,7 +10,7 @@
 <section class="section product-content">
     <div class="container">
         <!-- Main Product Introduction -->
-        <div class="row align-items-start g-4">
+        <div class="row align-items-start g-4 mb-5">
             <div class="col-lg-6">
                 <div class="product-image">
                     <img src="{{ url_for('static', filename='images/products/soundproof-box-main.jpg') }}" alt="Soundproof Box" class="img-fluid">
@@ -35,26 +35,34 @@
             </div>
         </div>
 
-        <!-- Product Gallery -->
-        <div class="product-gallery mt-4">
-            <div class="row g-3">
+        <!-- Main Gallery Section -->
+        <div class="gallery-section mb-5">
+            <div class="row g-4">
                 <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-1.jpg') }}" alt="Soundproof Box Detail 1" class="img-fluid gallery-image">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/soundproof-box-1.jpg') }}" alt="Soundproof Box Detail 1" class="gallery-image">
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-2.jpg') }}" alt="Soundproof Box Detail 2" class="img-fluid gallery-image">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/soundproof-box-2.jpg') }}" alt="Soundproof Box Detail 2" class="gallery-image">
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-3.jpg') }}" alt="Soundproof Box Detail 3" class="img-fluid gallery-image">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/soundproof-box-3.jpg') }}" alt="Soundproof Box Detail 3" class="gallery-image">
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-4.jpg') }}" alt="Soundproof Box Detail 4" class="img-fluid gallery-image">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/soundproof-box-4.jpg') }}" alt="Soundproof Box Detail 4" class="gallery-image">
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Technical Details -->
-        <div class="technical-details mt-4">
+        <div class="technical-details mb-5">
             {% if current_lang == 'zh' %}
             <p>某些客户由于空间及成本限制，也不需要精度太高的消声箱，岸肯电子也提供另外一种产品，平板型消声箱。</p>
             <p>该产品分部采用钢板结构，中间填充高效吸音隔音材料，内部是由岸肯电子专业设计的吸声板板，采用不同材质的吸音材料根据声学原理叠加而成，以达到对不同频段的声波进行吸收。内部有可以活动的拉板，采用吸音设计，以方便测试使用。</p>
@@ -103,38 +111,46 @@
             {% endif %}
         </div>
 
-        <!-- Additional Gallery Row -->
-        <div class="product-gallery mt-4">
-            <div class="row g-3">
+        <!-- Additional Gallery Section -->
+        <div class="gallery-section mb-5">
+            <div class="row g-4">
                 <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-5.jpg') }}" alt="Soundproof Box Additional 1" class="img-fluid gallery-image">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/soundproof-box-5.jpg') }}" alt="Soundproof Box Additional 1" class="gallery-image">
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-6.jpg') }}" alt="Soundproof Box Additional 2" class="img-fluid gallery-image">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/soundproof-box-6.jpg') }}" alt="Soundproof Box Additional 2" class="gallery-image">
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-7.jpg') }}" alt="Soundproof Box Additional 3" class="img-fluid gallery-image">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/soundproof-box-7.jpg') }}" alt="Soundproof Box Additional 3" class="gallery-image">
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='images/products/soundproof-box-8.jpg') }}" alt="Soundproof Box Additional 4" class="img-fluid gallery-image">
+                    <div class="gallery-image-container">
+                        <img src="{{ url_for('static', filename='images/products/soundproof-box-8.jpg') }}" alt="Soundproof Box Additional 4" class="gallery-image">
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Automated Door Options -->
-        <div class="technical-details mt-4">
-            {% if current_lang == 'zh' %}
-            <p>当客户需要在生产线上进行快速的声学测试，即采用自动化开门及关门方式，我司提供翻盖式及抽屉式自动门消声箱供客户选择：</p>
-            {% elif current_lang == 'vi' %}
-            <p>Khi khách hàng cần thực hiện kiểm tra âm thanh nhanh chóng trên dây chuyền sản xuất, sử dụng phương thức mở cửa và đóng cửa tự động, công ty chúng tôi cung cấp hộp tiêu âm cửa tự động kiểu nắp gập và kiểu ngăn kéo để khách hàng lựa chọn:</p>
-            {% else %}
-            <p>When customers need to perform quick acoustic testing on the production line using automated door opening and closing methods, we offer flip-top and drawer-style automatic door soundproof boxes for customers to choose from:</p>
-            {% endif %}
-        </div>
+        <!-- Automated Door Types -->
+        <div class="automated-doors-section mb-5">
+            <div class="technical-details">
+                {% if current_lang == 'zh' %}
+                <p>当客户需要在生产线上进行快速的声学测试，即采用自动化开门及关门方式，我司提供翻盖式及抽屉式自动门消声箱供客户选择：</p>
+                {% elif current_lang == 'vi' %}
+                <p>Khi khách hàng cần thực hiện kiểm tra âm thanh nhanh chóng trên dây chuyền sản xuất, sử dụng phương thức mở cửa và đóng cửa tự động, công ty chúng tôi cung cấp hộp tiêu âm cửa tự động kiểu nắp gập và kiểu ngăn kéo để khách hàng lựa chọn：</p>
+                {% else %}
+                <p>When customers need to perform quick acoustic testing on the production line using automated door opening and closing methods, we offer flip-top and drawer-style automatic door soundproof boxes for customers to choose from:</p>
+                {% endif %}
+            </div>
 
-        <!-- Automated Door Types Gallery -->
-        <div class="product-gallery">
-            <div class="row g-3">
+            <!-- Automated Door Types Gallery -->
+            <div class="row g-4">
                 <div class="col-md-6">
                     <div class="automated-box-type">
                         {% if current_lang == 'zh' %}
@@ -146,10 +162,14 @@
                         {% endif %}
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <img src="{{ url_for('static', filename='images/products/auto-box-1.jpg') }}" alt="Automatic Flip-top Box 1" class="img-fluid gallery-image">
+                                <div class="gallery-image-container">
+                                    <img src="{{ url_for('static', filename='images/products/auto-box-1.jpg') }}" alt="Automatic Flip-top Box 1" class="gallery-image">
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <img src="{{ url_for('static', filename='images/products/auto-box-2.jpg') }}" alt="Automatic Flip-top Box 2" class="img-fluid gallery-image">
+                                <div class="gallery-image-container">
+                                    <img src="{{ url_for('static', filename='images/products/auto-box-2.jpg') }}" alt="Automatic Flip-top Box 2" class="gallery-image">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -165,10 +185,14 @@
                         {% endif %}
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <img src="{{ url_for('static', filename='images/products/auto-box-3.jpg') }}" alt="Automatic Drawer Box 1" class="img-fluid gallery-image">
+                                <div class="gallery-image-container">
+                                    <img src="{{ url_for('static', filename='images/products/auto-box-3.jpg') }}" alt="Automatic Drawer Box 1" class="gallery-image">
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <img src="{{ url_for('static', filename='images/products/auto-box-4.jpg') }}" alt="Automatic Drawer Box 2" class="img-fluid gallery-image">
+                                <div class="gallery-image-container">
+                                    <img src="{{ url_for('static', filename='images/products/auto-box-4.jpg') }}" alt="Automatic Drawer Box 2" class="gallery-image">
+                                </div>
                             </div>
                         </div>
                     </div>
