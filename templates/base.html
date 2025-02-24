@@ -79,16 +79,14 @@
     <!-- Main Content -->
     <div class="container">
         <div class="page-content">
-            {% if request.endpoint != 'index' %}
+            {% if request.endpoint != 'index' and request.endpoint != 'about' %}
                 <div class="page-with-sidebar">
                     <div class="main-content">
                         {% block page_content %}{% endblock %}
                     </div>
                     <div class="sidebar">
                         {% include '_product_sidebar.html' %}
-                        {% if request.endpoint not in ['about'] %}
                         {% include '_contact_info.html' %}
-                        {% endif %}
                     </div>
                 </div>
             {% else %}
