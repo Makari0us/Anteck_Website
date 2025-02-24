@@ -90,3 +90,10 @@ def reverb_room():
     return render_template('reverb_room.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
+
+@app.route('/online-testing-chamber')
+def online_testing_chamber():
+    language = get_user_language()
+    return render_template('online-testing-chamber.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)

@@ -80,7 +80,7 @@
             {% endif %}
             <span class="menu-icon">⌘</span>
         </a>
-        <a href="#" class="menu-item">
+        <a href="{{ url_for('online_testing_chamber') }}" class="menu-item">
             {% if current_lang == 'zh' %}
             生产线在线声学检测房
             {% elif current_lang == 'vi' %}

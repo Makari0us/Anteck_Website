@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<section class="hero-section text-center text-light py-4">
+    <div class="container">
+        <h1 class="display-5 mb-0">{{ content.nav_online_testing }}</h1>
+    </div>
+</section>
+
+<section class="section product-content">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='images/products/online-testing-chamber.jpg') }}" alt="Online Acoustic Testing Chamber" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-description">
+                    {% if current_lang == 'zh' %}
+                    <h2>在线声学测试室</h2>
+                    <p class="description-text">
+                        专业级在线声学测试室，为您提供高效、准确的声学测试解决方案。适用于大规模产品测试和质量控制环境。
+                    </p>
+                    <div class="consulting-number">咨询电话：+86 (134) 5166-1990</div>
+                    {% elif current_lang == 'vi' %}
+                    <h2>Phòng thử nghiệm âm học trực tuyến</h2>
+                    <p class="description-text">
+                        Phòng thử nghiệm âm học trực tuyến chuyên nghiệp, cung cấp giải pháp thử nghiệm âm học hiệu quả và chính xác. Phù hợp cho môi trường kiểm tra sản phẩm và kiểm soát chất lượng quy mô lớn.
+                    </p>
+                    <div class="consulting-number">Số điện thoại tư vấn: +86 (134) 5166-1990</div>
+                    {% else %}
+                    <h2>Online Acoustic Testing Chamber</h2>
+                    <p class="description-text">
+                        Professional-grade online acoustic testing chamber providing efficient and accurate acoustic testing solutions. Suitable for large-scale product testing and quality control environments.
+                    </p>
+                    <div class="consulting-number">Consultation Number: +1 (949) 992-3596</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Box -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="content-box p-4 border rounded">
+                    {% if current_lang == 'zh' %}
+                    <h3>功能特点</h3>
+                    <ul>
+                        <li>自动化测试系统</li>
+                        <li>实时数据采集和分析</li>
+                        <li>高精度声学测量</li>
+                        <li>多通道同步测试</li>
+                        <li>远程监控和数据存储</li>
+                    </ul>
+
+                    <h3>应用领域</h3>
+                    <ul>
+                        <li>产品质量控制</li>
+                        <li>研发测试验证</li>
+                        <li>生产线声学检测</li>
+                        <li>设备性能评估</li>
+                    </ul>
+
+                    {% elif current_lang == 'vi' %}
+                    <h3>Tính năng</h3>
+                    <ul>
+                        <li>Hệ thống kiểm tra tự động</li>
+                        <li>Thu thập và phân tích dữ liệu thời gian thực</li>
+                        <li>Đo lường âm học chính xác cao</li>
+                        <li>Kiểm tra đồng bộ đa kênh</li>
+                        <li>Giám sát từ xa và lưu trữ dữ liệu</li>
+                    </ul>
+
+                    <h3>Lĩnh vực ứng dụng</h3>
+                    <ul>
+                        <li>Kiểm soát chất lượng sản phẩm</li>
+                        <li>Kiểm tra và xác nhận R&D</li>
+                        <li>Kiểm tra âm học trong dây chuyền sản xuất</li>
+                        <li>Đánh giá hiệu suất thiết bị</li>
+                    </ul>
+
+                    {% else %}
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Automated testing system</li>
+                        <li>Real-time data acquisition and analysis</li>
+                        <li>High-precision acoustic measurements</li>
+                        <li>Multi-channel synchronized testing</li>
+                        <li>Remote monitoring and data storage</li>
+                    </ul>
+
+                    <h3>Applications</h3>
+                    <ul>
+                        <li>Product quality control</li>
+                        <li>R&D testing and validation</li>
+                        <li>Production line acoustic inspection</li>
+                        <li>Equipment performance evaluation</li>
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
