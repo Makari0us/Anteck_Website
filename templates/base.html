@@ -103,40 +103,10 @@
                 </div>
                 <div class="col-md-8">
                     <div class="contact-info">
-                        <p class="mb-1">
-                            {% if current_lang == 'zh' %}
-                            苏州岸肯电子科技有限公司 备案号：苏ICP备202104570号-1
-                            {% elif current_lang == 'vi' %}
-                            Công ty TNHH Công nghệ Điện tử Anken Suzhou | Số đăng ký: Số Su ICP 202104570-1
-                            {% else %}
-                            Suzhou Anken Electronic Technology Co., Ltd. | Registration: SuICP No.202104570-1
-                            {% endif %}
-                        </p>
-                        <p class="mb-1">
-                            {% if current_lang == 'zh' %}
-                            联系人：周经理 手机：13814886089/13451661990
-                            {% elif current_lang == 'vi' %}
-                            Liên hệ: Giám đốc Zhou | Di động: 13814886089/13451661990
-                            {% else %}
-                            Contact: Manager Zhou | Mobile: +1 (949) 992-3596
-                            {% endif %}
-                        </p>
-                        <p class="mb-1">
-                            {% if current_lang == 'zh' or current_lang == 'vi' %}
-                            电话：0512-62015275 传真：0512-68785280
-                            {% else %}
-                            Tel: 0512-62015275 Fax: 0512-68785280
-                            {% endif %}
-                        </p>
-                        <p class="mb-0">
-                            {% if current_lang == 'zh' %}
-                            邮箱：anteck@126.com anteck@anteck.com.cn
-                            {% elif current_lang == 'vi' %}
-                            Email: anteck@126.com anteck@anteck.com.cn
-                            {% else %}
-                            Email: anteck@126.com anteck@anteck.com.cn
-                            {% endif %}
-                        </p>
+                        <p class="mb-1">Suzhou Anken Electronic Technology Co., Ltd. | Registration: SuICP No.202104570-1</p>
+                        <p class="mb-1">Contact: Manager Zhou | Mobile: {{ "+86 (134) 5166-1990" if current_lang in ['zh', 'vi'] else "+1 (949) 992-3596" }}</p>
+                        <p class="mb-1">Tel: 0512-62015275 Fax: 0512-68785280</p>
+                        <p class="mb-0">Email: anteck@126.com anteck@anteck.com.cn</p>
                     </div>
                 </div>
             </div>

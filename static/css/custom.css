@@ -937,36 +937,36 @@
 footer {
     background: var(--bs-dark) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem 0; /* Added padding for better spacing */
+    padding: 2rem 0;
 }
 
 .footer-logo {
     height: 60px;
     width: auto;
-    margin-right: 2rem;
 }
 
-.footer-contact-info { /* Renamed for clarity */
+.contact-info {
     text-align: left;
 }
 
-.footer-contact-info p { /* Renamed for clarity */
+.contact-info p {
     margin-bottom: 0.5rem;
     line-height: 1.5;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.9);
 }
 
-.footer-contact-info p:last-child { /* Renamed for clarity */
+.contact-info p:last-child {
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {    .footer-logo {
+@media (max-width: 768px) {
+    .footer-logo {
         margin: 0 auto 1rem;
         display: block;
     }
 
-    .footer-contact-info { /* Renamed for clarity */
+    .contact-info {
         text-align: center;
     }
 }
