@@ -368,4 +368,58 @@
         </div>
     </div>
 </section>
+
+<section class="customer-references py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-4">
+            {% if current_lang == 'zh' %}
+            <h2 class="section-title">岸肯静音室客户</h2>
+            <p class="text-muted">(排名不分先后)</p>
+            {% elif current_lang == 'vi' %}
+            <h2 class="section-title">Khách hàng của Phòng cách âm An Ken</h2>
+            <p class="text-muted">(Không theo thứ tự)</p>
+            {% else %}
+            <h2 class="section-title">Silent Room Customers</h2>
+            <p class="text-muted">(In no particular order)</p>
+            {% endif %}
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>飞利浦 (PHILIPS) 静音室</td>
+                        <td>博世 (BOSCH) 汽车静音室</td>
+                        <td>三菱重工 (Mitsubishi) 静音室</td>
+                        <td>欧姆龙 (OMRON) 静音室</td>
+                    </tr>
+                    <tr>
+                        <td>德国宝马 (BOS) 汽车部件</td>
+                        <td>上海贝洱汽车电子静音室</td>
+                        <td>北京风仁静音室</td>
+                        <td>罗技电子静音室</td>
+                    </tr>
+                    <tr>
+                        <td>松田汽车部件静音室</td>
+                        <td>奥托利夫静音室</td>
+                        <td>英业达 (INVENTEC) 集团手机ACOUSTIC测试静音室</td>
+                        <td>杭州九阳 (JOYOUNG) 电磁炉静音室</td>
+                    </tr>
+                    <tr>
+                        <td>扬陆光电静音室</td>
+                        <td>宁波舜宇集团静音室</td>
+                        <td>Smith医疗静音室</td>
+                        <td>日本电产科宝静音室</td>
+                    </tr>
+                    <tr>
+                        <td>伟巴斯特静音室</td>
+                        <td>日本爱知电机静音室</td>
+                        <td colspan="2" class="text-center">......等等</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
