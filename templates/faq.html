@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero-section text-center text-light">
+    <div class="container">
+        <h1 class="display-4">
+            {% if current_lang == 'zh' %}
+            常见问题
+            {% elif current_lang == 'vi' %}
+            Câu hỏi thường gặp
+            {% else %}
+            Frequently Asked Questions
+            {% endif %}
+        </h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <!-- Content will be added later -->
+    </div>
+</section>
+{% endblock %}

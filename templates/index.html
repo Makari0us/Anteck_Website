@@ -309,5 +309,75 @@
     </div>
 </section>
 
+<!-- FAQ and Industry News Section -->
+<section class="info-section section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="info-card">
+                    <h2>
+                        {% if current_lang == 'zh' %}
+                        常见问题
+                        {% elif current_lang == 'vi' %}
+                        Câu hỏi thường gặp
+                        {% else %}
+                        Frequently Asked Questions
+                        {% endif %}
+                    </h2>
+                    <p class="text-muted">
+                        {% if current_lang == 'zh' %}
+                        了解更多关于我们产品和服务的常见问题
+                        {% elif current_lang == 'vi' %}
+                        Tìm hiểu thêm về các câu hỏi thường gặp về sản phẩm và dịch vụ của chúng tôi
+                        {% else %}
+                        Learn more about common questions regarding our products and services
+                        {% endif %}
+                    </p>
+                    <a href="{{ url_for('faq') }}" class="btn btn-primary">
+                        {% if current_lang == 'zh' %}
+                        查看更多
+                        {% elif current_lang == 'vi' %}
+                        Xem thêm
+                        {% else %}
+                        Learn More
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-card">
+                    <h2>
+                        {% if current_lang == 'zh' %}
+                        行业动态
+                        {% elif current_lang == 'vi' %}
+                        Tin tức ngành
+                        {% else %}
+                        Industry Dynamics
+                        {% endif %}
+                    </h2>
+                    <p class="text-muted">
+                        {% if current_lang == 'zh' %}
+                        了解最新的行业新闻和技术发展
+                        {% elif current_lang == 'vi' %}
+                        Cập nhật tin tức ngành và phát triển công nghệ mới nhất
+                        {% else %}
+                        Stay updated with the latest industry news and technological developments
+                        {% endif %}
+                    </p>
+                    <a href="{{ url_for('industry_dynamics') }}" class="btn btn-primary">
+                        {% if current_lang == 'zh' %}
+                        查看更多
+                        {% elif current_lang == 'vi' %}
+                        Xem thêm
+                        {% else %}
+                        Learn More
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{ super() }}
 {% endblock %}

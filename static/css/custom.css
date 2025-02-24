@@ -964,7 +964,8 @@ footer {
 }
 
 .patent-item:hover {
-    transform: scale(1.05);}
+    transform: scale(1.05);
+}
 
 .patent-image {
     width: 100%;
@@ -1113,6 +1114,73 @@ footer {
     }
 
     .advantages-section {
+        padding: 3rem 0;
+    }
+}
+
+/* Info Section Styles */
+.info-section {
+    background: var(--bs-dark);
+    padding: 4rem 0;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(228, 142, 56, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h2 {
+    color: #e48e38;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.info-card h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #e48e38, rgba(228, 142, 56, 0.3));
+}
+
+.info-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.info-card .btn-primary {
+    background-color: #e48e38;
+    border-color: #e48e38;
+    transition: all 0.3s ease;
+}
+
+.info-card .btn-primary:hover {
+    background-color: #d17f2d;
+    border-color: #d17f2d;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .info-section {
         padding: 3rem 0;
     }
 }

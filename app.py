@@ -135,3 +135,17 @@ def view_patent(number):
                             current_lang=language,
                             number=number)
     return redirect(url_for('honorary_qualification'))
+
+@app.route('/faq')
+def faq():
+    language = get_user_language()
+    return render_template('faq.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
+@app.route('/industry-dynamics')
+def industry_dynamics():
+    language = get_user_language()
+    return render_template('industry_dynamics.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
