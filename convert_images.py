@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 # Create the directory if it doesn't exist
-static_dir = Path("static/images/products")
+static_dir = Path("static/images")
 static_dir.mkdir(parents=True, exist_ok=True)
 
 # Specific image mappings
@@ -10,7 +10,8 @@ image_mappings = {
     "截屏2025-02-23 下午7.29.30.png": "acoustic-testing-equipment.jpg",
     "截屏2025-02-23 下午7.32.36.png": "acoustic-testing-device.jpg",
     "截屏2025-02-23 下午7.36.56.png": "acoustic-testing-instruments.jpg",
-    "截屏2025-02-23 下午7.46.15.png": "online-testing-chamber.jpg"
+    "截屏2025-02-23 下午7.46.15.png": "online-testing-chamber.jpg",
+    "截屏2025-02-23 下午8.04.06.png": "anken-building.jpg"
 }
 
 # Convert images
