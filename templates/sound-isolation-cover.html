@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Product Header -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h1>{{ content.sound_isolation_cover.title }}</h1>
+            <p class="lead">{{ content.sound_isolation_cover.description }}</p>
+        </div>
+    </div>
+
+    <!-- Main Product Image -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <img src="{{ url_for('static', filename='images/products/sound-isolation-cover.jpg') }}" 
+                 alt="Sound Isolation Cover" 
+                 class="img-fluid rounded shadow">
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2>{{ content.sound_isolation_cover.features_title }}</h2>
+            <ul class="list-group list-group-flush">
+                {% for feature in content.sound_isolation_cover.features %}
+                <li class="list-group-item">{{ feature }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Technical Specifications -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2>{{ content.sound_isolation_cover.specs_title }}</h2>
+            <table class="table">
+                <tbody>
+                    {% for spec in content.sound_isolation_cover.specifications %}
+                    <tr>
+                        <th scope="row">{{ spec.name }}</th>
+                        <td>{{ spec.value }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Applications -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2>{{ content.sound_isolation_cover.applications_title }}</h2>
+            <div class="row">
+                {% for application in content.sound_isolation_cover.applications %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ application.title }}</h5>
+                            <p class="card-text">{{ application.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -50,6 +50,13 @@ def products():
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
+@app.route('/sound-isolation-cover')
+def sound_isolation_cover():
+    language = get_user_language()
+    return render_template('sound-isolation-cover.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
 @app.route('/cases')
 def cases():
     language = get_user_language()
