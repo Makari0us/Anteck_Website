@@ -10,8 +10,35 @@
 <section class="section product-content">
     <div class="container">
         <div class="row g-4">
-            <div class="col-12">
-                <!-- Empty content ready for future updates -->
+            <div class="col-lg-6">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='images/products/online-testing-interior.jpg') }}" alt="Online Testing Chamber" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-description">
+                    {% if current_lang == 'zh' %}
+                    <h2>在线声学检测房</h2>
+                    <p class="description-text">
+                        我司在线检测是我司专利产品，采用弧形轨道设计，不同于其他的直线轨道自动门设计方式，即当自动门关闭时，可与隔音墙体压紧，完全密封，以达到非常高的隔音隔离度，目前已广泛提供给广大的汽车、电器、家电、机电等公司，提高了生产效率，提升了声学测试要求。
+                    </p>
+                    <div class="consulting-number">咨询电话：+86 (134) 5166-1990</div>
+
+                    {% elif current_lang == 'vi' %}
+                    <h2>Phòng kiểm tra âm học trực tuyến</h2>
+                    <p class="description-text">
+                        Hệ thống kiểm tra trực tuyến của chúng tôi là sản phẩm độc quyền, sử dụng thiết kế đường ray cong, khác với thiết kế cửa tự động đường thẳng thông thường. Khi cửa tự động đóng lại, nó ép chặt vào tường cách âm, tạo ra độ kín hoàn toàn, đạt được mức cách âm rất cao. Hiện nay, sản phẩm đã được cung cấp rộng rãi cho nhiều công ty ô tô, điện tử, đồ gia dụng và cơ điện, giúp nâng cao hiệu suất sản xuất và cải thiện yêu cầu kiểm tra âm học.
+                    </p>
+                    <div class="consulting-number">Số điện thoại tư vấn: +86 (134) 5166-1990</div>
+
+                    {% else %}
+                    <h2>Online Acoustic Testing Chamber</h2>
+                    <p class="description-text">
+                        Our online testing system is our patented product featuring an arc-track design, different from other straight-track automatic door designs. When the automatic door closes, it tightly presses against the soundproof wall, creating a complete seal to achieve very high sound isolation. Currently widely supplied to major automotive, electronics, home appliance, and electromechanical companies, it has improved production efficiency and enhanced acoustic testing requirements.
+                    </p>
+                    <div class="consulting-number">Consultation Number: +1 (949) 992-3596</div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
