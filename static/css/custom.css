@@ -105,13 +105,13 @@
 
 /* Custom spacing utilities */
 .hero-section {
-    padding: 4rem 0;
-    background: var(--bs-dark);
-    margin-bottom: 1rem; /* Added margin for better spacing */
+    padding: 3rem 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+    margin-bottom: 0;
 }
 
 .section {
-    padding: 3rem 0; /* Updated padding */
+    padding: 4rem 0;
 }
 
 /* Carousel styling */
@@ -484,62 +484,78 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Product Details Section */
+/* Product Details Section - ENHANCED */
 .product-details {
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
 }
 
 .product-details h3 {
     color: var(--bs-light);
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(228, 142, 56, 0.5);
 }
 
-.product-details h3:first-child {
-    margin-top: 0;
-}
-
-.product-details p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
+.product-details ul, .product-details ol {
+    padding-left: 1.2rem;
     margin-bottom: 1.5rem;
 }
 
-.product-details p:last-child {
+.product-details li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Customer References Table - ENHANCED */
+.customer-references {
+    margin-top: 3rem;
+}
+
+.customer-references .table {
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 0;
+    transition: all 0.3s ease;
 }
 
-/* Page Layout for Soundproof Boxes */
-.soundproof-page {
-    display: flex;
-    gap: 2rem; /* Adjust gap as needed */
+.customer-references .table td {
+    padding: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border-color: rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    transition: background-color 0.3s ease;
 }
 
-.soundproof-page .product-image-container {
-    width: 50%; /* Adjust width as needed */
+.customer-references .table td:hover {
+    background-color: rgba(228, 142, 56, 0.1);
 }
 
-.soundproof-page .description-container {
-    width: 50%; /* Adjust width as needed */
+.customer-references h3 {
+    color: var(--bs-light);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
-.soundproof-page .product-details {
-    width: 100%; /* Full width for product details */
-    margin-top: 2rem;
+.customer-references .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.9rem;
 }
 
 
-/* Gallery Section - Updated for professional layout */
-.room-gallery {
+/* Gallery Section - UPDATED */
+.gallery-section {
     margin: 2rem 0;
 }
 
-.room-gallery .row {
+.gallery-section .row {
     --bs-gutter-x: 2rem;
     --bs-gutter-y: 2rem;
 }
@@ -562,7 +578,7 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.gallery-image {
+.gallery-image-container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -571,37 +587,7 @@
     object-fit: cover;
 }
 
-/* Client Reference Table */
-.client-reference-table {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 2rem;
-}
-
-.client-reference-table .table {
-    background: transparent;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0;
-    transition: all 0.3s ease;
-}
-
-.client-reference-table .table td {
-    padding: 1rem;
-    vertical-align: middle;
-    text-align: center;
-    border-color: rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
-    line-height: 1.4;
-    transition: background-color 0.3s ease;
-}
-
-.client-reference-table .table td:hover {
-    background-color: rgba(228, 142, 56, 0.1);
-}
-
-/* Section spacing */
+/* Section Spacing */
 .mb-5 {
     margin-bottom: 3rem !important;
 }
