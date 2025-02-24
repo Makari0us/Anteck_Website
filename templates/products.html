@@ -9,10 +9,45 @@
 
 <section class="section">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="mb-4">Products</h2>
-                <!-- Content will be added here -->
+        <div class="row g-4">
+            <!-- Anechoic Chambers -->
+            <div class="col-md-4">
+                <a href="{{ url_for('panel_chamber') }}" class="product-card">
+                    <img src="{{ url_for('static', filename='images/products/panel-chamber.jpg') }}" alt="Panel Chamber" class="img-fluid">
+                    <h3>{{ content.nav_panel_chamber }}</h3>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ url_for('wedge_chamber') }}" class="product-card">
+                    <img src="{{ url_for('static', filename='images/products/wedge-chamber.jpg') }}" alt="Wedge Chamber" class="img-fluid">
+                    <h3>{{ content.nav_wedge_chamber }}</h3>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ url_for('reverb_room') }}" class="product-card">
+                    <img src="{{ url_for('static', filename='images/products/reverb-room.jpg') }}" alt="Reverberation Room" class="img-fluid">
+                    <h3>{{ content.nav_reverb_room }}</h3>
+                </a>
+            </div>
+
+            <!-- Testing Rooms -->
+            <div class="col-md-4">
+                <a href="{{ url_for('soundproof_boxes') }}" class="product-card">
+                    <img src="{{ url_for('static', filename='images/products/soundproof-box.jpg') }}" alt="Soundproof Box" class="img-fluid">
+                    <h3>{{ content.nav_boxes }}</h3>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ url_for('silent_rooms') }}" class="product-card">
+                    <img src="{{ url_for('static', filename='images/products/silent-room.jpg') }}" alt="Silent Room" class="img-fluid">
+                    <h3>{{ content.nav_rooms }}</h3>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ url_for('listening_room') }}" class="product-card">
+                    <img src="{{ url_for('static', filename='images/products/listening-room.jpg') }}" alt="Listening Room" class="img-fluid">
+                    <h3>{{ content.nav_listening }}</h3>
+                </a>
             </div>
         </div>
     </div>
