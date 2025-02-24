@@ -15,6 +15,13 @@ def index():
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
+@app.route('/products')
+def products():
+    language = get_user_language()
+    return render_template('products.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
 @app.route('/panel-chamber')
 def panel_chamber():
     language = get_user_language()
@@ -29,24 +36,24 @@ def wedge_chamber():
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
-@app.route('/soundproof_boxes')
+@app.route('/soundproof-boxes')
 def soundproof_boxes():
     language = get_user_language()
     return render_template('soundproof_boxes.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
-@app.route('/silent_rooms')
-def silent_rooms():
+@app.route('/listening-room')
+def listening_room():
     language = get_user_language()
-    return render_template('silent_rooms.html',
+    return render_template('listening_room.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
-@app.route('/products')
-def products():
+@app.route('/silent-rooms')
+def silent_rooms():
     language = get_user_language()
-    return render_template('products.html',
+    return render_template('silent_rooms.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -54,6 +61,27 @@ def products():
 def sound_isolation_cover():
     language = get_user_language()
     return render_template('sound-isolation-cover.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
+@app.route('/reverb-room')
+def reverb_room():
+    language = get_user_language()
+    return render_template('reverb_room.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
+@app.route('/online-testing-chamber')
+def online_testing_chamber():
+    language = get_user_language()
+    return render_template('online-testing_chamber.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
+@app.route('/acoustic-instruments')
+def acoustic_instruments():
+    language = get_user_language()
+    return render_template('acoustic_instruments.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -76,31 +104,3 @@ def set_language(lang):
     if lang in TRANSLATIONS:
         session['language'] = lang
     return redirect(url_for('index'))
-
-@app.route('/listening_room')
-def listening_room():
-    language = get_user_language()
-    return render_template('listening_room.html',
-                         content=TRANSLATIONS[language],
-                         current_lang=language)
-
-@app.route('/reverb-room')
-def reverb_room():
-    language = get_user_language()
-    return render_template('reverb_room.html',
-                         content=TRANSLATIONS[language],
-                         current_lang=language)
-
-@app.route('/online-testing-chamber')
-def online_testing_chamber():
-    language = get_user_language()
-    return render_template('online_testing_chamber.html',
-                         content=TRANSLATIONS[language],
-                         current_lang=language)
-
-@app.route('/acoustic-instruments')
-def acoustic_instruments():
-    language = get_user_language()
-    return render_template('acoustic_instruments.html',
-                         content=TRANSLATIONS[language],
-                         current_lang=language)
