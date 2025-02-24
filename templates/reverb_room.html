@@ -24,20 +24,6 @@
                     </p>
                     <div class="consulting-number">咨询电话：+86 (134) 5166-1990</div>
 
-                    <div class="mt-4">
-                        <h3>产品介绍</h3>
-                        <p class="description-text">
-                            声学混响室是一个能在所有边界上全部反射声能，并在其中充分扩散，使形成各处能量密度均匀、在各传播方向作无规分布的扩散场的实验室。
-                        </p>
-                    </div>
-
-                    <div class="mt-4">
-                        <h3>功用</h3>
-                        <p class="description-text">
-                            声学混响室的功用主要是：测定材料的吸声系数，空气中的声吸收，声源和机器、设备等的声功率及频谱，测量某些电声器件和设备的效率等声学性能以及对灵敏机件作噪声疲劳试验等等。
-                        </p>
-                    </div>
-
                     {% elif current_lang == 'vi' %}
                     <h2>Phòng vang âm</h2>
                     <p class="description-text">
@@ -51,6 +37,27 @@
                         Our company designs and manufactures professional-grade reverberation rooms according to customer requirements. In terms of aesthetics, dismantling capability, and reverberation uniformity, all meet world-class standards.
                     </p>
                     <div class="consulting-number">Consultation Number: +1 (949) 992-3596</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- New textbox with exact content from images -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="content-box p-4 border rounded">
+                    {% if current_lang == 'zh' %}
+                    <p class="mb-0">
+                        声学混响室是一个能在所有边界上全部反射声能，并在其中充分扩散，使形成各处能量密度均匀、在各传播方向作无规分布的扩散场的实验室。声学混响室的功用主要是：测定材料的吸声系数，空气中的声吸收，声源和机器、设备等的声功率及频谱，测量某些电声器件和设备的效率等声学性能以及对灵敏机件作噪声疲劳试验等等。
+                    </p>
+                    {% elif current_lang == 'vi' %}
+                    <p class="mb-0">
+                        Phòng thử nghiệm vang âm là một phòng thí nghiệm có khả năng phản xạ năng lượng âm thanh trên tất cả các ranh giới và khuếch tán đầy đủ bên trong, tạo ra một trường khuếch tán với mật độ năng lượng đồng nhất ở mọi vị trí và phân bố không đều theo mọi hướng truyền. Các ứng dụng chính của phòng vang âm bao gồm: đo hệ số hấp thụ âm của vật liệu, hấp thụ âm trong không khí, công suất âm thanh và phổ của nguồn âm và máy móc, thiết bị, đo hiệu suất âm học của một số thiết bị điện âm và thiết bị, cũng như thử nghiệm mỏi do tiếng ồn trên các bộ phận nhạy cảm.
+                    </p>
+                    {% else %}
+                    <p class="mb-0">
+                        An acoustic reverberation room is a laboratory that can fully reflect sound energy on all boundaries and fully diffuse within it, creating a diffuse field with uniform energy density everywhere and irregular distribution in all propagation directions. The main functions of the acoustic reverberation room are: measuring the sound absorption coefficient of materials, sound absorption in air, sound power and spectrum of sound sources and machinery equipment, measuring the acoustic performance such as efficiency of certain electroacoustic devices and equipment, and conducting noise fatigue tests on sensitive components.
+                    </p>
                     {% endif %}
                 </div>
             </div>
