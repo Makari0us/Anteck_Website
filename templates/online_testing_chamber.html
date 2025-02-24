@@ -164,6 +164,44 @@
                 </div>
             </div>
         </div>
+
+        <!-- Technical Requirements -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="content-box p-4 border rounded">
+                    {% if current_lang == 'zh' %}
+                    <p>目前，许多产品在生产时，需要每一件产品出厂前都要进行声学测量。为提高生产效率，必须在生产线上搭建一个测量声音的环境。在线检测静音室即提供了这种需求的解决方案。</p>
+                    <p>一般，在线检测有以下要求：</p>
+                    <p>隔音室/隔音房外观：模块化结构，可重复拆卸和组合。与生产线尺寸匹配，以达到较好的密封效果。</p>
+                    <p>隔音室/隔音房隔音效果：隔音室无一面是与墙面直接连接(包括底面)，隔音效果好。隔音性能：＜500Hz，≤30dB 500Hz ---- 4000Hz ≤50dB。单层壁结构可隔噪音35dB左右；双层壁结构可隔噪音55dB左右。</p>
+                    <p>隔音室结构及窗：双层磁力吸引密封门，密闭性好，采用高寿命门轴，无噪音设计，其寿命可达到每日开关100次并且使用多于10年无损坏。产品进出口设计自动门，开启灵活，安全。</p>
+                    <p>隔音室通风设备：室内换气装置有2个排气系统（低噪音风扇，1.5立方米/分钟），室内照明，室外操作，有设备通入室内连接孔。良好的空气流通性，检查人员可在室内滞留8小时/日以上。</p>
+                    <p>隔音室使用寿命：大于10年。</p>
+                    <p>体积：可根据用户不同需求定制不同型号。</p>
+
+                    {% elif current_lang == 'vi' %}
+                    <p>Hiện nay, nhiều sản phẩm trong quá trình sản xuất cần phải đo âm học trước khi xuất xưởng. Để nâng cao hiệu suất sản xuất, cần phải xây dựng một môi trường đo âm thanh trên dây chuyền sản xuất. Phòng cách âm kiểm tra trực tuyến cung cấp giải pháp cho nhu cầu này.</p>
+                    <p>Thông thường, kiểm tra trực tuyến có các yêu cầu sau:</p>
+                    <p>Bề ngoài phòng cách âm: Cấu trúc module hóa, có thể tháo lắp và kết hợp lại. Phù hợp với kích thước dây chuyền sản xuất để đạt hiệu quả cách âm tốt.</p>
+                    <p>Hiệu quả cách âm: Không có mặt nào tiếp xúc trực tiếp với tường (bao gồm cả mặt đáy), hiệu quả cách âm tốt. Khả năng cách âm: ＜500Hz, ≤30dB 500Hz ---- 4000Hz ≤50dB. Cấu trúc tường đơn lớp có thể cách âm khoảng 35dB; cấu trúc tường đôi có thể cách âm khoảng 55dB.</p>
+                    <p>Cấu trúc và cửa sổ: Cửa kín từ tính hai lớp, độ kín tốt, sử dụng bản lề cửa tuổi thọ cao, thiết kế không ồn, có thể mở đóng 100 lần mỗi ngày và sử dụng trên 10 năm không hư hỏng. Cửa tự động cho sản phẩm ra vào, mở linh hoạt, an toàn.</p>
+                    <p>Thiết bị thông gió: Có 2 hệ thống xả khí trong phòng (quạt thông gió êm, 1.5m³/phút), đèn chiếu sáng trong phòng, vận hành từ bên ngoài, có lỗ kết nối thiết bị vào phòng. Lưu thông không khí tốt, nhân viên kiểm tra có thể ở trong phòng trên 8 giờ/ngày.</p>
+                    <p>Tuổi thọ sử dụng: Trên 10 năm.</p>
+                    <p>Kích thước: Có thể tùy chỉnh theo yêu cầu của khách hàng.</p>
+
+                    {% else %}
+                    <p>Currently, many products require acoustic measurements before leaving the factory during production. To improve production efficiency, it is necessary to build a sound measurement environment on the production line. The online testing chamber provides a solution for this need.</p>
+                    <p>Generally, online testing has the following requirements:</p>
+                    <p>Soundproof Room Appearance: Modular structure, can be repeatedly dismantled and combined. Matches production line dimensions to achieve good sealing effect.</p>
+                    <p>Soundproofing Effect: No surface directly connects to walls (including bottom surface), good soundproofing effect. Sound insulation performance: ＜500Hz, ≤30dB 500Hz ---- 4000Hz ≤50dB. Single-wall structure can insulate noise around 35dB; double-wall structure can insulate noise around 55dB.</p>
+                    <p>Structure and Windows: Double-layer magnetic seal doors, good airtightness, using high-life door hinges, noise-free design, can achieve 100 times daily opening/closing and use for more than 10 years without damage. Automatic doors designed for product entry/exit, flexible opening, safe.</p>
+                    <p>Ventilation Equipment: Room has 2 exhaust systems (low-noise fans, 1.5 cubic meters/minute), indoor lighting, external operation, equipment connection holes to room interior. Good air circulation, inspection personnel can stay in room for over 8 hours/day.</p>
+                    <p>Service Life: Greater than 10 years.</p>
+                    <p>Volume: Can be customized according to different user requirements.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
