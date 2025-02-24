@@ -1,6 +1,6 @@
 TRANSLATIONS = {
     'en': {
-        'company_name': 'Suzhou Anken Electronic Technology Co., Ltd. | Experts in Anechoic Chamber and EMC Shielding Equipment',
+        'company_name': 'Suzhou Anteck Electronic Technology Co., Ltd. | Experts in Anechoic Chamber and EMC Shielding Equipment',
         'title': 'Welcome to Our Website',
         'nav_home': 'Home',
         'nav_panel_chamber': 'Panel Anechoic Chamber',
@@ -8,7 +8,7 @@ TRANSLATIONS = {
         'nav_boxes': 'Soundproof Boxes',
         'nav_rooms': 'Silent Rooms',
         'nav_products': 'Products',
-        'nav_about': 'About Anken',
+        'nav_about': 'About Anteck',
         'hero_title': 'Learn About Our Services',
         'hero_text': 'We provide quality solutions for your needs',
         'contact_title': 'Contact Us',
