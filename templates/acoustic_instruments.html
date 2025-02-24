@@ -10,8 +10,35 @@
 <section class="section product-content">
     <div class="container">
         <div class="row g-4">
-            <div class="col-12">
-                <!-- Empty content ready for future updates -->
+            <div class="col-lg-6">
+                <div class="product-image">
+                    <img src="{{ url_for('static', filename='images/products/acoustic-testing-equipment.jpg') }}" alt="Acoustic Testing Equipment" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-description">
+                    {% if current_lang == 'zh' %}
+                    <h2>声学测试仪器</h2>
+                    <p class="description-text">
+                        岸肯可为客户提供整套声学测试方案，代理国内外声学测试设备，客户遍及航空、航天、汽车、电子、家电，高校研究所和环保等领域。近10年来，公司依托声学所的专家，积极借鉴国外专家和公司的经验，在国内建造了80多座不同形式和规模，具有不同技术要求和特点的声学实验室，客户遍及国家科研单位，重点大专院校，跨国企业等，赢得了广泛的好评和赞誉。
+                    </p>
+                    <div class="consulting-number">咨询电话：+86 (134) 5166-1990</div>
+
+                    {% elif current_lang == 'vi' %}
+                    <h2>Thiết bị kiểm tra âm học</h2>
+                    <p class="description-text">
+                        Chúng tôi có thể cung cấp các giải pháp kiểm tra âm học toàn diện, đại diện cho thiết bị kiểm tra âm học trong và ngoài nước, với khách hàng trải rộng trong các lĩnh vực hàng không, vũ trụ, ô tô, điện tử, đồ gia dụng, viện nghiên cứu đại học và bảo vệ môi trường. Trong 10 năm qua, dựa trên các chuyên gia về âm học, chúng tôi đã tích cực học hỏi kinh nghiệm từ các chuyên gia và công ty nước ngoài, xây dựng hơn 80 phòng thí nghiệm âm học với các hình thức, quy mô, yêu cầu kỹ thuật và đặc điểm khác nhau tại Trung Quốc, phục vụ các đơn vị nghiên cứu khoa học quốc gia, các trường đại học trọng điểm và các doanh nghiệp đa quốc gia, nhận được nhiều đánh giá tích cực và khen ngợi.
+                    </p>
+                    <div class="consulting-number">Số điện thoại tư vấn: +86 (134) 5166-1990</div>
+
+                    {% else %}
+                    <h2>Acoustic Testing Instruments</h2>
+                    <p class="description-text">
+                        We provide comprehensive acoustic testing solutions, representing both domestic and international acoustic testing equipment, serving customers across aerospace, aviation, automotive, electronics, home appliances, university research institutes, and environmental protection sectors. Over the past decade, relying on acoustics experts, we have actively learned from international experts and companies, establishing over 80 acoustic laboratories of various forms and scales with different technical requirements and characteristics in China. Our customers include national research institutions, key universities, and multinational enterprises, earning widespread acclaim and recognition.
+                    </p>
+                    <div class="consulting-number">Consultation Number: +1 (949) 992-3596</div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
