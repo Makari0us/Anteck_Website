@@ -835,14 +835,12 @@
 /* Contact Info Section - Updated for sidebar placement */
 .contact-info {
     padding: 1.5rem;
-    background: #3c7ab7; /* Removed blue background */
     border-radius: 4px;
     overflow: hidden;
     margin-top: 20px;
 }
 
 .contact-info h3 {
-    background: #3c7ab7; /* Removed blue background */
     color: white;
     padding: 15px;
     margin: -1.5rem -1.5rem 15px -1.5rem;
@@ -851,51 +849,54 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact-details {
-    color: white;
+/* Footer Styles */
+footer {
+    background: var(--bs-dark) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
 }
 
-.contact-details p {
+.footer-logo {
+    height: 60px;
+    width: auto;
+}
+
+.contact-info {
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.contact-info p {
     margin-bottom: 0.5rem;
     line-height: 1.5;
     font-size: 0.9rem;
-    padding: 0 15px;
+    color: rgba(255, 255, 255, 0.9);
+    text-indent: 1rem;
 }
 
-.contact-details p:last-child {
+.contact-info p:last-child {
     margin-bottom: 0;
 }
 
-/* Sidebar layout adjustments */
-.sidebar {
-    width: 280px;
-    flex-shrink: 0;
-}
-
-.page-with-sidebar {
-    display: flex;
-    gap: 30px;
-    padding: 30px 0;
-}
-
-.main-content {
-    flex-grow: 1;
-}
-
 @media (max-width: 768px) {
-    .page-with-sidebar {
-        flex-direction: column;
+    .footer-logo {
+        margin: 0 auto 1rem;
+        display: block;
     }
 
-    .sidebar {
-        width: 100%;
-        margin-bottom: 1.5rem;
+    .contact-info {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .contact-info p {
+        text-indent: 0;
     }
 }
 
 /* Contact Page Styles */
 .contact-info-main {
-    background: #3c7ab7; /* Removed blue background */
+    background: #3c7ab7; 
     color: white;
     height: 100%;
     display: flex;
@@ -933,44 +934,6 @@
     }
 }
 
-/* Footer Styles */
-footer {
-    background: var(--bs-dark) !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem 0;
-}
-
-.footer-logo {
-    height: 60px;
-    width: auto;
-}
-
-.contact-info {
-    text-align: left;
-}
-
-.contact-info p {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.contact-info p:last-child {
-    margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-    .footer-logo {
-        margin: 0 auto 1rem;
-        display: block;
-    }
-
-    .contact-info {
-        text-align: center;
-    }
-}
-
 /* Product Feature Banner */
 .product-feature-banner {
     width: 100%;
@@ -1001,7 +964,7 @@ footer {
 }
 
 .patent-item:hover {
-    transform: scale(1.05);
+        transform: scale(1.05);
 }
 
 .patent-image {
