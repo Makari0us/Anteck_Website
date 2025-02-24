@@ -56,6 +56,9 @@
                         <a class="nav-link {{ 'active' if request.endpoint == 'silent_rooms' }}" href="{{ url_for('silent_rooms') }}">{{ content.nav_rooms }}</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {{ 'active' if request.endpoint == 'reverb_room' }}" href="{{ url_for('reverb_room') }}">{{ content.nav_reverb_room }}</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ 'active' if request.endpoint == 'products' }}" href="{{ url_for('products') }}">{{ content.nav_products }}</a>
                     </li>
                     <li class="nav-item">
