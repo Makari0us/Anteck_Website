@@ -94,6 +94,13 @@ def reverb_room():
 @app.route('/online-testing-chamber')
 def online_testing_chamber():
     language = get_user_language()
-    return render_template('online_testing_chamber.html',
+    return render_template('online-testing_chamber.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
+@app.route('/acoustic-instruments')
+def acoustic_instruments():
+    language = get_user_language()
+    return render_template('acoustic_instruments.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
