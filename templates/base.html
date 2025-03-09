@@ -81,7 +81,7 @@
     <!-- Main Content -->
     <div class="container">
         <div class="page-content">
-            {% if request.endpoint not in ['index', 'about', 'honored_customers', 'honorary_qualification', 'contact_location', 'view_patent'] %}
+            {% if request.endpoint not in ['index', 'about', 'honored_customers', 'honorary_qualification', 'contact_location', 'view_patent', 'client_page'] %}
                 <div class="page-with-sidebar">
                     <div class="main-content">
                         {% block page_content %}{% endblock %}
