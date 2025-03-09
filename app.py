@@ -13,7 +13,14 @@ CLIENTS = {
     4: "Smiths Medical",
     5: "TRW",
     6: "Zealer",
-    7: "Arvin Meritor"
+    7: "Arvin Meritor",
+    8: "北京航空航天大学",  # Beihang University
+    9: "一汽奔腾",         # Bestune
+    10: "BOSCH",
+    11: "大金空调",        # DAIKIN
+    12: "SONION",
+    13: "DELPHI",
+    14: "BOS"
 }
 
 def get_user_language():
@@ -176,6 +183,14 @@ def industry_dynamics():
 def client_page(client_id):
     client_name = CLIENTS.get(client_id, f"Client {client_id}")
     language = get_user_language()
+    # For English version, use English names for specific clients
+    if language == 'en':
+        if client_id == 8:
+            client_name = "Beihang University"
+        elif client_id == 9:
+            client_name = "Bestune"
+        elif client_id == 11:
+            client_name = "DAIKIN"
     return render_template('client_page.html',
                          content=TRANSLATIONS[language],
                          current_lang=language,
