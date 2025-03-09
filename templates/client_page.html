@@ -1,16 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="hero-section text-center text-light">
+<section class="client-detail-section text-center py-5">
     <div class="container">
-        <h1 class="display-4">{{ client_name }}</h1>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <!-- Content will be added later -->
-        <p>Client details will be displayed here.</p>
+        <div class="client-logo-large mb-4">
+            <img src="{{ url_for('static', filename='images/clients/client-' ~ client_id ~ '.jpg') }}" 
+                 alt="{{ client_name }}" 
+                 class="img-fluid">
+        </div>
+        <h1 class="display-4 mb-4">{{ client_name }}</h1>
     </div>
 </section>
 {% endblock %}

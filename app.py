@@ -5,6 +5,17 @@ from translations import TRANSLATIONS
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev_key")
 
+# Client data mapping
+CLIENTS = {
+    1: "AMETEK",
+    2: "Cooler Master",
+    3: "Pulse Secure",
+    4: "Smiths Medical",
+    5: "TRW",
+    6: "Zealer",
+    7: "Arvin Meritor"
+}
+
 def get_user_language():
     return session.get('language', 'en')
 
@@ -152,10 +163,10 @@ def industry_dynamics():
 
 @app.route('/client/<int:client_id>')
 def client_page(client_id):
-    # Dummy client data - in a real app this would come from a database
-    client_name = f"Client {client_id}"
+    client_name = CLIENTS.get(client_id, f"Client {client_id}")
     language = get_user_language()
     return render_template('client_page.html',
                          content=TRANSLATIONS[language],
                          current_lang=language,
-                         client_name=client_name)
+                         client_name=client_name,
+                         client_id=client_id)

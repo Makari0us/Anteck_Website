@@ -1260,3 +1260,50 @@ footer {
         gap: 1rem;
     }
 }
+
+/* Client Detail Page Styles */
+.client-detail-section {
+    padding: 4rem 0;
+    background: var(--bs-dark);
+}
+
+.client-logo-large {
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.client-logo-large:hover {
+    transform: translateY(-5px);
+    border-color: rgba(228, 142, 56, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.client-logo-large img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.client-detail-section h1 {
+    color: #e48e38;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.client-detail-section h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #e48e38, rgba(228, 142, 56, 0.3));
+}
