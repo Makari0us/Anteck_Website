@@ -9,7 +9,11 @@ static_dir.mkdir(parents=True, exist_ok=True)
 patents_dir = static_dir / "patents"
 patents_dir.mkdir(exist_ok=True)
 
-# Specific image mappings
+# Create clients directory
+clients_dir = static_dir / "clients"
+clients_dir.mkdir(exist_ok=True)
+
+# Client image mappings (old and new)
 image_mappings = {
     "截屏2025-02-23 下午7.29.30.png": "acoustic-testing-equipment.jpg",
     "截屏2025-02-23 下午7.32.36.png": "acoustic-testing-device.jpg",
@@ -19,7 +23,14 @@ image_mappings = {
     "截屏2025-02-23 下午8.14.50.png": "patents/patent1.jpg",
     "截屏2025-02-23 下午8.15.13.png": "patents/patent2.jpg",
     "截屏2025-02-23 下午8.15.24.png": "patents/patent3.jpg",
-    "截屏2025-02-23 下午8.15.30.png": "patents/patent4.jpg"
+    "截屏2025-02-23 下午8.15.30.png": "patents/patent4.jpg",
+    "截屏2025-03-09 下午2.55.40.png": "clients/client-8.jpg",  # Beihang University
+    "截屏2025-03-09 下午2.55.45.png": "clients/client-9.jpg",  # Bestune
+    "截屏2025-03-09 下午2.55.51.png": "clients/client-10.jpg", # BOSCH
+    "截屏2025-03-09 下午2.55.56.png": "clients/client-11.jpg", # DAIKIN
+    "截屏2025-03-09 下午2.56.00.png": "clients/client-12.jpg", # SONION
+    "截屏2025-03-09 下午2.56.04.png": "clients/client-13.jpg", # DELPHI
+    "截屏2025-03-09 下午2.56.08.png": "clients/client-14.jpg", # BOS
 }
 
 # Convert images
@@ -27,5 +38,5 @@ for source_name, target_name in image_mappings.items():
     source_path = f"attached_assets/{source_name}"
     output_path = static_dir / target_name
     if os.path.exists(source_path) and not output_path.exists():
-        os.system(f'convert "{source_path}" -quality 90 "{output_path}"')
+        os.system(f'convert "{source_path}" -quality 95 -resize "400x400>" "{output_path}"')
         print(f"Converted {source_path} to {output_path}")

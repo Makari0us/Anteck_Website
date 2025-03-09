@@ -1,0 +1,11 @@
+<div class="client-grid">
+    {% for i in range(start_idx, end_idx + 1) %}
+    <a href="{{ url_for('client_page', client_id=i) }}" class="client-item">
+        <div class="client-logo">
+            <img src="{{ url_for('static', filename='images/clients/client-' ~ i ~ '.jpg') }}" 
+                 alt="Client {{ i }}"
+                 class="img-fluid">
+        </div>
+    </a>
+    {% endfor %}
+</div>

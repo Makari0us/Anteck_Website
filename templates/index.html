@@ -363,7 +363,7 @@
                 <ul class="pagination justify-content-center">
                     {% for p in range(1, total_pages + 1) %}
                     <li class="page-item {% if p == page %}active{% endif %}">
-                        <a class="page-link" href="/?page={{ p }}">{{ p }}</a>
+                        <a class="page-link" href="#" onclick="loadPage({{ p }}); return false;">{{ p }}</a>
                     </li>
                     {% endfor %}
                 </ul>
@@ -444,3 +444,27 @@
 
 {{ super() }}
 {% endblock %}
+
+<script>
+function loadPage(pageNum) {
+    fetch(`/get_clients/${pageNum}`)
+        .then(response => response.json())
+        .then(data => {
+            // Update client grid
+            document.querySelector('.client-grid').innerHTML = data.html;
+
+            // Update pagination active state
+            document.querySelectorAll('.pagination .page-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelector(`.pagination .page-item:nth-child(${pageNum})`).classList.add('active');
+
+            // Smooth scroll to client section
+            document.querySelector('.clients-section').scrollIntoView({ behavior: 'smooth' });
+        })
+        .catch(error => console.error('Error loading clients:', error));
+}
+
+// Add smooth transition effect
+document.querySelector('.client-grid').style.transition = 'opacity 0.3s ease';
+</script>

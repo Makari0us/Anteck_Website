@@ -1,5 +1,6 @@
 import os
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, jsonify
+
 from translations import TRANSLATIONS
 
 app = Flask(__name__)
@@ -110,7 +111,7 @@ def online_testing_chamber():
 @app.route('/acoustic-instruments')
 def acoustic_instruments():
     language = get_user_language()
-    return render_template('acoustic_instruments.html',
+    return render_template('acoustic-instruments.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -196,3 +197,22 @@ def client_page(client_id):
                          current_lang=language,
                          client_name=client_name,
                          client_id=client_id)
+
+@app.route('/get_clients/<int:page>')
+def get_clients(page):
+    items_per_page = 8
+    total_clients = 70
+    start_idx = (page - 1) * items_per_page + 1
+    end_idx = min(start_idx + items_per_page - 1, total_clients)
+
+    clients_html = render_template('_clients_grid.html',
+                                start_idx=start_idx,
+                                end_idx=end_idx,
+                                content=TRANSLATIONS[get_user_language()],
+                                current_lang=get_user_language())
+
+    return jsonify({
+        'html': clients_html,
+        'total_pages': (total_clients + items_per_page - 1) // items_per_page,
+        'current_page': page
+    })
