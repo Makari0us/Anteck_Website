@@ -1215,7 +1215,7 @@ footer {
     position: relative;
     overflow: hidden;
     margin: 2rem 0;
-    padding: 1rem;
+    padding: 0 2rem;
 }
 
 .client-grid {
@@ -1229,16 +1229,18 @@ footer {
     text-decoration: none;
     display: block;
     aspect-ratio: 1;
-    padding: 1rem;
+    padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, border-color 0.3s ease;
+    min-height: 200px;
 }
 
 .client-item:hover {
     transform: translateY(-5px);
     border-color: rgba(228, 142, 56, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .client-logo {
@@ -1255,6 +1257,7 @@ footer {
     height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease;
+    padding: 1rem;
 }
 
 .client-item:hover .client-logo img {
@@ -1266,12 +1269,18 @@ footer {
     .client-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    .client-item {
+        min-height: 180px;
+    }
 }
 
 @media (max-width: 768px) {
     .client-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 1.5rem;
+    }
+    .client-item {
+        min-height: 150px;
     }
 }
 
@@ -1279,11 +1288,14 @@ footer {
     .client-grid {
         grid-template-columns: repeat(1, 1fr);
     }
+    .client-item {
+        min-height: 120px;
+    }
 }
 
 /* Pagination styling */
 .pagination-container {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .pagination .page-link {
@@ -1291,7 +1303,9 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.8);
     margin: 0 0.25rem;
+    padding: 0.75rem 1.25rem;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .pagination .page-link:hover {
