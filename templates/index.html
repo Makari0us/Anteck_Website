@@ -349,7 +349,7 @@
             {% for i in range(start_idx, end_idx + 1) %}
             <a href="{{ url_for('client_page', client_id=i) }}" class="client-item">
                 <div class="client-logo">
-                    <img src="{{ url_for('static', filename='images/clients/client-' ~ i ~ '.jpg') }}" 
+                    <img src="{{ url_for('static', filename='images/clients/client-' ~ i ~ '.jpg') }}"
                          alt="Client {{ i }}"
                          class="img-fluid">
                 </div>
@@ -447,24 +447,32 @@
 
 <script>
 function loadPage(pageNum) {
+    // Add loading state
+    const clientGrid = document.querySelector('.client-grid');
+    clientGrid.style.opacity = '0.5';
+
     fetch(`/get_clients/${pageNum}`)
         .then(response => response.json())
         .then(data => {
-            // Update client grid
-            document.querySelector('.client-grid').innerHTML = data.html;
+            // Update client grid with fade effect
+            clientGrid.style.opacity = '0';
+            setTimeout(() => {
+                clientGrid.innerHTML = data.html;
+                clientGrid.style.opacity = '1';
+            }, 300);
 
             // Update pagination active state
             document.querySelectorAll('.pagination .page-item').forEach(item => {
                 item.classList.remove('active');
             });
             document.querySelector(`.pagination .page-item:nth-child(${pageNum})`).classList.add('active');
-
-            // Smooth scroll to client section
-            document.querySelector('.clients-section').scrollIntoView({ behavior: 'smooth' });
         })
         .catch(error => console.error('Error loading clients:', error));
 }
 
-// Add smooth transition effect
-document.querySelector('.client-grid').style.transition = 'opacity 0.3s ease';
+// Initialize page transitions
+document.addEventListener('DOMContentLoaded', function() {
+    const clientGrid = document.querySelector('.client-grid');
+    clientGrid.style.transition = 'opacity 0.3s ease';
+});
 </script>

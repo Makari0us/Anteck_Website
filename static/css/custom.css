@@ -960,10 +960,10 @@ footer {
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
     display: block;
-    textdecoration: none;
+    text-decoration: none;
 }
 
-.patent-item:hover {
+..patent-item:hover {
     transform: scale(1.05);
 }
 
@@ -1215,6 +1215,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+    transition: opacity 0.3s ease;
 }
 
 .client-item {
