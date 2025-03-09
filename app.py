@@ -149,3 +149,13 @@ def industry_dynamics():
     return render_template('industry_dynamics.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
+
+@app.route('/client/<int:client_id>')
+def client_page(client_id):
+    # Dummy client data - in a real app this would come from a database
+    client_name = f"Client {client_id}"
+    language = get_user_language()
+    return render_template('client_page.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language,
+                         client_name=client_name)

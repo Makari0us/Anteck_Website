@@ -322,6 +322,43 @@
     </div>
 </section>
 
+<!-- Our Valued Clients Section -->
+<section class="clients-section section bg-dark">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>
+                {% if current_lang == 'zh' %}
+                我们的尊贵客户
+                {% elif current_lang == 'vi' %}
+                Khách hàng của chúng tôi
+                {% else %}
+                Our Valued Clients
+                {% endif %}
+            </h2>
+            <p class="text-muted">
+                {% if current_lang == 'zh' %}
+                为全球客户提供专业声学解决方案
+                {% elif current_lang == 'vi' %}
+                Cung cấp giải pháp âm học chuyên nghiệp cho khách hàng toàn cầu
+                {% else %}
+                Providing professional acoustic solutions to clients worldwide
+                {% endif %}
+            </p>
+        </div>
+        <div class="client-grid">
+            {% for i in range(1, 71) %}
+            <a href="{{ url_for('client_page', client_id=i) }}" class="client-item">
+                <div class="client-logo">
+                    <img src="{{ url_for('static', filename='images/clients/client-' ~ i ~ '.jpg') }}" 
+                         alt="Client {{ i }}"
+                         class="img-fluid">
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 <!-- FAQ and Industry News Section -->
 <section class="info-section section">
     <div class="container">
