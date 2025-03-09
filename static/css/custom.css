@@ -960,7 +960,7 @@ footer {
     margin-bottom: 2rem;
     transition: transform 0.3s ease;
     display: block;
-    text-decoration: none;
+    textdecoration: none;
 }
 
 .patent-item:hover {
@@ -1212,8 +1212,8 @@ footer {
 
 .client-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
     margin-top: 2rem;
 }
 
@@ -1230,10 +1230,11 @@ footer {
 .client-logo {
     aspect-ratio: 1;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    padding: 2rem;
 }
 
 .client-logo:hover {
@@ -1245,7 +1246,6 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 1rem;
     filter: grayscale(100%) brightness(0.8);
     transition: all 0.3s ease;
 }
@@ -1254,10 +1254,50 @@ footer {
     filter: grayscale(0%) brightness(1);
 }
 
+/* Pagination Styles */
+.pagination-container {
+    margin-top: 3rem;
+}
+
+.pagination .page-link {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: rgba(228, 142, 56, 0.2);
+    border-color: rgba(228, 142, 56, 0.3);
+    color: #fff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #e48e38;
+    border-color: #e48e38;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .client-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .client-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .client-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

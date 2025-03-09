@@ -21,10 +21,21 @@ def get_user_language():
 
 @app.route('/')
 def index():
+    page = request.args.get('page', 1, type=int)
+    items_per_page = 8
+    total_clients = 70
+    total_pages = (total_clients + items_per_page - 1) // items_per_page
+    start_idx = (page - 1) * items_per_page + 1
+    end_idx = min(start_idx + items_per_page - 1, total_clients)
+
     language = get_user_language()
     return render_template('index.html', 
                          content=TRANSLATIONS[language],
-                         current_lang=language)
+                         current_lang=language,
+                         page=page,
+                         total_pages=total_pages,
+                         start_idx=start_idx,
+                         end_idx=end_idx)
 
 @app.route('/products')
 def products():
