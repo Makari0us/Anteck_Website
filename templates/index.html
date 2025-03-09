@@ -345,16 +345,18 @@
                 {% endif %}
             </p>
         </div>
-        <div class="client-grid">
-            {% for i in range(start_idx, end_idx + 1) %}
-            <a href="{{ url_for('client_page', client_id=i) }}" class="client-item">
-                <div class="client-logo">
-                    <img src="{{ url_for('static', filename='images/clients/client-' ~ i ~ '.jpg') }}"
-                         alt="Client {{ i }}"
-                         class="img-fluid">
-                </div>
-            </a>
-            {% endfor %}
+        <div class="clients-wrapper">
+            <div class="client-grid">
+                {% for i in range(start_idx, end_idx + 1) %}
+                <a href="{{ url_for('client_page', client_id=i) }}" class="client-item">
+                    <div class="client-logo">
+                        <img src="{{ url_for('static', filename='images/clients/client-' ~ i ~ '.jpg') }}" 
+                             alt="Client {{ i }}"
+                             class="img-fluid">
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
         </div>
 
         <!-- Pagination -->
@@ -447,19 +449,42 @@
 
 <script>
 function loadPage(pageNum) {
-    // Add loading state
+    const clientsWrapper = document.querySelector('.clients-wrapper');
     const clientGrid = document.querySelector('.client-grid');
+
+    // Add loading state
     clientGrid.style.opacity = '0.5';
 
     fetch(`/get_clients/${pageNum}`)
         .then(response => response.json())
         .then(data => {
-            // Update client grid with fade effect
-            clientGrid.style.opacity = '0';
+            // Create temporary container for new content
+            const tempContainer = document.createElement('div');
+            tempContainer.innerHTML = data.html;
+            const newGrid = tempContainer.firstElementChild;
+
+            // Prepare for transition
+            newGrid.style.position = 'absolute';
+            newGrid.style.top = '0';
+            newGrid.style.left = '100%';
+            newGrid.style.width = '100%';
+            clientsWrapper.appendChild(newGrid);
+
+            // Trigger slide animation
+            requestAnimationFrame(() => {
+                clientGrid.style.transform = 'translateX(-100%)';
+                newGrid.style.transform = 'translateX(0)';
+                newGrid.style.transition = 'transform 0.5s ease';
+                clientGrid.style.transition = 'transform 0.5s ease';
+            });
+
+            // After animation completes
             setTimeout(() => {
-                clientGrid.innerHTML = data.html;
-                clientGrid.style.opacity = '1';
-            }, 300);
+                clientGrid.remove();
+                newGrid.style.position = 'static';
+                newGrid.style.transform = '';
+                newGrid.style.transition = '';
+            }, 500);
 
             // Update pagination active state
             document.querySelectorAll('.pagination .page-item').forEach(item => {
@@ -470,9 +495,9 @@ function loadPage(pageNum) {
         .catch(error => console.error('Error loading clients:', error));
 }
 
-// Initialize page transitions
+// Initialize the clients grid
 document.addEventListener('DOMContentLoaded', function() {
     const clientGrid = document.querySelector('.client-grid');
-    clientGrid.style.transition = 'opacity 0.3s ease';
+    clientGrid.style.opacity = '1';
 });
 </script>
