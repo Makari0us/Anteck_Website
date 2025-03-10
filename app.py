@@ -283,3 +283,10 @@ def why_soundproof():
     return render_template('why_soundproof.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
+
+@app.route('/faq/why-electromagnetic-shielding')
+def why_electromagnetic_shielding():
+    language = get_user_language()
+    return render_template('why_electromagnetic_shielding.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)

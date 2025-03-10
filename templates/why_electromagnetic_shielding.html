@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<section class="hero-section text-center text-light py-4">
+    <div class="container">
+        <h1 class="display-4">
+            {% if current_lang == 'zh' %}
+            什么是电磁屏蔽？为什么要屏蔽？
+            {% elif current_lang == 'vi' %}
+            Chắn điện từ là gì? Tại sao cần chắn điện từ?
+            {% else %}
+            What is electromagnetic shielding? Why is it needed?
+            {% endif %}
+        </h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="faq-content">
+                    {% if current_lang == 'zh' %}
+                    <p>屏蔽就是对两个空间区域之间进行金属的隔离，以控制电场、磁场和电磁波由一个区域对另一个区域的感应和辐射。具体说，就是用屏蔽体将元部件、电路、组合件、电缆或整个系统的干扰源包围起来，防止干扰电磁场向外扩散；用屏蔽体将接收电路、设备或系统包围起来，防止它们受到外界电磁场的影响。因为屏蔽体对来自导线、电缆、元部件、电路或系统等外部的干扰电磁波和内部电磁波均起着吸收能量（涡流损耗）和反向抵消（电磁感应）的作用，所以屏蔽体具有减弱干扰的功能。</p>
+                    <p>(1) 当干扰电磁场的频率较高时，利用低电阻率的金属材料中产生的涡流，形成对外来电磁波的抵消作用，从而达到屏蔽的效果。</p>
+                    <p>(2) 当干扰电磁波的频率较低时，要采用高导磁率的材料，从而使磁力线限制在屏蔽体内部，防止扩散到屏蔽的空间去。</p>
+                    <p>(3) 在某些场合下，如果要求对高频和低频电磁场都具有良好的屏蔽效果时，往往采用不同的金属材料组成多层屏蔽体。</p>
+                    {% elif current_lang == 'vi' %}
+                    <p>Chắn điện từ là sự cách ly kim loại giữa hai khu vực không gian, nhằm kiểm soát sự cảm ứng và bức xạ của điện trường, từ trường và sóng điện từ từ một khu vực này sang khu vực khác. Cụ thể, sử dụng vật liệu chắn để bao quanh các linh kiện, mạch điện, cụm linh kiện, cáp hoặc toàn bộ hệ thống nhiễu, ngăn chặn sự lan tỏa của trường điện từ nhiễu ra bên ngoài; sử dụng vật liệu chắn để bao quanh mạch thu, thiết bị hoặc hệ thống, ngăn chặn ảnh hưởng của trường điện từ bên ngoài.</p>
+                    <p>(1) Khi tần số của trường điện từ nhiễu cao, sử dụng dòng xoáy được tạo ra trong vật liệu kim loại có điện trở suất thấp để tạo ra tác dụng triệt tiêu sóng điện từ từ bên ngoài, từ đó đạt được hiệu quả chắn.</p>
+                    <p>(2) Khi tần số của sóng điện từ nhiễu thấp, cần sử dụng vật liệu có độ từ thẩm cao để giới hạn các đường sức từ trong vật liệu chắn, ngăn chặn sự lan tỏa vào không gian được chắn.</p>
+                    <p>(3) Trong một số trường hợp, nếu yêu cầu hiệu quả chắn tốt đối với cả trường điện từ tần số cao và thấp, thường sử dụng các vật liệu kim loại khác nhau để tạo thành vật liệu chắn nhiều lớp.</p>
+                    {% else %}
+                    <p>Shielding is the metal isolation between two spatial regions to control the induction and radiation of electric fields, magnetic fields, and electromagnetic waves from one region to another. Specifically, it involves using shielding materials to surround components, circuits, assemblies, cables, or entire systems that are sources of interference to prevent interference electromagnetic fields from spreading outward; using shielding materials to surround receiving circuits, equipment, or systems to prevent them from being affected by external electromagnetic fields.</p>
+                    <p>(1) When the frequency of interfering electromagnetic fields is high, the eddy currents generated in low-resistivity metal materials create a canceling effect against incoming electromagnetic waves, thus achieving the shielding effect.</p>
+                    <p>(2) When the frequency of interfering electromagnetic waves is low, materials with high permeability should be used to confine magnetic field lines within the shielding material, preventing dispersion into the shielded space.</p>
+                    <p>(3) In some cases, when good shielding effects are required for both high and low-frequency electromagnetic fields, different metal materials are often used to form multi-layer shielding materials.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block sidebar %}{% endblock %}

@@ -30,6 +30,17 @@
                         {% endif %}
                     </a>
                 </div>
+                <div class="faq-item mb-4">
+                    <a href="{{ url_for('why_electromagnetic_shielding') }}" class="btn btn-dark btn-lg d-block p-4 text-start">
+                        {% if current_lang == 'zh' %}
+                        什么是电磁屏蔽？为什么要屏蔽？
+                        {% elif current_lang == 'vi' %}
+                        Chắn điện từ là gì? Tại sao cần chắn điện từ?
+                        {% else %}
+                        What is electromagnetic shielding? Why is it needed?
+                        {% endif %}
+                    </a>
+                </div>
                 <!-- More FAQ items will be added here -->
             </div>
         </div>
