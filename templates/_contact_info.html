@@ -1,33 +1,17 @@
 <div class="contact-info">
-    {% if current_lang == 'zh' %}
-    <h3>联系方式</h3>
-    {% elif current_lang == 'vi' %}
-    <h3>Thông tin liên hệ</h3>
-    {% else %}
-    <h3>Our Contact Info</h3>
-    {% endif %}
-    <div class="contact-details">
+    <h3>
         {% if current_lang == 'zh' %}
-        <p>苏州岸肯电子科技有限公司</p>
-        <p>地址：苏州新区高山路288号108号厂房</p>
-        <p>联系人：周经理</p>
-        <p>电话：+86 (134) 5166-1990</p>
-        <p>邮箱：anteck@126.com<br>anteck@anteck.com.cn</p>
-        <p>传真：0512-68785280</p>
+        联系我们
         {% elif current_lang == 'vi' %}
-        <p>Công ty TNHH Công nghệ Điện tử Suzhou Anken</p>
-        <p>Địa chỉ: Phân xưởng 108, số 288 đường Gaoshan, Khu mới Suzhou</p>
-        <p>Người liên hệ: Giám đốc Zhou</p>
-        <p>Điện thoại: +86 (134) 5166-1990</p>
-        <p>Email: anteck@126.com<br>anteck@anteck.com.cn</p>
-        <p>Fax: 0512-68785280</p>
+        Liên hệ chúng tôi
         {% else %}
-        <p>Suzhou Anken Electronic Technology Co., Ltd</p>
-        <p>Address: Workshop 108, No. 288 Gaoshan Road, New District, Suzhou</p>
-        <p>Contact: Manager Zhou</p>
-        <p>Phone: +1 (949) 992-3596</p>
-        <p>Email: anteck@126.com<br>anteck@anteck.com.cn</p>
-        <p>Fax: 0512-68785280</p>
+        Contact Us
         {% endif %}
+    </h3>
+    <div class="contact-details">
+        <p><strong>{{ content.company_name.split('|')[0] }}</strong></p>
+        <p>Workshop 108, No. 288 Gaoshan Road,<br>New District, Suzhou</p>
+        <p>{{ content.phone_number }}</p>
+        <p>Email: anteck@126.com</p>
     </div>
 </div>
