@@ -964,7 +964,7 @@ footer {
 }
 
 .patent-item:hover {
-        transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .patent-image {
@@ -1215,14 +1215,14 @@ footer {
     position: relative;
     overflow: hidden;
     margin: 2rem auto;
-    max-width: 1600px;  /* Increased to accommodate 5 columns */
+    max-width: 1800px;  /* Increased to accommodate larger items */
     padding: 0 1rem;
 }
 
 .client-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);  /* Changed from 4 to 5 columns */
-    gap: 1.5rem;  /* Slightly reduced gap to fit 5 columns */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.2rem;  /* Adjusted for larger items */
     transition: opacity 0.3s ease;
     margin: 0 auto;
     width: 100%;
@@ -1232,13 +1232,42 @@ footer {
     text-decoration: none;
     display: block;
     aspect-ratio: 1;
-    padding: 1.5rem;
+    padding: 1.8rem;  /* Increased by 1.2x */
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    min-height: 180px;  /* Slightly reduced height */
+    min-height: 216px;  /* Increased from 180px by 1.2x */
     position: relative;
+}
+
+.client-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(228, 142, 56, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.client-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.4rem;  /* Increased by 1.2x */
+}
+
+.client-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.client-item:hover .client-logo img {
+    transform: scale(1.05);
 }
 
 /* Update responsive breakpoints */
@@ -1246,11 +1275,17 @@ footer {
     .client-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+    .client-item {
+        min-height: 200px;
+    }
 }
 
 @media (max-width: 992px) {
     .client-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .client-item {
+        min-height: 180px;
     }
 }
 
@@ -1258,11 +1293,17 @@ footer {
     .client-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .client-item {
+        min-height: 160px;
+    }
 }
 
 @media (max-width: 576px) {
     .client-grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .client-item {
+        min-height: 140px;
     }
 }
 
