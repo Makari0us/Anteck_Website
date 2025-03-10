@@ -859,6 +859,12 @@ footer {
 .footer-logo {
     height: 60px;
     width: auto;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo img {
+    width: 180px; /* Increased size from default */
+    height: auto;
 }
 
 .contact-info {
