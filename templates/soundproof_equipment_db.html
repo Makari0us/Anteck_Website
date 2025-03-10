@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<section class="hero-section text-center text-light py-4">
+    <div class="container">
+        <h1 class="display-4">
+            {% if current_lang == 'zh' %}
+            隔音设备一般隔挡多少dB音量？
+            {% elif current_lang == 'vi' %}
+            Thiết bị cách âm thường giảm bao nhiêu dB?
+            {% else %}
+            How many dB of sound do soundproofing equipment generally reduce?
+            {% endif %}
+        </h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="faq-content">
+                    {% if current_lang == 'zh' %}
+                    <p>隔音设备能有效隔高一定分贝的噪音量，不同隔音设备由于功能不一样，所能阻隔的声量也是有所差异的。比如最常见的隔音罩、隔音屏、隔音门、隔音窗、隔音耳机等。</p>
+                    <p>1、隔音罩是由系列隔音材料制作而成，一般会根据实际需要达到的隔音量去选用隔音材料，一般隔音量在20-50dB（A）左右，也可根据具体需求达到更高的隔音量。</p>
+                    <p>2、隔音屏一般是用在马路交通轨道、厂区、小区住宅外，覆盖有效区域平均降噪在5-15dB（A）左右。</p>
+                    <p>3、隔音门有不同的材质，木结构的隔声量在20-25dB（A）左右，特殊结构的隔声量能达到30-50dB（A）。</p>
+                    <p>4、隔音窗是由真空玻璃制作而成，隔声量可以将带30-38dB（A）以上。</p>
+                    <p>5、隔音耳机和耳塞的作用是一样的，现在市面上的隔音耳机和耳塞能隔音20-30dB（A）以上。</p>
+                    {% elif current_lang == 'vi' %}
+                    <p>Thiết bị cách âm có thể giảm hiệu quả một lượng decibel nhất định, các thiết bị cách âm khác nhau do chức năng khác nhau nên mức độ cách âm cũng khác nhau. Ví dụ như các loại phổ biến nhất là hộp cách âm, màn chắn âm, cửa cách âm, cửa sổ cách âm, tai nghe cách âm, v.v.</p>
+                    <p>1. Hộp cách âm được làm từ một loạt vật liệu cách âm, thường được chọn dựa trên mức độ cách âm cần thiết, thông thường giảm âm khoảng 20-50dB (A), và có thể đạt mức cách âm cao hơn tùy theo yêu cầu cụ thể.</p>
+                    <p>2. Màn chắn âm thường được sử dụng trên đường giao thông, khu công nghiệp, khu dân cư, với mức giảm ồn trung bình trong khu vực hiệu quả khoảng 5-15dB (A).</p>
+                    <p>3. Cửa cách âm có nhiều chất liệu khác nhau, cửa gỗ có khả năng cách âm khoảng 20-25dB (A), cấu trúc đặc biệt có thể đạt 30-50dB (A).</p>
+                    <p>4. Cửa sổ cách âm được làm từ kính chân không, có thể giảm âm trên 30-38dB (A).</p>
+                    <p>5. Tai nghe và nút tai chống ồn có cùng chức năng, các sản phẩm hiện có trên thị trường có thể giảm âm trên 20-30dB (A).</p>
+                    {% else %}
+                    <p>Soundproofing equipment can effectively reduce noise levels by a certain number of decibels. Different soundproofing equipment varies in noise reduction capability due to their different functions. Common examples include soundproof enclosures, screens, doors, windows, and headphones.</p>
+                    <p>1. Soundproof enclosures are made from a series of sound-absorbing materials, generally selected based on the required noise reduction level. They typically provide noise reduction of 20-50dB (A), and can achieve higher levels based on specific requirements.</p>
+                    <p>2. Soundproof screens are commonly used along roads, railway tracks, industrial areas, and residential complexes, providing an average noise reduction of 5-15dB (A) in the effective coverage area.</p>
+                    <p>3. Soundproof doors come in different materials: wooden structures provide sound reduction of 20-25dB (A), while special structures can achieve 30-50dB (A).</p>
+                    <p>4. Soundproof windows are made with vacuum glass and can reduce sound by over 30-38dB (A).</p>
+                    <p>5. Soundproof headphones and earplugs serve the same purpose, with current market products capable of reducing noise by over 20-30dB (A).</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block sidebar %}{% endblock %}

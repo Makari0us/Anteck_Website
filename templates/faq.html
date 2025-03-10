@@ -52,6 +52,17 @@
                         {% endif %}
                     </a>
                 </div>
+                <div class="faq-item mb-4">
+                    <a href="{{ url_for('soundproof_equipment_db') }}" class="btn btn-dark btn-lg d-block p-4 text-start">
+                        {% if current_lang == 'zh' %}
+                        隔音设备一般隔挡多少dB音量？
+                        {% elif current_lang == 'vi' %}
+                        Thiết bị cách âm thường giảm bao nhiêu dB?
+                        {% else %}
+                        How many dB of sound do soundproofing equipment generally reduce?
+                        {% endif %}
+                    </a>
+                </div>
                 <!-- More FAQ items will be added here -->
             </div>
         </div>
