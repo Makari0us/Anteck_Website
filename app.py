@@ -6,7 +6,7 @@ from translations import TRANSLATIONS
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev_key")
 
-# Client data mapping
+# Client data mapping with language-specific names
 CLIENTS = {
     1: "AMETEK",
     2: "Cooler Master",
@@ -15,46 +15,46 @@ CLIENTS = {
     5: "TRW",
     6: "Zealer",
     7: "Arvin Meritor",
-    8: "Beihang University",
-    9: "Bestune",
+    8: {"en": "Beihang University", "vi": "Beihang University", "zh": "北京航空航天大学"},
+    9: {"en": "Bestune", "vi": "Bestune", "zh": "一汽奔腾"},
     10: "BOSCH",
-    11: "DAIKIN",
+    11: {"en": "DAIKIN", "vi": "DAIKIN", "zh": "大金空调"},
     12: "SONION",
     13: "DELPHI",
     14: "BOS",
     15: "INTEVA",
     16: "Valeo",
     17: "Philips",
-    18: "Foxconn",
-    19: "Fujitsu",
+    18: {"en": "Foxconn", "vi": "Foxconn", "zh": "富士康"},
+    19: {"en": "Fujitsu", "vi": "Fujitsu", "zh": "富士通"},
     20: "GHSP",
-    21: "HIT",
-    22: "Kumho Tire",
+    21: {"en": "HIT", "vi": "HIT", "zh": "哈工大"},
+    22: {"en": "Kumho Tire", "vi": "Kumho Tire", "zh": "锦湖轮胎"},
     23: "KAIT",
-    24: "HuaBao",
-    25: "SAIC",
-    26: "Huaguan Group",
-    27: "Huaqin",
-    28: "JAC",
-    29: "Jin Laike",
-    30: "Joyoung",
-    31: "Konka",
-    32: "HEC",
-    33: "Longcheer",
+    24: {"en": "HuaBao", "vi": "HuaBao", "zh": "华宝"},
+    25: {"en": "SAIC", "vi": "SAIC", "zh": "上汽集团"},
+    26: {"en": "Huaguan Group", "vi": "Huaguan Group", "zh": "华冠集团"},
+    27: {"en": "Huaqin", "vi": "Huaqin", "zh": "华勤"},
+    28: {"en": "JAC", "vi": "JAC", "zh": "江淮汽车"},
+    29: {"en": "Jin Laike", "vi": "Jin Laike", "zh": "金莱克"},
+    30: {"en": "Joyoung", "vi": "Joyoung", "zh": "九阳"},
+    31: {"en": "Konka", "vi": "Konka", "zh": "康佳"},
+    32: {"en": "HEC", "vi": "HEC", "zh": "鸿志"},
+    33: {"en": "Longcheer", "vi": "Longcheer", "zh": "龙旗"},
     34: "Logitech",
-    35: "MA Steel",
+    35: {"en": "MA Steel", "vi": "MA Steel", "zh": "马钢"},
     36: "BenQ",
     37: "Sharp",
-    38: "NUAA",
-    39: "Yinghuada",
-    40: "Desano",
+    38: {"en": "NUAA", "vi": "NUAA", "zh": "南京航空航天大学"},
+    39: {"en": "Yinghuada", "vi": "Yinghuada", "zh": "英华达"},
+    40: {"en": "Desano", "vi": "Desano", "zh": "德赛"},
     41: "Omron",
-    42: "Richmat",
+    42: {"en": "Richmat", "vi": "Richmat", "zh": "豪江"},
     43: "Nidec",
-    44: "Realsil",
-    45: "Sanhua",
+    44: {"en": "Realsil", "vi": "Realsil", "zh": "瑞昱"},
+    45: {"en": "Sanhua", "vi": "Sanhua", "zh": "三花"},
     46: "Mitsubishi Heavy Industries",
-    47: "Sangfei Communication",
+    47: {"en": "Sangfei Communication", "vi": "Sangfei Communication", "zh": "桑菲通讯"},
     48: "HYO SEONG ZHIDA",
     49: "Meiji",
     50: "Visteon",
@@ -63,22 +63,29 @@ CLIENTS = {
     53: "Panasonic",
     54: "Mando",
     55: "TRICO",
-    56: "TINNO",
-    57: "TIANSHIDA",
+    56: {"en": "TINNO", "vi": "TINNO", "zh": "天珑移动"},
+    57: {"en": "TIANSHIDA", "vi": "TIANSHIDA", "zh": "天时达"},
     58: "SKYBEST",
-    59: "VIA",
+    59: {"en": "VIA", "vi": "VIA", "zh": "威盛电子"},
     60: "Webasto",
     61: "Crown",
     62: "Siemens",
-    63: "Xiaomi",
+    63: {"en": "Xiaomi", "vi": "Xiaomi", "zh": "小米"},
     64: "ADDA",
-    65: "SIASUN",
-    66: "EC Research",
-    67: "Yankuang Textile",
-    68: "YISEN",
+    65: {"en": "SIASUN", "vi": "SIASUN", "zh": "新松"},
+    66: {"en": "EC Research", "vi": "EC Research", "zh": "研科"},
+    67: {"en": "Yankuang Textile", "vi": "Yankuang Textile", "zh": "扬子江纺业"},
+    68: {"en": "YISEN", "vi": "YISEN", "zh": "易森"},
     69: "cebi international",
     70: "Infineon"
 }
+
+def get_client_name(client_id, language):
+    """Get client name based on language"""
+    client = CLIENTS.get(client_id)
+    if isinstance(client, dict):
+        return client.get(language, client['en'])
+    return client
 
 def get_user_language():
     return session.get('language', 'en')
@@ -86,7 +93,7 @@ def get_user_language():
 @app.route('/')
 def index():
     page = request.args.get('page', 1, type=int)
-    items_per_page = 10  # Changed from 8 to 10
+    items_per_page = 10  
     total_clients = 70
     total_pages = (total_clients + items_per_page - 1) // items_per_page
     start_idx = (page - 1) * items_per_page + 1
@@ -214,7 +221,7 @@ def contact_location():
 
 @app.route('/view-patent/<int:number>')
 def view_patent(number):
-    if 1 <= number <= 4:  # Validate patent number range
+    if 1 <= number <= 4:  
         language = get_user_language()
         return render_template('view_patent.html',
                             content=TRANSLATIONS[language],
@@ -238,8 +245,8 @@ def industry_dynamics():
 
 @app.route('/client/<int:client_id>')
 def client_page(client_id):
-    client_name = CLIENTS.get(client_id, f"Client {client_id}")
     language = get_user_language()
+    client_name = get_client_name(client_id, language)
     return render_template('client_page.html',
                          content=TRANSLATIONS[language],
                          current_lang=language,
@@ -248,17 +255,21 @@ def client_page(client_id):
 
 @app.route('/get_clients/<int:page>')
 def get_clients(page):
-    items_per_page = 10  # Changed from 8 to 10
+    items_per_page = 10
     total_clients = 70
     start_idx = (page - 1) * items_per_page + 1
     end_idx = min(start_idx + items_per_page - 1, total_clients)
 
+    language = get_user_language()
+    # Create a dictionary of translated client names for the current language
+    translated_clients = {i: get_client_name(i, language) for i in range(1, 71)}
+
     clients_html = render_template('_clients_grid.html',
                                 start_idx=start_idx,
                                 end_idx=end_idx,
-                                client_names=CLIENTS,
-                                content=TRANSLATIONS[get_user_language()],
-                                current_lang=get_user_language())
+                                client_names=translated_clients,
+                                content=TRANSLATIONS[language],
+                                current_lang=language)
 
     return jsonify({
         'html': clients_html,
