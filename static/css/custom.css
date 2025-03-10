@@ -328,14 +328,15 @@
 
 /* Product Sidebar Styles */
 .product-sidebar {
-    background: #333333; /* Dark gray background */
+    background: linear-gradient(145deg, #2d2d40, #1a1a2e); /* Regal dark blue/purple gradient */
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-header {
-    background: #333333; /* Dark gray background */
+    background: linear-gradient(145deg, #33334d, #1a1a2e); /* Slightly lighter gradient for header */
     color: white;
     padding: 15px;
     margin: 0;
@@ -361,7 +362,7 @@
 }
 
 .menu-item:hover {
-    background-color: #444444;
+    background: linear-gradient(145deg, #3f3f5f, #2a2a45); /* Regal hover effect */
     color: white;
     text-decoration: none;
 }
