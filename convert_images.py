@@ -31,6 +31,13 @@ image_mappings = {
     "截屏2025-03-09 下午2.56.00.png": "clients/client-12.jpg", # SONION
     "截屏2025-03-09 下午2.56.04.png": "clients/client-13.jpg", # DELPHI
     "截屏2025-03-09 下午2.56.08.png": "clients/client-14.jpg", # BOS
+    "截屏2025-03-09 下午4.07.49.png": "clients/client-15.jpg", # INTEVA
+    "截屏2025-03-09 下午4.07.57.png": "clients/client-16.jpg", # Valeo
+    "截屏2025-03-09 下午4.08.01.png": "clients/client-17.jpg", # Philips
+    "截屏2025-03-09 下午4.08.05.png": "clients/client-18.jpg", # Foxconn
+    "截屏2025-03-09 下午4.08.10.png": "clients/client-19.jpg", # Fujitsu
+    "截屏2025-03-09 下午4.08.14.png": "clients/client-20.jpg", # GHSP
+    "截屏2025-03-09 下午4.08.18.png": "clients/client-21.jpg", # HIT
 }
 
 # Convert images
