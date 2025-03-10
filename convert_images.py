@@ -71,6 +71,13 @@ image_mappings = {
     "截屏2025-03-09 下午4.26.56.png": "clients/client-61.jpg",  # Crown
     "截屏2025-03-09 下午4.27.01.png": "clients/client-62.jpg",  # Siemens
     "截屏2025-03-09 下午4.27.05.png": "clients/client-63.jpg",  # Xiaomi
+    "截屏2025-03-09 下午4.29.24.png": "clients/client-64.jpg",  # ADDA
+    "截屏2025-03-09 下午4.29.29.png": "clients/client-65.jpg",  # SIASUN
+    "截屏2025-03-09 下午4.29.34.png": "clients/client-66.jpg",  # EC Research
+    "截屏2025-03-09 下午4.29.38.png": "clients/client-67.jpg",  # Yankuang Textile
+    "截屏2025-03-09 下午4.29.42.png": "clients/client-68.jpg",  # YISEN
+    "截屏2025-03-09 下午4.29.46.png": "clients/client-69.jpg",  # cebi international
+    "截屏2025-03-09 下午4.29.50.png": "clients/client-70.jpg",  # Infineon
 }
 
 # Client names mapping
@@ -123,7 +130,14 @@ client_names = {
     60: "Webasto",
     61: "Crown",
     62: "Siemens",
-    63: "Xiaomi"
+    63: "Xiaomi",
+    64: "ADDA",
+    65: "SIASUN",
+    66: "EC Research",
+    67: "Yankuang Textile",
+    68: "YISEN",
+    69: "cebi international",
+    70: "Infineon"
 }
 
 # Convert images
