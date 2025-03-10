@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<section class="hero-section text-center text-light py-4">
+    <div class="container">
+        <h1 class="display-4">
+            {% if current_lang == 'zh' %}
+            一般静音房多少分贝合格？
+            {% elif current_lang == 'vi' %}
+            Phòng cách âm đạt tiêu chuẩn cần giảm bao nhiêu dB?
+            {% else %}
+            What dB level qualifies as a standard soundproof room?
+            {% endif %}
+        </h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="faq-content">
+                    {% if current_lang == 'zh' %}
+                    <p>静音房的本底噪声值取决于测试的产品，产品的噪音值决定了静音房做到多少分贝合适，没有严格说做到多少合格这一说法。</p>
+                    <p>所有需要测试噪音的产品都可以用静音房来进行测试，常见的有传声器、小型马达、风扇、空调、家用电器、汽车配件等系列产品。一般正常情况下，静音房在40-20分贝左右，噪音值超过45分贝的产品也没必要测试了。所以静音房至少也要做到45分贝的本底噪声值才算合格，低于20分贝的精准度要求较高了，就属于消声室了。</p>
+                    <p>拓展知识：</p>
+                    <p>消声室和静音房的功能都是一样的，都是用来测试产品的噪声大小，两者不同的区别是：消声室比静音房的测试精准度更高，声学要求更高，制作工艺更复杂，制作成本也更高。消声室内需要形成一个自由声场，通过安装吸声尖劈的形式实现；静音房只需要在嘈杂的环境中隔离出一个安静的环境就可以了。</p>
+                    {% elif current_lang == 'vi' %}
+                    <p>Mức độ ồn nền của phòng cách âm phụ thuộc vào sản phẩm cần kiểm tra, giá trị tiếng ồn của sản phẩm quyết định mức độ giảm âm phù hợp của phòng cách âm, không có một tiêu chuẩn cứng nhắc về mức độ đạt chuẩn.</p>
+                    <p>Tất cả các sản phẩm cần kiểm tra tiếng ồn đều có thể sử dụng phòng cách âm để thử nghiệm, phổ biến như micro, động cơ nhỏ, quạt, điều hòa, đồ gia dụng, phụ tùng ô tô, v.v. Trong điều kiện bình thường, phòng cách âm có mức ồn khoảng 40-20dB, những sản phẩm có mức ồn trên 45dB không cần thiết phải kiểm tra. Do đó, phòng cách âm phải đạt được mức ồn nền tối thiểu 45dB mới đạt tiêu chuẩn, yêu cầu độ chính xác dưới 20dB được coi là phòng tiêu âm.</p>
+                    <p>Kiến thức mở rộng:</p>
+                    <p>Phòng tiêu âm và phòng cách âm có chức năng giống nhau, đều dùng để kiểm tra mức độ ồn của sản phẩm, sự khác biệt là: phòng tiêu âm có độ chính xác kiểm tra cao hơn, yêu cầu âm học cao hơn, quy trình sản xuất phức tạp hơn và chi phí cao hơn. Phòng tiêu âm cần tạo ra một trường âm tự do thông qua việc lắp đặt các vật liệu hấp thụ âm hình nêm; phòng cách âm chỉ cần tạo ra một môi trường yên tĩnh trong không gian ồn ào.</p>
+                    {% else %}
+                    <p>The background noise level of a soundproof room depends on the product being tested. The noise value of the product determines the appropriate decibel level for the soundproof room; there is no strict standard for qualification.</p>
+                    <p>All products requiring noise testing can be tested in a soundproof room, including common items such as microphones, small motors, fans, air conditioners, household appliances, and automotive parts. Under normal circumstances, soundproof rooms typically maintain 40-20 decibels, and products with noise levels exceeding 45 decibels don't require testing. Therefore, a soundproof room must achieve a minimum background noise level of 45 decibels to be considered qualified, while precision requirements below 20 decibels fall into the category of anechoic chambers.</p>
+                    <p>Extended Knowledge:</p>
+                    <p>Anechoic chambers and soundproof rooms serve the same function of testing product noise levels, but they differ in several aspects: anechoic chambers offer higher testing precision, have stricter acoustic requirements, involve more complex manufacturing processes, and cost more to produce. Anechoic chambers need to create a free sound field through the installation of sound-absorbing wedges, while soundproof rooms only need to isolate a quiet environment from noisy surroundings.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block sidebar %}{% endblock %}

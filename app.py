@@ -304,3 +304,10 @@ def soundproof_equipment_db():
     return render_template('soundproof_equipment_db.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
+
+@app.route('/faq/soundproof-room-qualification')
+def soundproof_room_qualification():
+    language = get_user_language()
+    return render_template('soundproof_room_qualification.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)

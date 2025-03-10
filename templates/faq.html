@@ -63,6 +63,17 @@
                         {% endif %}
                     </a>
                 </div>
+                <div class="faq-item mb-4">
+                    <a href="{{ url_for('soundproof_room_qualification') }}" class="btn btn-dark btn-lg d-block p-4 text-start">
+                        {% if current_lang == 'zh' %}
+                        一般静音房多少分贝合格？
+                        {% elif current_lang == 'vi' %}
+                        Phòng cách âm đạt tiêu chuẩn cần giảm bao nhiêu dB?
+                        {% else %}
+                        What dB level qualifies as a standard soundproof room?
+                        {% endif %}
+                    </a>
+                </div>
                 <!-- More FAQ items will be added here -->
             </div>
         </div>
