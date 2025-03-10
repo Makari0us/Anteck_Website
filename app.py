@@ -15,13 +15,69 @@ CLIENTS = {
     5: "TRW",
     6: "Zealer",
     7: "Arvin Meritor",
-    8: "北京航空航天大学",  # Beihang University
-    9: "一汽奔腾",         # Bestune
+    8: "Beihang University",
+    9: "Bestune",
     10: "BOSCH",
-    11: "大金空调",        # DAIKIN
+    11: "DAIKIN",
     12: "SONION",
     13: "DELPHI",
-    14: "BOS"
+    14: "BOS",
+    15: "INTEVA",
+    16: "Valeo",
+    17: "Philips",
+    18: "Foxconn",
+    19: "Fujitsu",
+    20: "GHSP",
+    21: "HIT",
+    22: "Kumho Tire",
+    23: "KAIT",
+    24: "HuaBao",
+    25: "SAIC",
+    26: "Huaguan Group",
+    27: "Huaqin",
+    28: "JAC",
+    29: "Jin Laike",
+    30: "Joyoung",
+    31: "Konka",
+    32: "HEC",
+    33: "Longcheer",
+    34: "Logitech",
+    35: "MA Steel",
+    36: "BenQ",
+    37: "Sharp",
+    38: "NUAA",
+    39: "Yinghuada",
+    40: "Desano",
+    41: "Omron",
+    42: "Richmat",
+    43: "Nidec",
+    44: "Realsil",
+    45: "Sanhua",
+    46: "Mitsubishi Heavy Industries",
+    47: "Sangfei Communication",
+    48: "HYO SEONG ZHIDA",
+    49: "Meiji",
+    50: "Visteon",
+    51: "Providence Enterprise",
+    52: "SUMIDA",
+    53: "Panasonic",
+    54: "Mando",
+    55: "TRICO",
+    56: "TINNO",
+    57: "TIANSHIDA",
+    58: "SKYBEST",
+    59: "VIA",
+    60: "Webasto",
+    61: "Crown",
+    62: "Siemens",
+    63: "Xiaomi",
+    64: "ADDA",
+    65: "SIASUN",
+    66: "EC Research",
+    67: "Yankuang Textile",
+    68: "YISEN",
+    69: "cebi international",
+    70: "Infineon"
 }
 
 def get_user_language():
@@ -184,14 +240,6 @@ def industry_dynamics():
 def client_page(client_id):
     client_name = CLIENTS.get(client_id, f"Client {client_id}")
     language = get_user_language()
-    # For English version, use English names for specific clients
-    if language == 'en':
-        if client_id == 8:
-            client_name = "Beihang University"
-        elif client_id == 9:
-            client_name = "Bestune"
-        elif client_id == 11:
-            client_name = "DAIKIN"
     return render_template('client_page.html',
                          content=TRANSLATIONS[language],
                          current_lang=language,
