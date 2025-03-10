@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<section class="hero-section text-center text-light py-4">
+    <div class="container">
+        <h1 class="display-5 mb-0">{{ content.nav_faq }}</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="faq-content bg-dark text-light p-4 rounded">
+            {% if current_lang == 'zh' %}
+            <h2 class="mb-4">为什么需要声屏蔽室或消声箱？</h2>
+            <div class="faq-item">
+                <h3 class="mb-3">（消声室或半消声室）基本概念</h3>
+                
+                <h4 class="mt-4">自由场空间</h4>
+                <p>消声室的主要功能是为声学测试提供一个自由场空间或半自由场空间。自由场是指声波在无限大空间里传播时，不存在任何反射体和反射面。</p>
+                
+                <p>自然界中的自由场空间是将声源吊在空中，远离任何反射物，声波可自由地向360°全方位角传播。半自由场空间是指自由空间中有一一个反射面，声波只能在180°半球方位自由传播。常见的半自由场空间如水泥地面的大型露天停车场、室外篮球场、停机坪...等。</p>
+                
+                <p>波在自由场或半自由场空间里传播有特定的物理定义：</p>
+                <ol>
+                    <li>对点声源声压随距离衰减，这就是声能的反平方律</li>
+                    <li>声压级在常温常压下等于声强级，这是在消声室里测量声功率的理论基础。</li>
+                </ol>
+
+                <h4 class="mt-4">背景噪声</h4>
+                <p>尽管水泥地面的大型露天停车场、室外篮球场、停机坪...等也能提供半自由场空间，但测量时会受背景噪声的影响。试想，冰箱的噪声在30dB (A) 而环境的背景噪声在45dB (A)，要测量冰箱的噪声是不可能的。所以消声室另一个功能是提供低背景噪声的环境以适应测试环境的要求。</p>
+                
+                <p>根据国标GB6882-86《半消声室精密法测定消声室和半消声室精密法》，在测试频率范围内，背景噪声的声压级至少比被测声源的声压级低6dB，最好低12dB。</p>
+
+                <h4 class="mt-4">截止频率</h4>
+                <p>消声室要在室内模拟自由场或半自由场空间，所以要求墙面吸声系数为99%以上。半自由场墙面的反射系数为95%以上。设计一种能做到全频带（20 Hz - 20000 Hz）的100%吸声体，是不可能的。因为通用的材料对高频声波很容易被吸收，而低频吸收效果很不好。截止频率是指在此频率以上，墙面的吸声系统能保持99%的吸声系数。实际工程中的（半）自由场空间是指对截止频率以上的声波，消声室内为（半）自由场空间，截止频率越低，尖锐的长度要求就越大。一般而言，尖锐的长度适用于1/4波长处理法。</p>
+
+                <h4 class="mt-4">消声室的鉴定方法</h4>
+                <p>在实际工程中，声场自由空间是鉴定消声室好坏的关键依据。国标ISO 4744和国标GB 6882-86提供了鉴定消声室自由空间的鉴定方法。</p>
+                
+                <p>另外，本底噪声是消声室的另一重要指标。测量中得到的本底噪声是仪器的本底噪声加消声室的本底噪声。</p>
+            </div>
+            {% elif current_lang == 'vi' %}
+            <h2 class="mb-4">Tại sao cần phòng cách âm hoặc hộp cách âm?</h2>
+            <div class="faq-item">
+                <h3 class="mb-3">Khái niệm cơ bản (Phòng tiêu âm hoặc bán tiêu âm)</h3>
+                
+                <h4 class="mt-4">Không gian trường tự do</h4>
+                <p>Chức năng chính của phòng tiêu âm là cung cấp một không gian trường tự do hoặc bán tự do cho việc kiểm tra âm học. Trường tự do là nơi sóng âm truyền trong không gian vô hạn mà không có bất kỳ vật phản xạ hoặc bề mặt phản xạ nào.</p>
+                
+                <p>Trong tự nhiên, không gian trường tự do là nơi nguồn âm được treo trong không khí, xa khỏi bất kỳ vật phản xạ nào, sóng âm có thể tự do truyền theo góc 360°. Không gian bán tự do là không gian tự do có một mặt phản xạ, sóng âm chỉ có thể truyền tự do trong bán cầu 180°. Không gian bán tự do thông thường như bãi đỗ xe bê tông lớn ngoài trời, sân bóng rổ ngoài trời, bãi đỗ máy bay... vv.</p>
+                
+                <p>Sóng truyền trong không gian trường tự do hoặc bán tự do có các định nghĩa vật lý cụ thể:</p>
+                <ol>
+                    <li>Đối với nguồn âm điểm, áp suất âm giảm theo khoảng cách, đây là quy luật nghịch đảo bình phương của năng lượng âm</li>
+                    <li>Mức áp suất âm bằng mức cường độ âm ở nhiệt độ và áp suất thường, đây là cơ sở lý thuyết để đo công suất âm trong phòng tiêu âm.</li>
+                </ol>
+
+                <h4 class="mt-4">Tiếng ồn nền</h4>
+                <p>Mặc dù bãi đỗ xe bê tông lớn ngoài trời, sân bóng rổ ngoài trời, bãi đỗ máy bay... vv cũng có thể cung cấp không gian bán tự do, nhưng việc đo lường sẽ bị ảnh hưởng bởi tiếng ồn nền. Hãy tưởng tượng, tiếng ồn tủ lạnh ở 30dB (A) và tiếng ồn nền môi trường ở 45dB (A), không thể đo được tiếng ồn tủ lạnh. Vì vậy, một chức năng khác của phòng tiêu âm là cung cấp môi trường có tiếng ồn nền thấp để đáp ứng yêu cầu môi trường kiểm tra.</p>
+                
+                <p>Theo tiêu chuẩn quốc gia GB6882-86 "Phương pháp chính xác để xác định phòng tiêu âm và phòng bán tiêu âm", trong phạm vi tần số kiểm tra, mức áp suất âm của tiếng ồn nền phải thấp hơn ít nhất 6dB so với mức áp suất âm của nguồn âm được đo, tốt nhất là thấp hơn 12dB.</p>
+
+                <h4 class="mt-4">Tần số cắt</h4>
+                <p>Phòng tiêu âm cần mô phỏng không gian trường tự do hoặc bán tự do trong phòng, vì vậy yêu cầu hệ số hấp thụ âm của tường phải trên 99%. Hệ số phản xạ của tường bán tự do phải trên 95%. Thiết kế một vật hấp thụ âm 100% toàn dải tần (20 Hz - 20000 Hz) là không thể. Bởi vì các vật liệu thông thường dễ dàng hấp thụ sóng âm tần số cao, nhưng hiệu quả hấp thụ tần số thấp rất kém. Tần số cắt là tần số mà trên đó hệ thống hấp thụ âm của tường có thể duy trì hệ số hấp thụ 99%. Trong thực tế, không gian trường (bán) tự do đề cập đến không gian phòng tiêu âm là không gian trường (bán) tự do đối với sóng âm trên tần số cắt, tần số cắt càng thấp, yêu cầu về chiều dài vật nhọn càng lớn. Nói chung, chiều dài vật nhọn áp dụng phương pháp xử lý 1/4 bước sóng.</p>
+
+                <h4 class="mt-4">Phương pháp xác định phòng tiêu âm</h4>
+                <p>Trong thực tế, không gian trường tự do là tiêu chí quan trọng để xác định chất lượng phòng tiêu âm. Tiêu chuẩn quốc tế ISO 4744 và tiêu chuẩn quốc gia GB 6882-86 cung cấp phương pháp xác định không gian tự do của phòng tiêu âm.</p>
+                
+                <p>Ngoài ra, tiếng ồn nền là một chỉ số quan trọng khác của phòng tiêu âm. Tiếng ồn nền đo được là tổng của tiếng ồn nền của thiết bị và tiếng ồn nền của phòng tiêu âm.</p>
+            </div>
+            {% else %}
+            <h2 class="mb-4">Why do you need an acoustic screen room or soundproof box?</h2>
+            <div class="faq-item">
+                <h3 class="mb-3">Basic Concept (Anechoic or Semi-Anechoic Chamber)</h3>
+                
+                <h4 class="mt-4">Free Field Space</h4>
+                <p>The main function of an anechoic chamber is to provide a free field space or semi-free field space for acoustic testing. A free field refers to sound waves propagating in an infinite space without any reflectors or reflecting surfaces.</p>
+                
+                <p>In nature, a free field space is where the sound source is suspended in the air, away from any reflective objects, and sound waves can freely propagate in 360° omnidirectional angles. A semi-free field space refers to a free space with one reflecting surface, where sound waves can only propagate freely in 180° hemispheric directions. Common semi-free field spaces include large outdoor concrete parking lots, outdoor basketball courts, aircraft parking areas, etc.</p>
+                
+                <p>Wave propagation in free field or semi-free field spaces has specific physical definitions:</p>
+                <ol>
+                    <li>For point sound sources, sound pressure attenuates with distance, which is the inverse square law of sound energy</li>
+                    <li>Sound pressure level equals sound intensity level under normal temperature and pressure, which is the theoretical basis for measuring sound power in anechoic chambers.</li>
+                </ol>
+
+                <h4 class="mt-4">Background Noise</h4>
+                <p>Although concrete parking lots, outdoor basketball courts, aircraft parking areas, etc., can provide semi-free field spaces, measurements will be affected by background noise. Imagine, if refrigerator noise is at 30dB (A) and the environmental background noise is at 45dB (A), measuring the refrigerator's noise would be impossible. Therefore, another function of an anechoic chamber is to provide a low background noise environment to meet testing environment requirements.</p>
+                
+                <p>According to national standard GB6882-86 "Precision method for determining anechoic and semi-anechoic chambers", within the test frequency range, the sound pressure level of background noise should be at least 6dB lower than the sound pressure level of the measured sound source, preferably 12dB lower.</p>
+
+                <h4 class="mt-4">Cut-off Frequency</h4>
+                <p>An anechoic chamber needs to simulate free field or semi-free field space indoors, so the wall absorption coefficient must be above 99%. The reflection coefficient of semi-free field walls must be above 95%. Designing a 100% sound absorber for the full frequency band (20 Hz - 20000 Hz) is impossible. Because common materials easily absorb high-frequency sound waves, but low-frequency absorption is very poor. Cut-off frequency refers to the frequency above which the wall absorption system can maintain a 99% absorption coefficient. In practical engineering, (semi) free field space refers to the anechoic chamber being a (semi) free field space for sound waves above the cut-off frequency, the lower the cut-off frequency, the greater the sharp length requirement. Generally, the sharp length applies to the 1/4 wavelength treatment method.</p>
+
+                <h4 class="mt-4">Anechoic Chamber Verification Method</h4>
+                <p>In practical engineering, free field space is the key criterion for verifying anechoic chamber quality. International standard ISO 4744 and national standard GB 6882-86 provide methods for verifying the free space of anechoic chambers.</p>
+                
+                <p>Additionally, background noise is another important indicator of an anechoic chamber. The background noise measured is the sum of the instrument's background noise and the anechoic chamber's background noise.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

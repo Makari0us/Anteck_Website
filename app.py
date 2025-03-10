@@ -276,3 +276,10 @@ def get_clients(page):
         'total_pages': (total_clients + items_per_page - 1) // items_per_page,
         'current_page': page
     })
+
+@app.route('/faq/why-soundproof')
+def why_soundproof():
+    language = get_user_language()
+    return render_template('why_soundproof.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)

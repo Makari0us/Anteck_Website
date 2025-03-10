@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="hero-section text-center text-light">
+<section class="hero-section text-center text-light py-4">
     <div class="container">
         <h1 class="display-4">
             {% if current_lang == 'zh' %}
@@ -17,7 +17,22 @@
 
 <section class="section">
     <div class="container">
-        <!-- Content will be added later -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="faq-item mb-4">
+                    <a href="{{ url_for('why_soundproof') }}" class="btn btn-dark btn-lg d-block p-4 text-start">
+                        {% if current_lang == 'zh' %}
+                        为什么需要声屏蔽室或消声箱？
+                        {% elif current_lang == 'vi' %}
+                        Tại sao cần phòng cách âm hoặc hộp cách âm?
+                        {% else %}
+                        Why do you need an acoustic screen room or soundproof box?
+                        {% endif %}
+                    </a>
+                </div>
+                <!-- More FAQ items will be added here -->
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
