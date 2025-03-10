@@ -328,14 +328,14 @@
 
 /* Product Sidebar Styles */
 .product-sidebar {
-    background: #3c7ab7; /*Removed blue background*/
+    background: #333333; /* Dark gray background */
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 20px;
 }
 
 .sidebar-header {
-    background: #3c7ab7; /*Removed blue background*/
+    background: #333333; /* Dark gray background */
     color: white;
     padding: 15px;
     margin: 0;
@@ -361,7 +361,7 @@
 }
 
 .menu-item:hover {
-    background-color: #2c5a8f;
+    background-color: #444444;
     color: white;
     text-decoration: none;
 }
