@@ -256,6 +256,7 @@ def get_clients(page):
     clients_html = render_template('_clients_grid.html',
                                 start_idx=start_idx,
                                 end_idx=end_idx,
+                                client_names=CLIENTS,
                                 content=TRANSLATIONS[get_user_language()],
                                 current_lang=get_user_language())
 
