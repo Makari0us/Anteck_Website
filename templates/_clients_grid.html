@@ -3,8 +3,11 @@
     <a href="{{ url_for('client_page', client_id=i) }}" class="client-item">
         <div class="client-logo">
             <img src="{{ url_for('static', filename='images/clients/client-' ~ i ~ '.jpg') }}" 
-                 alt="Client {{ i }}"
+                 alt="{% if i in client_names %}{{ client_names[i] }}{% else %}Client {{ i }}{% endif %}"
                  class="img-fluid">
+        </div>
+        <div class="client-name">
+            {% if i in client_names %}{{ client_names[i] }}{% else %}Client {{ i }}{% endif %}
         </div>
     </a>
     {% endfor %}

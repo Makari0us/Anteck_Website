@@ -15,29 +15,45 @@ clients_dir.mkdir(exist_ok=True)
 
 # Client image mappings (old and new)
 image_mappings = {
-    "截屏2025-02-23 下午7.29.30.png": "acoustic-testing-equipment.jpg",
-    "截屏2025-02-23 下午7.32.36.png": "acoustic-testing-device.jpg",
-    "截屏2025-02-23 下午7.36.56.png": "acoustic-testing-instruments.jpg",
-    "截屏2025-02-23 下午7.46.15.png": "online-testing-chamber.jpg",
-    "截屏2025-02-23 下午8.04.06.png": "anken-building.jpg",
-    "截屏2025-02-23 下午8.14.50.png": "patents/patent1.jpg",
-    "截屏2025-02-23 下午8.15.13.png": "patents/patent2.jpg",
-    "截屏2025-02-23 下午8.15.24.png": "patents/patent3.jpg",
-    "截屏2025-02-23 下午8.15.30.png": "patents/patent4.jpg",
-    "截屏2025-03-09 下午2.55.40.png": "clients/client-8.jpg",  # Beihang University
-    "截屏2025-03-09 下午2.55.45.png": "clients/client-9.jpg",  # Bestune
-    "截屏2025-03-09 下午2.55.51.png": "clients/client-10.jpg", # BOSCH
-    "截屏2025-03-09 下午2.55.56.png": "clients/client-11.jpg", # DAIKIN
-    "截屏2025-03-09 下午2.56.00.png": "clients/client-12.jpg", # SONION
-    "截屏2025-03-09 下午2.56.04.png": "clients/client-13.jpg", # DELPHI
-    "截屏2025-03-09 下午2.56.08.png": "clients/client-14.jpg", # BOS
-    "截屏2025-03-09 下午4.07.49.png": "clients/client-15.jpg", # INTEVA
-    "截屏2025-03-09 下午4.07.57.png": "clients/client-16.jpg", # Valeo
-    "截屏2025-03-09 下午4.08.01.png": "clients/client-17.jpg", # Philips
-    "截屏2025-03-09 下午4.08.05.png": "clients/client-18.jpg", # Foxconn
-    "截屏2025-03-09 下午4.08.10.png": "clients/client-19.jpg", # Fujitsu
-    "截屏2025-03-09 下午4.08.14.png": "clients/client-20.jpg", # GHSP
-    "截屏2025-03-09 下午4.08.18.png": "clients/client-21.jpg", # HIT
+    "截屏2025-03-09 下午2.55.40.png": "clients/client-8.jpg",   # Beihang University
+    "截屏2025-03-09 下午2.55.45.png": "clients/client-9.jpg",   # Bestune
+    "截屏2025-03-09 下午2.55.51.png": "clients/client-10.jpg",  # BOSCH
+    "截屏2025-03-09 下午2.55.56.png": "clients/client-11.jpg",  # DAIKIN
+    "截屏2025-03-09 下午2.56.00.png": "clients/client-12.jpg",  # SONION
+    "截屏2025-03-09 下午2.56.04.png": "clients/client-13.jpg",  # DELPHI
+    "截屏2025-03-09 下午2.56.08.png": "clients/client-14.jpg",  # BOS
+    "截屏2025-03-09 下午4.07.49.png": "clients/client-15.jpg",  # INTEVA
+    "截屏2025-03-09 下午4.07.57.png": "clients/client-16.jpg",  # Valeo
+    "截屏2025-03-09 下午4.08.01.png": "clients/client-17.jpg",  # Philips
+    "截屏2025-03-09 下午4.08.05.png": "clients/client-18.jpg",  # Foxconn
+    "截屏2025-03-09 下午4.08.10.png": "clients/client-19.jpg",  # Fujitsu
+    "截屏2025-03-09 下午4.08.14.png": "clients/client-20.jpg",  # GHSP
+    "截屏2025-03-09 下午4.08.18.png": "clients/client-21.jpg",  # HIT
+    "截屏2025-03-09 下午4.11.50.png": "clients/client-22.jpg",  # Kumho Tire
+    "截屏2025-03-09 下午4.11.55.png": "clients/client-23.jpg",  # KAIT
+    "截屏2025-03-09 下午4.11.59.png": "clients/client-24.jpg",  # HuaBao
+    "截屏2025-03-09 下午4.12.03.png": "clients/client-25.jpg",  # SAIC
+    "截屏2025-03-09 下午4.12.07.png": "clients/client-26.jpg",  # Huaguan Group
+    "截屏2025-03-09 下午4.12.10.png": "clients/client-27.jpg",  # Huaqin
+    "截屏2025-03-09 下午4.12.25.png": "clients/client-28.jpg",  # JAC
+}
+
+# Client names mapping
+client_names = {
+    15: "INTEVA",
+    16: "Valeo",
+    17: "Philips",
+    18: "Foxconn",
+    19: "Fujitsu",
+    20: "GHSP",
+    21: "HIT",
+    22: "Kumho Tire",
+    23: "KAIT",
+    24: "HuaBao",
+    25: "SAIC",
+    26: "Huaguan Group",
+    27: "Huaqin",
+    28: "JAC"
 }
 
 # Convert images

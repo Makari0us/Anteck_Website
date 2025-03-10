@@ -1252,7 +1252,7 @@ footer {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 2.5rem; /* Make room for client name */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1268,6 +1268,20 @@ footer {
 
 .client-item:hover .client-logo img {
     transform: scale(1.05);
+}
+
+.client-name {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Update responsive breakpoints */
