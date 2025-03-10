@@ -41,6 +41,17 @@
                         {% endif %}
                     </a>
                 </div>
+                <div class="faq-item mb-4">
+                    <a href="{{ url_for('soundproof_room_standards') }}" class="btn btn-dark btn-lg d-block p-4 text-start">
+                        {% if current_lang == 'zh' %}
+                        怎样才能算是标准的消声室（半消声室）？
+                        {% elif current_lang == 'vi' %}
+                        Thế nào là một phòng tiêu âm (bán tiêu âm) tiêu chuẩn?
+                        {% else %}
+                        What constitutes a standard anechoic chamber (semi-anechoic chamber)?
+                        {% endif %}
+                    </a>
+                </div>
                 <!-- More FAQ items will be added here -->
             </div>
         </div>
