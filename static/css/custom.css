@@ -871,7 +871,7 @@ footer {
 }
 
 .footer-logo {
-    height: 60px;
+    height: 150px; /* Increased from 60px to 150px (2.5x larger) */
     width: auto;
 }
 
@@ -938,7 +938,7 @@ footer {
 }
 
 .map-container {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
