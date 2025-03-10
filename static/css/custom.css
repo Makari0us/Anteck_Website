@@ -964,7 +964,7 @@ footer {
 }
 
 .patent-item:hover {
-    transform: scale(1.05);
+        transform: scale(1.05);
 }
 
 .patent-image {
@@ -1214,8 +1214,9 @@ footer {
 .clients-wrapper {
     position: relative;
     overflow: hidden;
-    margin: 2rem 0;
-    padding: 0 2rem;
+    margin: 2rem auto;
+    max-width: 1400px;
+    padding: 0;
 }
 
 .client-grid {
@@ -1223,6 +1224,8 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     transition: opacity 0.3s ease;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .client-item {
@@ -1299,16 +1302,25 @@ footer {
 /* Pagination styling */
 .pagination-container {
     margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .pagination .page-link {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.8);
-    margin: 0 0.25rem;
     padding: 0.75rem 1.25rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    min-width: 3rem;
+    text-align: center;
 }
 
 .pagination .page-link:hover {
