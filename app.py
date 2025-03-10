@@ -30,7 +30,7 @@ def get_user_language():
 @app.route('/')
 def index():
     page = request.args.get('page', 1, type=int)
-    items_per_page = 8
+    items_per_page = 10  # Changed from 8 to 10
     total_clients = 70
     total_pages = (total_clients + items_per_page - 1) // items_per_page
     start_idx = (page - 1) * items_per_page + 1
@@ -200,7 +200,7 @@ def client_page(client_id):
 
 @app.route('/get_clients/<int:page>')
 def get_clients(page):
-    items_per_page = 8
+    items_per_page = 10  # Changed from 8 to 10
     total_clients = 70
     start_idx = (page - 1) * items_per_page + 1
     end_idx = min(start_idx + items_per_page - 1, total_clients)
