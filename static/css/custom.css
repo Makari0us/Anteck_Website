@@ -863,7 +863,7 @@ footer {
 }
 
 .footer-logo img {
-    width: 540px; /* Increased to 300% of previous 180px */
+    width: 378px; /* Decreased by 30% from 540px */
     height: auto;
 }
 
