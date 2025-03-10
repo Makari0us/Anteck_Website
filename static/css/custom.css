@@ -858,13 +858,13 @@ footer {
 }
 
 .footer-logo {
-    height: 80px; /* Increased height */
+    height: 120px; /* Further increased height */
     width: auto;
     margin-bottom: 1.5rem;
 }
 
 .footer-logo img {
-    width: 800px; /* Increased size from 540px to 800px */
+    width: 1200px; /* Further increased size from 800px to 1200px */
     height: auto;
 }
 
