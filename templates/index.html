@@ -29,6 +29,31 @@
     </button>
 </div>
 
+<!-- Search Section -->
+<section class="search-section py-4">
+    <div class="container">
+        <form action="{{ url_for('search') }}" method="GET" class="search-form">
+            <div class="input-group">
+                <input type="text" 
+                       name="q" 
+                       class="form-control form-control-lg" 
+                       placeholder="{% if current_lang == 'zh' %}搜索产品或服务...{% elif current_lang == 'vi' %}Tìm kiếm sản phẩm hoặc dịch vụ...{% else %}Search products or services...{% endif %}"
+                       required>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search"></i>
+                    {% if current_lang == 'zh' %}
+                    搜索
+                    {% elif current_lang == 'vi' %}
+                    Tìm kiếm
+                    {% else %}
+                    Search
+                    {% endif %}
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
 <!-- Hot Keywords Section -->
 <div class="hot-keywords-container">
     <div class="container">

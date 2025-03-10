@@ -311,3 +311,76 @@ def soundproof_room_qualification():
     return render_template('soundproof_room_qualification.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
+
+@app.route('/search')
+def search():
+    query = request.args.get('q', '')
+    language = get_user_language()
+
+    if not query:
+        return redirect(url_for('index'))
+
+    # Define searchable content with their URLs
+    searchable_content = {
+        'panel_chamber': {
+            'url': url_for('panel_chamber'),
+            'zh': '平板消声室',
+            'vi': 'Phòng tiêu âm phẳng',
+            'en': 'Panel Anechoic Chamber'
+        },
+        'wedge_chamber': {
+            'url': url_for('wedge_chamber'),
+            'zh': '尖劈消声室',
+            'vi': 'Phòng tiêu âm hình nêm',
+            'en': 'Wedge Anechoic Chamber'
+        },
+        'soundproof_boxes': {
+            'url': url_for('soundproof_boxes'),
+            'zh': '消声箱|静音箱',
+            'vi': 'Hộp tiêu âm | Hộp cách âm',
+            'en': 'Soundproof Box | Silent Box'
+        },
+        'listening_room': {
+            'url': url_for('listening_room'),
+            'zh': '听音室|视听室',
+            'vi': 'Phòng nghe | Phòng nghe nhìn',
+            'en': 'Listening Room | AV Room'
+        },
+        'silent_rooms': {
+            'url': url_for('silent_rooms'),
+            'zh': '静音室|隔音室',
+            'vi': 'Phòng cách âm | Phòng cách ly âm',
+            'en': 'Silent Room | Soundproof Room'
+        },
+        'reverb_room': {
+            'url': url_for('reverb_room'),
+            'zh': '混响室',
+            'vi': 'Phòng vang âm',
+            'en': 'Reverberation Room'
+        },
+        'acoustic_instruments': {
+            'url': url_for('acoustic_instruments'),
+            'zh': '声学测试仪器',
+            'vi': 'Thiết bị kiểm tra âm học',
+            'en': 'Acoustic Testing Instruments'
+        }
+    }
+
+    # Search results
+    results = []
+    query_lower = query.lower()
+
+    for key, content in searchable_content.items():
+        # Search in current language and English (as fallback)
+        if (query_lower in content[language].lower() or 
+            query_lower in content['en'].lower()):
+            results.append({
+                'title': content[language],
+                'url': content['url']
+            })
+
+    return render_template('search_results.html',
+                         query=query,
+                         results=results,
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
