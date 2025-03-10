@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero-section text-center text-light">
+    <div class="container">
+        <h1 class="display-4">{{ content.nav_about }}</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                {% if current_lang == 'zh' %}
+                <div class="about-content">
+                    <h2 class="mb-4">关于岸肯</h2>
+                    <p>苏州岸肯为声学领域专业公司，为高新技术企业。公司多年专业从事消声室设备、声学、噪声、电声和电磁屏蔽设备的开发与生产，产品出口美国，日本，墨西哥，印度，越南，台湾等国家和地区。</p>
+                    <h3>我公司生产的屏蔽设备包含：</h3>
+                    <ol>
+                        <li>屏蔽声音的消声室、听音室、视听室、混响室、静音室、消声箱、静音箱、静音房、隔声罩等</li>
+                        <li>屏蔽电磁辐射的屏蔽室，暗室以及屏蔽箱等屏蔽体。</li>
+                        <li>声学测试系统解决方案，配套提供声级计和噪声测量仪器、电声测量仪器、多通道噪声振动分析仪等5个大类近60个产品品种。</li>
+                    </ol>
+                </div>
+                {% elif current_lang == 'vi' %}
+                <div class="about-content">
+                    <h2 class="mb-4">Về Anken</h2>
+                    <p>Anken Suzhou là công ty chuyên nghiệp trong lĩnh vực âm học và là doanh nghiệp công nghệ cao. Công ty đã nhiều năm chuyên phát triển và sản xuất thiết bị phòng tiêu âm, thiết bị âm học, chống ồn, âm thanh điện tử và thiết bị chắn điện từ, với sản phẩm xuất khẩu sang Mỹ, Nhật Bản, Mexico, Ấn Độ, Việt Nam, Đài Loan và các quốc gia, khu vực khác.</p>
+                    <h3>Thiết bị chắn của công ty chúng tôi bao gồm:</h3>
+                    <ol>
+                        <li>Thiết bị chắn âm như phòng tiêu âm, phòng nghe, phòng nghe nhìn, phòng vang âm, phòng cách âm, hộp tiêu âm, hộp cách âm, phòng cách âm, vỏ cách âm, v.v.</li>
+                        <li>Thiết bị chắn bức xạ điện từ như phòng chắn, phòng tối và các cấu trúc chắn như hộp chắn.</li>
+                        <li>Giải pháp hệ thống kiểm tra âm học, cung cấp kèm theo máy đo mức âm thanh và thiết bị đo tiếng ồn, thiết bị đo âm thanh điện tử, máy phân tích độ rung tiếng ồn đa kênh, v.v., với 5 danh mục lớn gồm gần 60 loại sản phẩm.</li>
+                    </ol>
+                </div>
+                {% else %}
+                <div class="about-content">
+                    <h2 class="mb-4">About Anteck</h2>
+                    <p>Suzhou Anteck is a professional company in the acoustics field and a high-tech enterprise. The company has been specializing in the development and production of anechoic chamber equipment, acoustics, noise control, electroacoustic and electromagnetic shielding equipment for many years, with products exported to the United States, Japan, Mexico, India, Vietnam, Taiwan and other countries and regions.</p>
+                    <h3>Our shielding equipment includes:</h3>
+                    <ol>
+                        <li>Sound shielding facilities such as anechoic chambers, listening rooms, audiovisual rooms, reverberation rooms, silent rooms, soundproof boxes, silent boxes, silent rooms, sound isolation covers, etc.</li>
+                        <li>Electromagnetic radiation shielding facilities such as shielded rooms, dark rooms, and shielding enclosures like shield boxes.</li>
+                        <li>Acoustic testing system solutions, equipped with sound level meters and noise measurement instruments, electroacoustic measurement instruments, multi-channel noise vibration analyzers, etc., with 5 major categories comprising nearly 60 product varieties.</li>
+                    </ol>
+                </div>
+                {% endif %}
+
+                <!-- Company Building Image -->
+                <div class="company-building mt-5">
+                    <img src="{{ url_for('static', filename='images/anken-building.jpg') }}" alt="Anteck Company Building" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Horizontal Navigation Bar -->
+                <div class="about-nav mt-5">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <a href="{{ url_for('honorary_qualification') }}" class="btn btn-primary w-100">{{ content.nav_honorary_qualification }}</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="{{ url_for('contact_location') }}" class="btn btn-primary w-100">{{ content.nav_contact_location }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
