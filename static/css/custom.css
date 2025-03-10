@@ -857,13 +857,13 @@ footer {
 }
 
 .footer-logo {
-    height: auto;
+    height: 60px;
     width: auto;
     margin-bottom: 1.5rem;
 }
 
 .footer-logo img {
-    width: 189px; /* Decreased to half size (0.5x) from 378px */
+    width: 180px; /* Increased size from default */
     height: auto;
 }
 
