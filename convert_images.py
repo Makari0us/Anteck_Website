@@ -36,6 +36,13 @@ image_mappings = {
     "截屏2025-03-09 下午4.12.07.png": "clients/client-26.jpg",  # Huaguan Group
     "截屏2025-03-09 下午4.12.10.png": "clients/client-27.jpg",  # Huaqin
     "截屏2025-03-09 下午4.12.25.png": "clients/client-28.jpg",  # JAC
+    "截屏2025-03-09 下午4.16.33.png": "clients/client-29.jpg",  # Jin Laike
+    "截屏2025-03-09 下午4.16.37.png": "clients/client-30.jpg",  # Joyoung
+    "截屏2025-03-09 下午4.16.42.png": "clients/client-31.jpg",  # Konka
+    "截屏2025-03-09 下午4.16.47.png": "clients/client-32.jpg",  # HEC
+    "截屏2025-03-09 下午4.16.51.png": "clients/client-33.jpg",  # Longcheer
+    "截屏2025-03-09 下午4.17.01.png": "clients/client-34.jpg",  # Logitech
+    "截屏2025-03-09 下午4.17.06.png": "clients/client-35.jpg",  # MA Steel
 }
 
 # Client names mapping
@@ -53,7 +60,14 @@ client_names = {
     25: "SAIC",
     26: "Huaguan Group",
     27: "Huaqin",
-    28: "JAC"
+    28: "JAC",
+    29: "Jin Laike",
+    30: "Joyoung",
+    31: "Konka",
+    32: "HEC",
+    33: "Longcheer",
+    34: "Logitech",
+    35: "MA Steel"
 }
 
 # Convert images
