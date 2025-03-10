@@ -41,7 +41,10 @@
                 <div class="list-group">
                     {% for result in results %}
                         <a href="{{ result.url }}" class="list-group-item list-group-item-action">
-                            {{ result.title }}
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-2">{{ result.title }}</h5>
+                            </div>
+                            <p class="mb-1">{{ result.description }}</p>
                         </a>
                     {% endfor %}
                 </div>
