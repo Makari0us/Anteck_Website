@@ -332,7 +332,7 @@ def submit_contact():
 
     if not all([name, email, message]):
         flash(translations.get('contact_form_incomplete', 'Please fill in all fields'))
-        return redirect(url_for('contact_location'))
+        return redirect(url_for('index'))
 
     try:
         msg = Message(
@@ -351,4 +351,4 @@ def submit_contact():
         print(f"Error sending email: {e}")
         flash(translations.get('contact_form_error', 'Error sending message. Please try again later.'))
 
-    return redirect(url_for('contact_location'))
+    return redirect(url_for('index'))
