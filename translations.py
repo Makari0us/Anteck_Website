@@ -16,7 +16,15 @@ TRANSLATIONS = {
         'phone_number': '+1 (949) 992-3596',
         'nav_honored_customers': 'Honored Customers',
         'nav_honorary_qualification': 'Honorary Qualification',
-        'nav_contact_location': 'Contact and Location'
+        'nav_contact_location': 'Contact and Location',
+        'contact_form_title': 'Contact Us',
+        'contact_form_name': 'Your Name',
+        'contact_form_email': 'Your Email',
+        'contact_form_message': 'Your Message',
+        'contact_form_submit': 'Send Message',
+        'contact_form_success': 'Message sent successfully!',
+        'contact_form_error': 'Error sending message. Please try again later.',
+        'contact_form_incomplete': 'Please fill in all fields',
     },
     'vi': {
         'company_name': 'Công ty TNHH Công nghệ Điện tử Anken Tô Châu | Chuyên Phát triển và Sản xuất Thiết bị Phòng Tiêu âm, Thiết bị Điện âm Cách âm và Thiết bị Chắn Điện từ',
@@ -35,7 +43,15 @@ TRANSLATIONS = {
         'phone_number': '+86 (134) 5166-1990',
         'nav_honored_customers': 'Khách hàng Danh dự',
         'nav_honorary_qualification': 'Chứng nhận Danh dự',
-        'nav_contact_location': 'Liên hệ và Địa điểm'
+        'nav_contact_location': 'Liên hệ và Địa điểm',
+        'contact_form_title': 'Liên hệ với chúng tôi',
+        'contact_form_name': 'Tên của bạn',
+        'contact_form_email': 'Email của bạn',
+        'contact_form_message': 'Tin nhắn của bạn',
+        'contact_form_submit': 'Gửi tin nhắn',
+        'contact_form_success': 'Đã gửi tin nhắn thành công!',
+        'contact_form_error': 'Lỗi khi gửi tin nhắn. Vui lòng thử lại sau.',
+        'contact_form_incomplete': 'Vui lòng điền đầy đủ thông tin',
     },
     'zh': {
         'company_name': '苏州岸肯电子科技有限公司 | 专业从事消声室设备、隔声电声和电磁屏蔽设备的开发生产',
@@ -54,6 +70,14 @@ TRANSLATIONS = {
         'phone_number': '+86 (134) 5166-1990',
         'nav_honored_customers': '荣誉客户',
         'nav_honorary_qualification': '荣誉资质',
-        'nav_contact_location': '联系方式和地址'
+        'nav_contact_location': '联系方式和地址',
+        'contact_form_title': '联系我们',
+        'contact_form_name': '您的姓名',
+        'contact_form_email': '您的邮箱',
+        'contact_form_message': '您的留言',
+        'contact_form_submit': '发送消息',
+        'contact_form_success': '消息发送成功！',
+        'contact_form_error': '发送消息时出错。请稍后重试。',
+        'contact_form_incomplete': '请填写所有字段',
     }
 }

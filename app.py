@@ -1,10 +1,19 @@
 import os
-from flask import Flask, render_template, request, session, redirect, url_for, jsonify
+from flask import Flask, render_template, request, session, redirect, url_for, jsonify, flash
+from flask_mail import Mail, Message
 
 from translations import TRANSLATIONS
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "dev_key")
+
+# Email configuration
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'anteckacoustic@gmail.com'
+app.config['MAIL_PASSWORD'] = os.environ.get('GMAIL_APP_PASSWORD')
+mail = Mail(app)
 
 # Client data mapping with language-specific names
 CLIENTS = {
@@ -311,3 +320,35 @@ def soundproof_room_qualification():
     return render_template('soundproof_room_qualification.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
+
+@app.route('/submit-contact', methods=['POST'])
+def submit_contact():
+    language = get_user_language()
+    translations = TRANSLATIONS[language]
+
+    name = request.form.get('name')
+    email = request.form.get('email')
+    message = request.form.get('message')
+
+    if not all([name, email, message]):
+        flash(translations.get('contact_form_incomplete', 'Please fill in all fields'))
+        return redirect(url_for('contact_location'))
+
+    try:
+        msg = Message(
+            subject=f'New Contact Form Submission from {name}',
+            sender=app.config['MAIL_USERNAME'],
+            recipients=[app.config['MAIL_USERNAME']],
+            body=f"""
+            Name: {name}
+            Email: {email}
+            Message: {message}
+            """
+        )
+        mail.send(msg)
+        flash(translations.get('contact_form_success', 'Message sent successfully!'))
+    except Exception as e:
+        print(f"Error sending email: {e}")
+        flash(translations.get('contact_form_error', 'Error sending message. Please try again later.'))
+
+    return redirect(url_for('contact_location'))
