@@ -857,8 +857,8 @@ footer {
 }
 
 .footer-logo {
-    height: 60px;
-    width: auto;
+    max-width: 300px; /* 2.5x the original size of 120px */
+    margin-bottom: 1rem;
 }
 
 .contact-info {
