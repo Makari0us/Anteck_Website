@@ -28,7 +28,7 @@ TRANSLATIONS = {
         'message_us_button': 'Message Us'
     },
     'vi': {
-        'company_name': 'Công ty TNHH Công nghệ Điện tử Anken Tô Châu | Chuyên Phát triển và Sản xuất Thiết bị Phòng Tiêu âm, Thiết bị Điện âm Cách âm và Thiết bị Chắn Điện từ',
+        'company_name': 'Công ty TNHH Công nghệ Điện tử Anteck Tô Châu | Chuyên Phát triển và Sản xuất Thiết bị Phòng Tiêu âm, Thiết bị Điện âm Cách âm và Thiết bị Chắn Điện từ',
         'title': 'Chào mừng đến với Trang web của Chúng tôi',
         'nav_home': 'Trang chủ',
         'nav_panel_chamber': 'Phòng Tiêu âm Panel',
@@ -36,7 +36,7 @@ TRANSLATIONS = {
         'nav_boxes': 'Hộp Cách âm',
         'nav_rooms': 'Phòng Cách âm',
         'nav_products': 'Sản phẩm',
-        'nav_about': 'Về Anken',
+        'nav_about': 'Về Anteck',
         'hero_title': 'Tìm hiểu về Dịch vụ của Chúng tôi',
         'hero_text': 'Chúng tôi cung cấp giải pháp chất lượng cho nhu cầu của bạn',
         'contact_title': 'Liên hệ với Chúng tôi',
