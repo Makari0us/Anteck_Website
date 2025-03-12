@@ -191,11 +191,11 @@
 </section>
 
 <!-- Contact Form Section -->
-<section class="contact-form-section section bg-light" id="contact">
+<section class="contact-form-section section bg-dark" id="contact">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="text-center mb-4">
+            <div class="col-lg-6 mx-auto">
+                <h2 class="text-center mb-4 text-light">
                     {% if current_lang == 'zh' %}
                     联系我们
                     {% elif current_lang == 'vi' %}
@@ -205,8 +205,8 @@
                     {% endif %}
                 </h2>
                 <form id="contactForm" onsubmit="return sendEmail(event)" class="contact-form">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">
+                    <div class="mb-2">
+                        <label for="name" class="form-label text-light small">
                             {% if current_lang == 'zh' %}
                             姓名
                             {% elif current_lang == 'vi' %}
@@ -215,10 +215,10 @@
                             Name
                             {% endif %}
                         </label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+                        <input type="text" class="form-control form-control-sm bg-dark text-light border-secondary" id="name" name="name" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">
+                    <div class="mb-2">
+                        <label for="email" class="form-label text-light small">
                             {% if current_lang == 'zh' %}
                             电子邮件
                             {% elif current_lang == 'vi' %}
@@ -227,10 +227,10 @@
                             Email
                             {% endif %}
                         </label>
-                        <input type="email" class="form-control" id="email" name="email" required>
+                        <input type="email" class="form-control form-control-sm bg-dark text-light border-secondary" id="email" name="email" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">
+                    <div class="mb-2">
+                        <label for="subject" class="form-label text-light small">
                             {% if current_lang == 'zh' %}
                             主题
                             {% elif current_lang == 'vi' %}
@@ -239,10 +239,10 @@
                             Subject
                             {% endif %}
                         </label>
-                        <input type="text" class="form-control" id="subject" name="subject" required>
+                        <input type="text" class="form-control form-control-sm bg-dark text-light border-secondary" id="subject" name="subject" required>
                     </div>
                     <div class="mb-3">
-                        <label for="message" class="form-label">
+                        <label for="message" class="form-label text-light small">
                             {% if current_lang == 'zh' %}
                             消息
                             {% elif current_lang == 'vi' %}
@@ -251,10 +251,10 @@
                             Message
                             {% endif %}
                         </label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        <textarea class="form-control form-control-sm bg-dark text-light border-secondary" id="message" name="message" rows="4" required></textarea>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-outline-light btn-sm">
                             {% if current_lang == 'zh' %}
                             发送消息
                             {% elif current_lang == 'vi' %}
