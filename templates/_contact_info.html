@@ -30,4 +30,15 @@
         <p>Fax: 0512-68785280</p>
         {% endif %}
     </div>
+    <div class="text-center mt-3">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">
+            {% if current_lang == 'zh' %}
+            发送消息给我们
+            {% elif current_lang == 'vi' %}
+            Gửi tin nhắn cho chúng tôi
+            {% else %}
+            Message Us
+            {% endif %}
+        </a>
+    </div>
 </div>
