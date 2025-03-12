@@ -272,30 +272,53 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
 
-    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-    const mailtoLink = `mailto:anteckacoustic@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const formData = {
+        name,
+        email,
+        subject,
+        message
+    };
 
-    window.location.href = mailtoLink;
-
-    // Clear the form
-    document.getElementById('contactForm').reset();
-
-    // Show success message
-    const statusDiv = document.getElementById('formStatus');
-    statusDiv.style.display = 'block';
-    statusDiv.className = 'mt-3 text-center text-success';
-    statusDiv.textContent = {% if current_lang == 'zh' %}
-        '消息已准备发送！'
-    {% elif current_lang == 'vi' %}
-        'Tin nhắn đã sẵn sàng để gửi!'
-    {% else %}
-        'Message ready to send!'
-    {% endif %};
-
-    setTimeout(() => {
-        statusDiv.style.display = 'none';
-    }, 3000);
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.text();
+    })
+    .then(data => {
+        const statusDiv = document.getElementById('formStatus');
+        statusDiv.style.display = 'block';
+        statusDiv.className = 'mt-3 text-center text-success';
+        statusDiv.textContent = {% if current_lang == 'zh' %}
+            '消息发送成功！'
+        {% elif current_lang == 'vi' %}
+            'Gửi tin nhắn thành công!'
+        {% else %}
+            'Message sent successfully!'
+        {% endif %};
+        document.getElementById('contactForm').reset();
+    })
+    .catch(error => {
+        const statusDiv = document.getElementById('formStatus');
+        statusDiv.style.display = 'block';
+        statusDiv.className = 'mt-3 text-center text-danger';
+        statusDiv.textContent = {% if current_lang == 'zh' %}
+            '发送消息时出错。请稍后再试。'
+        {% elif current_lang == 'vi' %}
+            'Đã xảy ra lỗi khi gửi tin nhắn. Vui lòng thử lại sau.'
+        {% else %}
+            'Error sending message. Please try again later.'
+        {% endif %};
+    });
 });
+
 </script>
 
 <!-- About Section -->

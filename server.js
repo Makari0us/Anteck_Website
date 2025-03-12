@@ -38,7 +38,7 @@ app.post('/send-email', (req, res) => {
     service: 'gmail',
     auth: {
       user: 'anteckacoustic@gmail.com',
-      pass: process.env.EMAIL_PASSWORD
+      pass: 'xwir oemm fsjq zaqt'
     }
   });
 
