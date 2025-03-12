@@ -191,19 +191,11 @@
 </section>
 
 <!-- Contact Form Section -->
-<section class="contact-form-section section bg-dark" id="contact">
+<section class="contact-form-section section bg-dark text-light" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mx-auto">
-                <h2 class="text-center mb-4 text-light">
-                    {% if current_lang == 'zh' %}
-                    联系我们
-                    {% elif current_lang == 'vi' %}
-                    Liên hệ với chúng tôi
-                    {% else %}
-                    Contact Us
-                    {% endif %}
-                </h2>
+                <h2 class="text-center mb-4">{{ content.contact_title }}</h2>
                 <form id="contactForm" onsubmit="return sendEmail(event)" class="contact-form">
                     <div class="mb-2">
                         <label for="name" class="form-label text-light small">
