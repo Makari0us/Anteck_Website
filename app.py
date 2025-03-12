@@ -167,7 +167,7 @@ def reverb_room():
 @app.route('/online-testing-chamber')
 def online_testing_chamber():
     language = get_user_language()
-    return render_template('online_testing_chamber.html',
+    return render_template('online-testing-chamber.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -215,7 +215,7 @@ def honorary_qualification():
 @app.route('/contact-location')
 def contact_location():
     language = get_user_language()
-    return render_template('contact_location.html',
+    return render_template('contact-location.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -294,7 +294,7 @@ def why_electromagnetic_shielding():
 @app.route('/faq/soundproof-room-standards')
 def soundproof_room_standards():
     language = get_user_language()
-    return render_template('soundproof_room_standards.html',
+    return render_template('soundproof_room-standards.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 

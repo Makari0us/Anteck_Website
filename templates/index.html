@@ -190,6 +190,105 @@
     </div>
 </section>
 
+<!-- Contact Form Section -->
+<section class="contact-form-section section bg-light" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-center mb-4">
+                    {% if current_lang == 'zh' %}
+                    联系我们
+                    {% elif current_lang == 'vi' %}
+                    Liên hệ với chúng tôi
+                    {% else %}
+                    Contact Us
+                    {% endif %}
+                </h2>
+                <form id="contactForm" onsubmit="return sendEmail(event)" class="contact-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            {% if current_lang == 'zh' %}
+                            姓名
+                            {% elif current_lang == 'vi' %}
+                            Họ tên
+                            {% else %}
+                            Name
+                            {% endif %}
+                        </label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">
+                            {% if current_lang == 'zh' %}
+                            电子邮件
+                            {% elif current_lang == 'vi' %}
+                            Email
+                            {% else %}
+                            Email
+                            {% endif %}
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">
+                            {% if current_lang == 'zh' %}
+                            主题
+                            {% elif current_lang == 'vi' %}
+                            Chủ đề
+                            {% else %}
+                            Subject
+                            {% endif %}
+                        </label>
+                        <input type="text" class="form-control" id="subject" name="subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">
+                            {% if current_lang == 'zh' %}
+                            消息
+                            {% elif current_lang == 'vi' %}
+                            Tin nhắn
+                            {% else %}
+                            Message
+                            {% endif %}
+                        </label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">
+                            {% if current_lang == 'zh' %}
+                            发送消息
+                            {% elif current_lang == 'vi' %}
+                            Gửi tin nhắn
+                            {% else %}
+                            Send Message
+                            {% endif %}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function sendEmail(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+    window.location.href = `mailto:anteckacoustic@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Clear the form
+    document.getElementById('contactForm').reset();
+    return false;
+}
+</script>
+
 <!-- About Section -->
 <section id="about" class="section">
     <div class="container">
