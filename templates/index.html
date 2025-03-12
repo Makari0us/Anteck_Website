@@ -196,7 +196,7 @@
         <div class="row">
             <div class="col-lg-6 mx-auto">
                 <h2 class="text-center mb-4">{{ content.contact_title }}</h2>
-                <form id="contactForm" onsubmit="return sendEmail(event)" class="contact-form">
+                <form id="contactForm" class="contact-form">
                     <div class="mb-2">
                         <label for="name" class="form-label text-light small">
                             {% if current_lang == 'zh' %}
@@ -257,14 +257,15 @@
                         </button>
                     </div>
                 </form>
+                <div id="formStatus" class="mt-3 text-center" style="display: none;"></div>
             </div>
         </div>
     </div>
 </section>
 
 <script>
-function sendEmail(event) {
-    event.preventDefault();
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -272,13 +273,29 @@ function sendEmail(event) {
     const message = document.getElementById('message').value;
 
     const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailtoLink = `mailto:anteckacoustic@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    window.location.href = `mailto:anteckacoustic@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
 
     // Clear the form
     document.getElementById('contactForm').reset();
-    return false;
-}
+
+    // Show success message
+    const statusDiv = document.getElementById('formStatus');
+    statusDiv.style.display = 'block';
+    statusDiv.className = 'mt-3 text-center text-success';
+    statusDiv.textContent = {% if current_lang == 'zh' %}
+        '消息已准备发送！'
+    {% elif current_lang == 'vi' %}
+        'Tin nhắn đã sẵn sàng để gửi!'
+    {% else %}
+        'Message ready to send!'
+    {% endif %};
+
+    setTimeout(() => {
+        statusDiv.style.display = 'none';
+    }, 3000);
+});
 </script>
 
 <!-- About Section -->
