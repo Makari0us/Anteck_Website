@@ -8,6 +8,31 @@
     </div>
 </section>
 
+
+<section class="hero-section text-center text-light py-4">
+    <div class="container">
+        <h1 class="display-4">{{ content.contact_form_title }}</h1>
+    </div>
+</section>
+
+<section class="contact-description bg-dark text-light py-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                {% if current_lang == 'zh' %}
+                <p class="lead mb-0">欢迎通过此表格联系我们，无论您有任何产品咨询、项目要求、技术问题或其他疑问，我们的专业团队将尽快回复您。您也可以留下详细需求，我们将为您提供定制解决方案。</p>
+                {% elif current_lang == 'vi' %}
+                <p class="lead mb-0">Vui lòng liên hệ với chúng tôi qua biểu mẫu này nếu bạn có bất kỳ thắc mắc về sản phẩm, yêu cầu dự án, câu hỏi kỹ thuật hoặc bất kỳ vấn đề nào khác. Đội ngũ chuyên gia của chúng tôi sẽ phản hồi bạn trong thời gian sớm nhất. Bạn cũng có thể để lại yêu cầu chi tiết và chúng tôi sẽ cung cấp giải pháp phù hợp.</p>
+                {% else %}
+                <p class="lead mb-0">Please contact us through this form if you have any product inquiries, project requirements, technical questions, or any other concerns. Our team of experts will respond to you as soon as possible. You can also leave detailed requirements, and we will provide you with a customized solution.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section section bg-dark text-light" id="contact">
+
 <section class="contact-section section bg-dark text-light" id="contact">
     <div class="container">
         <div class="row justify-content-center">

@@ -895,6 +895,18 @@ footer {
 }
 
 /* Contact Page Styles */
+.contact-description {
+    background: linear-gradient(to bottom, #444444, #333333);
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+}
+
+.contact-description .lead {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
 .contact-info-main {
     background: linear-gradient(to bottom, #333333, #222222);
     color: white;
