@@ -896,7 +896,7 @@ footer {
 
 /* Contact Page Styles */
 .contact-info-main {
-    background: #3c7ab7;
+    background: linear-gradient(to bottom, #333333, #222222);
     color: white;
     height: 100%;
     display: flex;
@@ -1007,46 +1007,6 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-}
-
-/* Contact Page Styles */
-.contact-info-main {
-    background: #3c7ab7;
-    color: white;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.contact-info-main h3 {
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    text-align: center;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.contact-info-main h3:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.map-container {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-@media (max-width: 768px) {
-    .contact-info-main {
-        margin-bottom: 2rem;
-    }
 }
 
 /* Advantages Section */
