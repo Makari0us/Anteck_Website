@@ -303,7 +303,7 @@ def why_electromagnetic_shielding():
 @app.route('/faq/soundproof-room-standards')
 def soundproof_room_standards():
     language = get_user_language()
-    return render_template('soundproof_room-standards.html',
+    return render_template('soundproof_room_standards.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
