@@ -303,7 +303,7 @@ def why_electromagnetic_shielding():
 @app.route('/faq/soundproof-room-standards')
 def soundproof_room_standards():
     language = get_user_language()
-    return render_template('soundproof_room_standards.html',
+    return render_template('soundproof_room-standards.html',
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
@@ -321,6 +321,13 @@ def soundproof_room_qualification():
                          content=TRANSLATIONS[language],
                          current_lang=language)
 
+@app.route('/contact')
+def contact():
+    language = get_user_language()
+    return render_template('contact.html',
+                         content=TRANSLATIONS[language],
+                         current_lang=language)
+
 @app.route('/submit-contact', methods=['POST'])
 def submit_contact():
     language = get_user_language()
@@ -332,7 +339,7 @@ def submit_contact():
 
     if not all([name, email, message]):
         flash(translations.get('contact_form_incomplete', 'Please fill in all fields'))
-        return redirect(url_for('index'))
+        return redirect(url_for('contact'))
 
     try:
         msg = Message(
@@ -351,4 +358,4 @@ def submit_contact():
         print(f"Error sending email: {e}")
         flash(translations.get('contact_form_error', 'Error sending message. Please try again later.'))
 
-    return redirect(url_for('index'))
+    return redirect(url_for('contact'))

@@ -25,6 +25,7 @@ TRANSLATIONS = {
         'contact_form_success': 'Message sent successfully!',
         'contact_form_error': 'Error sending message. Please try again later.',
         'contact_form_incomplete': 'Please fill in all fields',
+        'message_us_button': 'Message Us'
     },
     'vi': {
         'company_name': 'Công ty TNHH Công nghệ Điện tử Anken Tô Châu | Chuyên Phát triển và Sản xuất Thiết bị Phòng Tiêu âm, Thiết bị Điện âm Cách âm và Thiết bị Chắn Điện từ',
@@ -52,6 +53,7 @@ TRANSLATIONS = {
         'contact_form_success': 'Đã gửi tin nhắn thành công!',
         'contact_form_error': 'Lỗi khi gửi tin nhắn. Vui lòng thử lại sau.',
         'contact_form_incomplete': 'Vui lòng điền đầy đủ thông tin',
+        'message_us_button': 'Nhắn tin cho chúng tôi'
     },
     'zh': {
         'company_name': '苏州岸肯电子科技有限公司 | 专业从事消声室设备、隔声电声和电磁屏蔽设备的开发生产',
@@ -79,5 +81,6 @@ TRANSLATIONS = {
         'contact_form_success': '消息发送成功！',
         'contact_form_error': '发送消息时出错。请稍后重试。',
         'contact_form_incomplete': '请填写所有字段',
+        'message_us_button': '联系我们'
     }
 }

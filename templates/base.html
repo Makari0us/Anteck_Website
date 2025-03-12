@@ -25,6 +25,7 @@
                     <img src="{{ url_for('static', filename='images/phone-icon.svg') }}" alt="Phone" class="phone-icon">
                     {{ content.phone_number }}
                 </div>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary me-3">{{ content.message_us_button }}</a>
                 <div class="language-buttons">
                     <button class="btn btn-sm btn-outline-light language-btn" onclick="setLanguage('en')">EN</button>
                     <button class="btn btn-sm btn-outline-light language-btn" onclick="setLanguage('vi')">VI</button>
